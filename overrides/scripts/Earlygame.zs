@@ -948,10 +948,10 @@ makeShaped("excavator_iron", <thermalfoundation:tool.excavator_iron>,
 	  I : <minecraft:stick>});
 
 // Exchanging Gadget
-recipes.removeByRecipeName("buildinggadgets:exchangertool");
+recipes.removeByRecipeName("buildinggadgets:exchangingtool");
 makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate: {Name: "minecraft:air"}}),
 	["IRI",
-	 "DLD",
+	 "DFD",
 	 "ILI"],
 	{ D : <ore:gemDiamond>,
 	  L : <ore:gemLapis>,
@@ -965,7 +965,7 @@ makeShaped("lt_hammer", <littletiles:hammer>,
 	["III",
 	 " R ",
 	 " R "],
-	{ R : <ore:rodDraconium>,
+	{ R : <ore:stickDraconium>,
 	  I : <ore:ingotIron>});
 
 // ME Controller
