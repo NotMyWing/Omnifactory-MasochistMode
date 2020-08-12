@@ -106,9 +106,9 @@ print("--- loading Logipipes.zs ---");
 	recipes.remove(<logisticspipes:pipe_transport_basic>);
 	recipes.addShapedMirrored("Unrouted Transport Pipe", 
 	<logisticspipes:pipe_transport_basic> *8, [
-	[<ore:plateSteel>, <ore:itemConduitBinder>, <ore:plateSteel>], 
+	[<ore:plateWroughtIron>, <ore:itemConduitBinder>, <ore:plateWroughtIron>], 
 	[<ore:itemConduitBinder>, <ore:blockGlass>, <ore:itemConduitBinder>], 
-	[<ore:plateSteel>, <ore:itemConduitBinder>, <ore:plateSteel>]]);
+	[<ore:plateWroughtIron>, <ore:itemConduitBinder>, <ore:plateWroughtIron>]]);
 
 	recipes.remove(<logisticspipes:pipe_request_table>);
 	recipes.addShapedMirrored("Logistics Request Table", 

@@ -126,14 +126,6 @@ compressor.recipeBuilder()
 	.EUt(8000)
 	.buildAndRegister();
 
-// Lumium
-compressor.recipeBuilder()
-	.inputs([<thermalfoundation:material:358> * 2])
-	.outputs(<contenttweaker:lumiumplating>)
-	.duration(200)
-	.EUt(8000)
-	.buildAndRegister();
-
 // Iridium
 compressor.recipeBuilder()
 	.inputs([<ore:plateIridium> * 2])
@@ -687,14 +679,6 @@ macerator.recipeBuilder()
 	.outputs([<draconicevolution:draconium_dust> * 3])
 	.duration(40)
 	.EUt(500)
-	.buildAndRegister();
-
-// Prismarine Crystals
-macerator.recipeBuilder()
-	.inputs([<minecraft:prismarine_shard>])
-	.outputs([<minecraft:prismarine_crystals> * 4])
-	.duration(20)
-	.EUt(16)
 	.buildAndRegister();
 
 // Launch Pad

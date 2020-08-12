@@ -470,11 +470,6 @@ signalumplating.rarity = "uncommon";
 signalumplating.maxStackSize = 64;
 signalumplating.register();
 
-var lumiumplating = VanillaFactory.createItem("lumiumplating");
-lumiumplating.rarity = "uncommon";
-lumiumplating.maxStackSize = 64;
-lumiumplating.register();
-
 var iridiumalloyplating = VanillaFactory.createItem("iridiumalloyplating");
 iridiumalloyplating.rarity = "uncommon";
 iridiumalloyplating.maxStackSize = 64;

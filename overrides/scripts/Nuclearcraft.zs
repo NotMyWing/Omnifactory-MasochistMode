@@ -646,7 +646,7 @@ makeShaped("of_nc_water_source", <nuclearcraft:water_source>,
     ["AAA",
      "B B",
      "AAA"],
-    { A : <ore:plateSteel>,
+    { A : <ore:plateWroughtIron>,
       B : <minecraft:water_bucket:*> });
 
 //Uranium RTG
