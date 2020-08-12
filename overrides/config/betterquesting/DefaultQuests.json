@@ -40859,257 +40859,257 @@
           },
           "taskID:8": "bq_standard:retrieval"
         }
+      }
+    },
+    "798:10": {
+      "preRequisites:11": [
+        258
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§6Awakened Cores§6§r are the third tier of §bDraconic Evolution§r core, and are common components of endgame recipes.\n\nThese cores are made with §6Awakened Draconium§r and also cost §e3 Billion RF§r to craft.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "draconicevolution:awakened_core"
+          },
+          "ismain:1": 1,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Awakened Core",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
       },
-      "798:10": {
-        "preRequisites:11": [
-          258
-        ],
-        "properties:10": {
-          "betterquesting:10": {
-            "autoclaim:1": 0,
-            "desc:8": "§6Awakened Cores§6§r are the third tier of §bDraconic Evolution§r core, and are common components of endgame recipes.\n\nThese cores are made with §6Awakened Draconium§r and also cost §e3 Billion RF§r to craft.",
-            "globalshare:1": 0,
-            "icon:10": {
+      "questID:3": 798,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin25"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:awakened_core"
-            },
-            "ismain:1": 1,
-            "issilent:1": 0,
-            "lockedprogress:1": 1,
-            "name:8": "Awakened Core",
-            "partysinglereward:1": 0,
-            "questlogic:8": "AND",
-            "repeat_relative:1": 1,
-            "repeattime:3": -1,
-            "simultaneous:1": 0,
-            "snd_complete:8": "minecraft:entity.player.levelup",
-            "snd_update:8": "minecraft:entity.player.levelup",
-            "tasklogic:8": "AND",
-            "visibility:8": "ALWAYS"
-          }
-        },
-        "questID:3": 798,
-        "rewards:9": {
-          "0:10": {
-            "index:3": 0,
-            "rewardID:8": "bq_standard:item",
-            "rewards:9": {
-              "0:10": {
-                "Count:3": 1,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "contenttweaker:omnicoin25"
-              }
             }
-          }
-        },
-        "tasks:9": {
-          "0:10": {
-            "autoConsume:1": 0,
-            "consume:1": 0,
-            "groupDetect:1": 0,
-            "ignoreNBT:1": 0,
-            "index:3": 0,
-            "partialMatch:1": 1,
-            "requiredItems:9": {
-              "0:10": {
-                "Count:3": 1,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "draconicevolution:awakened_core"
-              }
-            },
-            "taskID:8": "bq_standard:retrieval"
-          }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "799:10": {
+      "preRequisites:11": [
+        344
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A gear forged from §6Empowered Diamantine Crystal§6§r.\n\n§rWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "moreplates:empowered_diamatine_gear"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Empowered Diamantine Gear",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
         }
       },
-      "799:10": {
-        "preRequisites:11": [
-          344
-        ],
-        "properties:10": {
-          "betterquesting:10": {
-            "autoclaim:1": 0,
-            "desc:8": "A gear forged from §6Empowered Diamantine Crystal§6§r.\n\n§rWhile you can empower gears directly, it makes much more sense to solidify them.",
-            "globalshare:1": 0,
-            "icon:10": {
+      "questID:3": 799,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "moreplates:empowered_diamatine_gear"
-            },
-            "ismain:1": 0,
-            "issilent:1": 0,
-            "lockedprogress:1": 1,
-            "name:8": "Empowered Diamantine Gear",
-            "partysinglereward:1": 0,
-            "questlogic:8": "AND",
-            "repeat_relative:1": 1,
-            "repeattime:3": -1,
-            "simultaneous:1": 0,
-            "snd_complete:8": "minecraft:entity.player.levelup",
-            "snd_update:8": "minecraft:entity.player.levelup",
-            "tasklogic:8": "AND",
-            "visibility:8": "ALWAYS"
-          }
-        },
-        "questID:3": 799,
-        "rewards:9": {},
-        "tasks:9": {
-          "0:10": {
-            "autoConsume:1": 0,
-            "consume:1": 0,
-            "groupDetect:1": 0,
-            "ignoreNBT:1": 0,
-            "index:3": 0,
-            "partialMatch:1": 1,
-            "requiredItems:9": {
-              "0:10": {
-                "Count:3": 1,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "moreplates:empowered_diamatine_gear"
-              }
-            },
-            "taskID:8": "bq_standard:retrieval"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "800:10": {
+      "preRequisites:11": [
+        798
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Portable Tank§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "draconicevolution:energy_storage_core"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Power Storage on a Massive Level",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 800,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
           }
         }
       },
-      "800:10": {
-        "preRequisites:11": [
-          798
-        ],
-        "properties:10": {
-          "betterquesting:10": {
-            "autoclaim:1": 0,
-            "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Portable Tank§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
-            "globalshare:1": 0,
-            "icon:10": {
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "draconicevolution:energy_storage_core"
             },
-            "ismain:1": 0,
-            "issilent:1": 0,
-            "lockedprogress:1": 1,
-            "name:8": "Power Storage on a Massive Level",
-            "partysinglereward:1": 0,
-            "questlogic:8": "AND",
-            "repeat_relative:1": 1,
-            "repeattime:3": -1,
-            "simultaneous:1": 0,
-            "snd_complete:8": "minecraft:entity.player.levelup",
-            "snd_update:8": "minecraft:entity.player.levelup",
-            "tasklogic:8": "AND",
-            "visibility:8": "ALWAYS"
-          }
-        },
-        "questID:3": 800,
-        "rewards:9": {
-          "0:10": {
-            "index:3": 0,
-            "rewardID:8": "bq_standard:item",
-            "rewards:9": {
-              "0:10": {
-                "Count:3": 2,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "contenttweaker:omnicoin5"
-              }
+            "1:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "draconicevolution:energy_pylon"
             }
-          }
-        },
-        "tasks:9": {
-          "0:10": {
-            "autoConsume:1": 0,
-            "consume:1": 0,
-            "groupDetect:1": 0,
-            "ignoreNBT:1": 0,
-            "index:3": 0,
-            "partialMatch:1": 1,
-            "requiredItems:9": {
-              "0:10": {
-                "Count:3": 1,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "draconicevolution:energy_storage_core"
-              },
-              "1:10": {
-                "Count:3": 2,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "draconicevolution:energy_pylon"
-              }
-            },
-            "taskID:8": "bq_standard:retrieval"
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "801:10": {
+      "preRequisites:11": [
+        21
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Now that you have acquired §6Steel§6§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Learning§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:cobblestone_generator"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Infinite Cobblestone",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 801,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 1,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:omnicoin5"
+            }
           }
         }
       },
-      "801:10": {
-        "preRequisites:11": [
-          21
-        ],
-        "properties:10": {
-          "betterquesting:10": {
-            "autoclaim:1": 0,
-            "desc:8": "Now that you have acquired §6Steel§6§r, your path to infinite cobblestone awaits! The §6Cobblestone Generator§r continuously outputs cobblestone into adjacent inventories, and can be upgraded to produce it even faster.\n\nCobblestone can be processed into many useful materials:\n\n§6Gravel§r is useful for making conduits and §9Concrete§r.\n\n§6Sand§r is useful for §6Glass§r, which can be turned into §6Nether Quartz§r.\n\nFinally, §6Dust§r can be turned into §6Clay§r which is both a reliable source of §6Aluminium§r and very important for automating §bDeep Mob Learning§r.\n\nSet up a §ecobbleworks§r soon, so you can stockpile all these useful materials.\n",
-            "globalshare:1": 0,
-            "icon:10": {
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
               "id:8": "nuclearcraft:cobblestone_generator"
-            },
-            "ismain:1": 0,
-            "issilent:1": 0,
-            "lockedprogress:1": 1,
-            "name:8": "Infinite Cobblestone",
-            "questlogic:8": "AND",
-            "repeat_relative:1": 1,
-            "repeattime:3": -1,
-            "simultaneous:1": 0,
-            "snd_complete:8": "minecraft:entity.player.levelup",
-            "snd_update:8": "minecraft:entity.player.levelup",
-            "tasklogic:8": "AND",
-            "visibility:8": "ALWAYS"
-          }
-        },
-        "questID:3": 801,
-        "rewards:9": {
-          "0:10": {
-            "index:3": 1,
-            "rewardID:8": "bq_standard:item",
-            "rewards:9": {
-              "0:10": {
-                "Count:3": 1,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "contenttweaker:omnicoin5"
-              }
             }
-          }
-        },
-        "tasks:9": {
-          "0:10": {
-            "autoConsume:1": 0,
-            "consume:1": 0,
-            "groupDetect:1": 0,
-            "ignoreNBT:1": 0,
-            "index:3": 0,
-            "partialMatch:1": 1,
-            "requiredItems:9": {
-              "0:10": {
-                "Count:3": 1,
-                "Damage:2": 0,
-                "OreDict:8": "",
-                "id:8": "nuclearcraft:cobblestone_generator"
-              }
-            },
-            "taskID:8": "bq_standard:retrieval"
-          }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
     }
