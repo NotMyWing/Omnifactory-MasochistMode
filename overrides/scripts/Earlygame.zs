@@ -177,15 +177,16 @@ recipes.remove(<appliedenergistics2:quartz_glass>);
 recipes.addShaped(<simplyjetpacks:metaitem:4>, [[<minecraft:leather>, <ore:plateSteel>, <minecraft:leather>]]);
 
 //EIO Alloys
-alloy.recipeBuilder().inputs([<gregtech:meta_item_1:10197>, <gregtech:meta_item_1:2106>]).outputs([<gregtech:meta_item_1:10184>]).duration(200).EUt(16).buildAndRegister();
-alloy.recipeBuilder().inputs([<gregtech:meta_item_1:10197>, <gregtech:meta_item_1:2101>]).outputs([<gregtech:meta_item_1:10184>]).duration(200).EUt(16).buildAndRegister();
-alloy.recipeBuilder().inputs([<gregtech:meta_item_1:10197>, <gregtech:meta_item_1:2012>]).outputs([<gregtech:meta_item_1:10184>]).duration(200).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<gregtech:meta_item_1:10184>, <minecraft:obsidian>]).outputs([<enderio:item_alloy_ingot:6>]).duration(240).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<gregtech:meta_item_1:10184>, <actuallyadditions:item_crystal:3>]).outputs([<enderio:item_alloy_ingot:6>]).duration(240).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<gregtech:meta_item_1:10184>, <gregtech:meta_item_1:2061>]).outputs([<enderio:item_alloy_ingot>]).duration(120).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<minecraft:gold_ingot>, <minecraft:soul_sand>]).outputs([<enderio:item_alloy_ingot:7>]).duration(120).EUt(16).buildAndRegister();
 alloy.recipeBuilder().inputs([<enderio:item_alloy_ingot:6>, <ore:dustEndstone>]).outputs([<enderio:item_alloy_ingot:8>]).duration(300).EUt(120).buildAndRegister();
 alloy.recipeBuilder().inputs([<minecraft:glass>, <gregtech:meta_item_1:2202>]).outputs([<appliedenergistics2:quartz_glass> * 2]).duration(100).EUt(16).buildAndRegister();
+
+//Red Alloy
+alloy.recipeBuilder().inputs([<ore:ingotCopper>, <minecraft:redstone> * 4]).outputs([<gregtech:meta_item_1:10237>]).duration(180).EUt(16).buildAndRegister();
+
 
 //Ender Chest
 recipes.removeByRecipeName("enderstorage:ender_chest");
@@ -210,12 +211,6 @@ recipes.addShaped(<gregtech:machine:61>, [
 	[<gregtech:meta_item_1:32641>, <gregtech:meta_item_1:32601>, <gregtech:meta_item_2:14184>],
 	[<ore:cableGtSingleCopper>, <ore:cableGtSingleCopper>, <gregtech:machine:502>],
 	[<ore:circuitGood>, <ore:circuitGood>, <ore:cableGtSingleCopper>]]);
-
-//LV Piston
-recipes.addShaped(<gregtech:meta_item_1:32640>, [
-	[<gregtech:meta_item_1:12197>,<gregtech:meta_item_1:12197>,<gregtech:meta_item_1:12197>],
-	[<ore:cableGtSingleTin>, <gregtech:meta_item_1:14197>,<gregtech:meta_item_1:14197>],
-	[<ore:cableGtSingleTin>, <gregtech:meta_item_1:32600>, <gregtech:meta_item_2:26197>]]);
 
 <simplefluidtanks:wrench>.displayName = "Multiblock Fluid Tank Wrench";
 <simplefluidtanks:tankitem>.displayName = "Multiblock Fluid Tank Block";
@@ -891,3 +886,94 @@ macerator.recipeBuilder()
 
 //Remove Unobtainable Clay recipe
 recipes.removeByRecipeName("thermalfoundation:clay_ball");
+
+/* 
+ * Early game adjustments
+ */
+
+// Fireclay Dust
+recipes.removeByRecipeName("gregtech:fireclay_dust");
+recipes.addShapeless(<ore:dustFireclay>.firstItem, [
+	<ore:dustClay> * 2, <ore:dustBrick> * 2
+]);
+
+centrifuge.findRecipe(30, [<ore:dustFireclay>.firstItem * 2], [null]).remove();
+centrifuge.recipeBuilder()
+    .inputs(<ore:dustFireclay>)
+    .outputs([<ore:dustClay>.firstItem * 2, <ore:dustBrick>.firstItem * 2])
+    .duration(45).EUt(30).buildAndRegister();
+
+// Brick Dust
+macerator.recipeBuilder()
+	.inputs(<ore:ingotBrick>)
+	.outputs(<ore:dustBrick>.firstItem)
+	.duration(35).EUt(8).buildAndRegister();
+
+// Farming Station
+recipes.removeByRecipeName("enderio:farming_station");
+makeShaped("farming_station", <enderio:block_farm_station>,
+	["VCV",
+	 "SHS",
+	 "GPG"],
+	{ V : <ore:itemVibrantCrystal>,
+	  P : <ore:itemPulsatingCrystal>,
+	  S : <ore:plateSteel>,
+	  G : <ore:gearIronInfinity>,
+	  H : <ore:itemSimpleMachineChassi>,
+	  C : <ore:circuitBasic>});
+
+// Steam Dynamo Augments
+recipes.removeByRecipeName("thermalexpansion:augment_26");
+
+// Pulsating Mesh
+alloy.recipeBuilder()
+	.inputs([<forestry:crafting_material>, <gregtech:meta_item_2:32505>])
+	.outputs([<forestry:crafting_material:1>])
+	.duration(180).EUt(16).buildAndRegister();
+
+// Yeet Charcoal from Furnace recipes
+furnace.remove(<minecraft:coal:1>);
+furnace.remove(<minecraft:coal:1>);
+furnace.remove(<minecraft:coal:1>);
+furnace.remove(<minecraft:coal:1>);
+furnace.remove(<minecraft:coal:1>);
+
+// Excavator
+recipes.removeByRecipeName("thermalfoundation:tool.excavator_iron");
+makeShaped("excavator_iron", <thermalfoundation:tool.excavator_iron>,
+	[" S ",
+	 "SIS",
+	 " I "],
+	{ S : <ore:plateSteel>,
+	  I : <minecraft:stick>});
+
+// Exchanging Gadget
+recipes.removeByRecipeName("buildinggadgets:exchangingtool");
+makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate: {Name: "minecraft:air"}}),
+	["IRI",
+	 "DFD",
+	 "ILI"],
+	{ D : <ore:gemDiamond>,
+	  L : <ore:gemLapis>,
+	  F : <gregtech:meta_item_1:32674>, // IV Field Emitter
+	  R : <ore:dustRedstone>,
+	  I : <ore:ingotIron>});
+
+// LittleTiles Hammer
+recipes.removeByRecipeName("littletiles:hammer");
+makeShaped("lt_hammer", <littletiles:hammer>,
+	["III",
+	 " R ",
+	 " R "],
+	{ R : <ore:stickDraconium>,
+	  I : <ore:ingotIron>});
+
+// ME Controller
+recipes.removeByRecipeName("appliedenergistics2:network/blocks/controller");
+makeShaped("me_controller", <appliedenergistics2:controller>,
+	["PFP",
+	 "FAF",
+	 "PFP"],
+	{ F : <ore:crystalPureFluix>,
+	  P : <ore:plateDarkSteel>,
+	  A : <appliedenergistics2:energy_acceptor>});

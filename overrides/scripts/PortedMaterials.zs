@@ -33,6 +33,7 @@ enderium.addFlags(["GENERATE_ROD"]);
 val omnium = MaterialRegistry.createIngotMaterial(709, "omnium", 0x84053e, "shiny", 2);
 
 val draconium = MaterialRegistry.createIngotMaterial(710, "draconium", 0xbe49ed, "dull", 2);
+draconium.addFlags(["GENERATE_ROD"]);
 
 val endSteel = MaterialRegistry.createIngotMaterial(712, "end_steel", 0xe0efbd, "shiny", 2);
 endSteel.addFlags(["GENERATE_PLATE","GENERATE_GEAR"]);
