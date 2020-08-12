@@ -940,9 +940,40 @@ furnace.remove(<minecraft:coal:1>);
 
 // Excavator
 recipes.removeByRecipeName("thermalfoundation:tool.excavator_iron");
-makeShaped("excavator_iron", <enderio:block_farm_station>,
-	[" S",
+makeShaped("excavator_iron", <thermalfoundation:tool.excavator_iron>,
+	[" S ",
 	 "SIS",
 	 " I "],
 	{ S : <ore:plateSteel>,
 	  I : <minecraft:stick>});
+
+// Exchanging Gadget
+recipes.removeByRecipeName("buildinggadgets:exchangertool");
+makeShaped("exchangertool", <buildinggadgets:exchangertool>.withTag({blockstate: {Name: "minecraft:air"}}),
+	["IRI",
+	 "DLD",
+	 "ILI"],
+	{ D : <ore:gemDiamond>,
+	  L : <ore:gemLapis>,
+	  F : <gregtech:meta_item_1:32674>, // IV Field Emitter
+	  R : <ore:dustRedstone>,
+	  I : <ore:ingotIron>});
+
+// LittleTiles Hammer
+recipes.removeByRecipeName("littletiles:hammer");
+makeShaped("lt_hammer", <littletiles:hammer>,
+	["III",
+	 " R ",
+	 " R "],
+	{ R : <ore:rodDraconium>,
+	  I : <ore:ingotIron>});
+
+// ME Controller
+recipes.removeByRecipeName("appliedenergistics2:network/blocks/controller");
+makeShaped("me_controller", <appliedenergistics2:controller>,
+	["PFP",
+	 "FAF",
+	 "PFP"],
+	{ F : <ore:crystalPureFluix>,
+	  P : <ore:plateDarkSteel>,
+	  A : <appliedenergistics2:energy_acceptor>});

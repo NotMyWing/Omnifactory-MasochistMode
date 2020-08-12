@@ -12700,7 +12700,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you\u0027ve tried to insert or remove a lot of items quickly, you might notice your ME network\n§eflickers offline§r briefly. This is because digitizing and re-materializing items requires energy!\n\nYour network doesn\u0027t naturally store very much energy and the §6Energy Acceptor§r only intermittently refills the network\u0027s power. To keep things stable, you will need to add some energy storage in your network using §6Energy Cells§r.\n\nJust place one anywhere in your network and it will fill up with AE energy received from the Energy Acceptor. Now, you should have enough energy in your network to prevent these power losses. Feel free to add more energy cells, or upgrade to §6Dense Energy Cells§r, if you continue to experience problems.\n\nIf you\u0027ve opted to enable channels in your AE2 configs, you will innately have some energy storage from the §3ME Controller§r, but we assume you know what you\u0027re doing at that point. §eAE2 Channels mechanics are outside the scope of the quest book, and this is the only time it will be mentioned.",
+          "desc:8": "If you\u0027ve tried to insert or remove a lot of items quickly, you might notice your ME network\n§eflickers offline§r briefly. This is because digitizing and re-materializing items requires energy!\n\nYour network doesn\u0027t naturally store very much energy and the §6Energy Acceptor§r only intermittently refills the network\u0027s power. To keep things stable, you will need to add some energy storage in your network using §6Energy Cells§r.\n\nJust place one anywhere in your network and it will fill up with AE energy received from the Energy Acceptor. Now, you should have enough energy in your network to prevent these power losses. Feel free to add more energy cells, or upgrade to §6Dense Energy Cells§r, if you continue to experience problems.\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -15516,7 +15516,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Fluix is initially made via in-world crafting, by dropping §6Redstone Dust§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You\u0027ll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.\n\nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. \n\nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.",
+          "desc:8": "Fluix is initially made via in-world crafting, by dropping §6Redstone Dust§r, §6Nether Quartz§r, and a §6Charged Certus Quartz Crystal§r in the same block of §9Water§r. You\u0027ll see some sparks then the items will merge into a §6Fluix Crystal§r. Be sure to turn off any nearby item magnets/collectors or they might interrupt this crafting process.\n\nThe §3Energy Acceptor§r converts RF power into AE power that Applied Energistics uses, in a 2 RF to 1 AE ratio. This power will be transmitted through adjacent full-block ME Network devices, as well as along all connected §6ME Cables§r, §6ME Conduits§r, and §6Quartz Fiber§r. \nQuartz Fiber are §emicroparts§r you can put between an ME Cable and any ME Network block or another ME Cable. This will allow transmission of AE power but not data, which is useful for having data-isolated ME Networks all sharing the same power source.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40565,7 +40565,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No Description",
+          "desc:8": "An \"upgraded\" version of §3Energy Acceptor§r, §3ME Controller§r is the heart of your ME network. Each block offers §a32 channels per side§r.\n\nME Controllers can form a multiblock with the max size of 7x7x7, but keep in mind that a controller block can only have two adjacent blocks in at most one axis.\n\nThere can only be one ME Controller in a single network. Having two connected to the same network will turn both off and red.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40589,7 +40589,25 @@
       },
       "questID:3": 793,
       "rewards:9": {},
-      "tasks:9": {}
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "appliedenergistics2:controller"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     },
     "794:10": {
       "preRequisites:11": [
