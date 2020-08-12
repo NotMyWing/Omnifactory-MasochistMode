@@ -1149,6 +1149,135 @@ val lunarminingstation = Builder.start(loc, id)
                         .build())
     .buildAndRegister() as Multiblock;
 
+id += 1;
+loc = "reinforced_coke_oven";
+
+val reinforced_coke_oven = Builder.start(loc, id)
+    .withPattern(
+        FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
+            .aisle(
+                    "CCC",
+                    "BSB",
+                    "CCC")
+            .aisle(
+                    "CCC",
+                    "B B",
+                    "CCC")
+            .aisle(
+                    "CCC",
+                    "BBB",
+                    "CCC")
+            .where(' ', IBlockMatcher.ANY)
+            .where('S', IBlockMatcher.controller(loc))
+            .where('B', <metastate:gregtech:metal_casing:1>)
+            .whereOr('C', <metastate:gregtech:metal_casing:0>,
+                            IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_FLUIDS,
+                                                                MultiblockAbility.IMPORT_ITEMS,
+                                                                MultiblockAbility.EXPORT_ITEMS))
+            .setAmountAtLeast('O', 1)
+            .where('O', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_ITEMS))
+            .setAmountAtLeast('I', 1)
+            .where('I', IBlockMatcher.abilityPartPredicate(MultiblockAbility.IMPORT_ITEMS))
+            .setAmountAtLeast('F', 1)
+            .where('F', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_FLUIDS))
+            .setAmountAtLeast('#', 14)
+            .where('#', <metastate:gregtech:metal_casing:0>)
+            .build())
+    .addDesign(
+        FactoryMultiblockShapeInfo.start()
+            .aisle(
+                    "ICC",
+                    "BBB",
+                    "CCC")
+            .aisle(
+                    "CCC",
+                    "S B",
+                    "CCC")
+            .aisle(
+                    "OCC",
+                    "BBB",
+                    "FCC")
+            .where(' ', IBlockInfo.EMPTY)
+            .where('S', IBlockInfo.controller(loc))
+            .where('C', <metastate:gregtech:metal_casing:0>)
+            .where('B', <metastate:gregtech:metal_casing:1>)
+            .where('O', MetaTileEntities.ITEM_EXPORT_BUS[0], IFacing.west())
+            .where('F', MetaTileEntities.FLUID_EXPORT_HATCH[0], IFacing.west())
+            .where('I', MetaTileEntities.ITEM_IMPORT_BUS[0], IFacing.west())
+            .build())
+    .withRecipeMap(
+        FactoryRecipeMap.start(loc)
+                        .maxFluidOutputs(1)
+                        .minInputs(1)
+                        .maxInputs(1)
+                        .minOutputs(1)
+                        .maxOutputs(1)
+                        .build())
+    .buildAndRegister() as Multiblock;
+
+reinforced_coke_oven.noEnergy = true;    
+
+id += 1;
+loc = "reinforced_coke_oven_2";
+
+val reinforced_coke_oven_2 = Builder.start(loc, id)
+    .withPattern(
+        FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
+            .aisle(
+                    "CCC",
+                    "CSC",
+                    "CCC")
+            .aisle(
+                    "BBB",
+                    "B B",
+                    "BBB")
+            .aisle(
+                    "CCC",
+                    "CCC",
+                    "CCC")
+            .where(' ', IBlockMatcher.ANY)
+            .where('S', IBlockMatcher.controller(loc))
+            .where('B', <metastate:gregtech:metal_casing:1>)
+            .whereOr('C', <metastate:gregtech:metal_casing:0>,
+                            IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_FLUIDS,
+                                                                MultiblockAbility.IMPORT_ITEMS,
+                                                                MultiblockAbility.EXPORT_ITEMS))
+            .setAmountAtLeast('O', 1)
+            .where('O', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_ITEMS))
+            .setAmountAtLeast('I', 1)
+            .where('I', IBlockMatcher.abilityPartPredicate(MultiblockAbility.IMPORT_ITEMS))
+            .setAmountAtLeast('F', 1)
+            .where('F', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_FLUIDS))
+            .setAmountAtLeast('#', 14)
+            .where('#', <metastate:gregtech:metal_casing:0>)
+            .build())
+    .addDesign(
+        FactoryMultiblockShapeInfo.start()
+            .aisle(
+                    "IBC",
+                    "CBC",
+                    "CBC")
+            .aisle(
+                    "CBC",
+                    "S C",
+                    "CBC")
+            .aisle(
+                    "OBC",
+                    "CBC",
+                    "FBC")
+            .where(' ', IBlockInfo.EMPTY)
+            .where('S', IBlockInfo.controller(loc))
+            .where('C', <metastate:gregtech:metal_casing:0>)
+            .where('B', <metastate:gregtech:metal_casing:1>)
+            .where('O', MetaTileEntities.ITEM_EXPORT_BUS[0], IFacing.west())
+            .where('F', MetaTileEntities.FLUID_EXPORT_HATCH[0], IFacing.west())
+            .where('I', MetaTileEntities.ITEM_IMPORT_BUS[0], IFacing.west())
+            .build())
+    .withRecipeMap(reinforced_coke_oven.recipeMap)
+    .buildAndRegister() as Multiblock;
+
+reinforced_coke_oven_2.noEnergy = true;    
+
 ///////////////////////////////////////////////
 ////////////   Crafting Recipes   /////////////
 ///////////////////////////////////////////////
@@ -1327,6 +1456,24 @@ makeShaped("lunar_mining_station", <gregtech:machine:3007>,
     { C : <ore:circuitExtreme>, //T4
       L : <gregtech:machine_casing:6>, //LuV Machine Casing
       S : <extrautils2:screen>}); 
+
+// Reinforced Coke Oven
+
+makeShaped("reinforced_coke_oven", <gregtech:machine:3008>,
+    ["CPC",
+     "PFP",
+     "CPC"],
+    { C : <gregtech:metal_casing:1>, // Primitive Brick
+      P : <gregtech:fluid_pipe:2095>, // Medium Bronze Pipe
+      F : <ore:frameGtBronze>}); 
+
+recipes.addShapeless(<gregtech:machine:3008>, [
+	<gregtech:machine:3009>
+]);
+
+recipes.addShapeless(<gregtech:machine:3009>, [
+	<gregtech:machine:3008>
+]);
 
 ///////////////////////////////////////////////
 ////////////  Multiblock Recipes  /////////////
@@ -1516,6 +1663,93 @@ medium_microverse.recipeMap
     .outputs(<gregtech:ore_iridium_0> * 64,
              <gregtech:ore_iridium_0> * 64,
              <gregtech:ore_osmium_0> * 16)
+    .buildAndRegister();
+
+// Tier 4.5: Lumium Microminer - Mission 1: Overworld Mobs
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(800)
+    .EUt(3750)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <ore:treeSapling>)
+    .outputs(<minecraft:skull> * 32,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:skull:2> * 32,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:skull:4> * 32,
+             <minecraft:gunpowder> * 64,
+             <minecraft:slime> * 64,
+             <armorplus:material:1> * 64)
+    .buildAndRegister();
+
+// Tier 4.5: Lumium Microminer - Mission 2: Hellish Mobs
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(1000)
+    .EUt(3750)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <minecraft:netherrack>)
+    .outputs(<minecraft:blaze_rod> * 64,
+             <minecraft:blaze_rod> * 64,
+             <minecraft:ghast_tear> * 64,
+             <minecraft:skull:1>* 32,
+             <armorplus:material:2> * 64,
+             <armorplus:material:2> * 64,
+             <minecraft:magma_cream> * 64)
+    .buildAndRegister();
+
+// Tier 4.5: Lumium Microminer - Mission 3: End Mobs
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(1200)
+    .EUt(3750)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <minecraft:end_stone>)
+    .outputs(<enderio:block_enderman_skull> * 32,
+             <gregtech:compressed_9:14> * 16,
+             <minecraft:shulker_shell> * 64,
+             <minecraft:shulker_shell> * 64,
+             <darkutils:shulker_pearl> * 64)
+    .buildAndRegister();
+
+// Tier 4.5: Lumium Microminer - Mission 4: Dragon Fight
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(2000)
+    .EUt(10000)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <minecraft:ender_eye> * 16)
+    .outputs(<contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <minecraft:skull:5>)
+    .buildAndRegister();
+
+// Tier 4.5: Lumium Microminer - Mission 4: Wither Fight
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(2000)
+    .EUt(10000)
+    .inputs(<contenttweaker:tierfourandhalfship>,
+            <contenttweaker:quantumflux> * 8,
+            <thermalfoundation:material:1026> * 64,
+            <armorplus:material:2> * 64)
+    .outputs(<contenttweaker:witherrealmdata> * 64,
+             <contenttweaker:witherrealmdata> * 64,
+             <extendedcrafting:storage:2> * 64)
     .buildAndRegister();
 
 // Tier 5: Iridium Microminer - Mission 1: Marble Ores
@@ -1815,4 +2049,30 @@ lunarminingstation.recipeMap
     .inputs(<contenttweaker:helium3rover>)
     .fluidOutputs(<liquid:helium3> * 48000)
 	.property("consumeChance", 10)
+    .buildAndRegister();
+
+// Reinforced Coke Oven
+
+reinforced_coke_oven.recipeMap
+    .recipeBuilder()
+    .duration(200)
+    .inputs(<ore:logWood>)
+    .outputs(<ore:charcoal>.firstItem)
+    .fluidOutputs(<liquid:creosote> * 800)
+    .buildAndRegister();
+
+reinforced_coke_oven.recipeMap
+    .recipeBuilder()
+    .duration(400)
+    .inputs(<ore:charcoal>)
+    .outputs(<ore:gemCoke>.firstItem)
+    .fluidOutputs(<liquid:creosote> * 800)
+    .buildAndRegister();
+
+reinforced_coke_oven.recipeMap
+    .recipeBuilder()
+    .duration(200)
+    .inputs(<ore:coal>)
+    .outputs(<ore:gemCoke>.firstItem)
+    .fluidOutputs(<liquid:creosote> * 800)
     .buildAndRegister();
