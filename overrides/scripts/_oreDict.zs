@@ -1881,15 +1881,6 @@ recipes.addShapeless(<draconicevolution:draconium_dust>, [<gregtech:meta_item_1:
 furnace.remove(<gregtech:meta_item_1:9710>);
 recipes.addShapeless(<draconicevolution:draconium_ingot>, [<gregtech:meta_item_1:10710>]);
 
-//Awakened Draconium
-fluidextractor.recipeBuilder().inputs(<draconicevolution:nugget:1>).fluidOutputs([<liquid:awakeneddraconium> * 16]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<draconicevolution:draconic_ingot>).fluidOutputs([<liquid:awakeneddraconium> * 144]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<draconicevolution:draconic_block>).fluidOutputs([<liquid:awakeneddraconium> * 1296]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 144).notConsumable(<gregtech:meta_item_1:32309>).outputs([<draconicevolution:nugget:1> * 9]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 144).notConsumable(<gregtech:meta_item_1:32306>).outputs([<draconicevolution:draconic_ingot>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<draconicevolution:draconic_block>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 144).notConsumable(<gregtech:meta_item_1:32301>).outputs([<moreplates:awakened_draconium_plate>]).duration(200).EUt(30).buildAndRegister();
-
 //Neutronium
 <ore:ingotNeutronium>.add(<avaritia:resource:4>);
 <ore:nuggetNeutronium>.add(<avaritia:resource:3>);
