@@ -1857,16 +1857,9 @@ alloy.findRecipe(32, [<gregtech:meta_item_1:10709> * 9,<gregtech:meta_item_1:323
 fluidextractor.findRecipe(32, [<gregtech:meta_item_1:10709>], [null]).remove();
 fluidextractor.findRecipe(32, [<gregtech:meta_item_1:9709>], [null]).remove();
 fluidextractor.findRecipe(32, [<gregtech:compressed_17:8>], [null]).remove();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:33>).fluidOutputs([<liquid:omnium> * 16]).duration(25).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:32>).fluidOutputs([<liquid:omnium> * 144]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:4>).fluidOutputs([<liquid:omnium> * 1296]).duration(1800).EUt(30).buildAndRegister();
 solidifier.findRecipe(8, [<gregtech:meta_item_1:32309>], [<liquid:omnium> * 144]).remove();
 solidifier.findRecipe(8, [<gregtech:meta_item_1:32306>], [<liquid:omnium> * 144]).remove();
 solidifier.findRecipe(8, [<gregtech:meta_item_1:32308>], [<liquid:omnium> * 1296]).remove();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 144).notConsumable(<gregtech:meta_item_1:32309>).outputs([<extendedcrafting:material:33> * 9]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 144).notConsumable(<gregtech:meta_item_1:32306>).outputs([<extendedcrafting:material:32>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<extendedcrafting:storage:4>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 16).notConsumable(<gregtech:meta_item_1:32307>).outputs([<extendedcrafting:singularity_ultimate>]).duration(200).EUt(30).buildAndRegister();
 furnace.remove(<gregtech:meta_item_1:10709>);
 furnace.addRecipe(<extendedcrafting:material:32>, <gregtech:meta_item_1:2709>, 0.0);
 recipes.addShapeless(<extendedcrafting:material:32>, [<gregtech:meta_item_1:10709>]);
