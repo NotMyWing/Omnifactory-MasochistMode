@@ -216,6 +216,12 @@ freezer.recipeBuilder()
     .outputs(<nuclearcraft:block_ice>)
     .duration(600).EUt(1200).buildAndRegister();
 
+freezer.recipeBuilder()
+    .inputs([<ore:wireGtSingleDraconium>, <ore:plateNetherStar>])
+    .fluidInputs([<liquid:nitrogen> * 1000])
+    .outputs(<ore:wireGtSingleSuperconductor>)
+    .duration(100).EUt(6000).buildAndRegister();
+
 solidifier.recipeBuilder()
     .fluidInputs([<liquid:thorium> * 144])
     .notConsumable(<gregtech:meta_item_1:32307>)
