@@ -219,7 +219,7 @@ freezer.recipeBuilder()
 freezer.recipeBuilder()
     .inputs([<ore:wireGtSingleDraconium>, <ore:plateNetherStar>])
     .fluidInputs([<liquid:nitrogen> * 1000])
-    .outputs(<ore:wireGtSingleSuperconductor>)
+    .outputs(<ore:wireGtSingleSuperconductor>.firstItem)
     .duration(100).EUt(6000).buildAndRegister();
 
 solidifier.recipeBuilder()
