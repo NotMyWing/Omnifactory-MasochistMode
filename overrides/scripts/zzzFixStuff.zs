@@ -115,13 +115,6 @@ recipes.addShapeless(<gregtech:meta_item_1:2156>, [<thermalfoundation:material:7
     === Avaritia Tweaks ===
  */
 
-// Add solidifier block recipe
-solidifier.recipeBuilder()
-    .fluidInputs([<liquid:moltencrystalmatrix> * 1296])
-    .notConsumable(<gregtech:meta_item_1:32308>)
-    .outputs([<avaritia:block_resource:2>])
-    .duration(200).EUt(30).buildAndRegister();
-
 // decomposition for crystal matrix block
 recipes.addShapeless("of_crystal_matrix_decomp", <avaritia:resource:1> * 9, [<avaritia:block_resource:2>]);
 

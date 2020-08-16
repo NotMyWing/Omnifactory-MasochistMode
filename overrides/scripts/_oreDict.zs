@@ -1922,13 +1922,6 @@ solidifier.recipeBuilder()
     .notConsumable(<gregtech:meta_item_1:32301>)
     .duration(200).EUt(30).buildAndRegister();
 
-// Crystal Matrix Plate
-solidifier.recipeBuilder()
-    .outputs([<ore:plateCrystalMatrix>.firstItem])
-    .fluidInputs(<liquid:moltencrystalmatrix> * 144)
-    .notConsumable(<gregtech:meta_item_1:32301>)
-    .duration(200).EUt(30).buildAndRegister();
-
 // Lumium Plate
 solidifier.recipeBuilder()
 	.outputs([<ore:plateLumium>.firstItem])

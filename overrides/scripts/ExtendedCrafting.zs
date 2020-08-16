@@ -289,17 +289,6 @@ solidifier.recipeBuilder()
     .duration(500).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
-    .inputs([<avaritia:resource:1>])
-    .fluidOutputs([<liquid:moltencrystalmatrix> * 144])
-    .duration(180).EUt(16).buildAndRegister();
-
-solidifier.recipeBuilder()
-    .fluidInputs([<liquid:moltencrystalmatrix> * 144])
-    .notConsumable(<gregtech:meta_item_1:32306>)
-    .outputs(<avaritia:resource:1>)
-    .duration(500).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
     .inputs([<minecraft:dye:4>])
     .fluidOutputs([<liquid:lapis> * 144])
     .duration(180).EUt(16).buildAndRegister();
