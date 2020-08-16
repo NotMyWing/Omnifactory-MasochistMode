@@ -3240,7 +3240,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §6Cadmium Batteries§r are the best ones, as they have the most storage capacity. §6Lithium§r is second best, and §6Sodium§r is third.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare. Consider \"buying\" some Lithium with §dOmnicoins§r.\n\n§6Cadmium§r is so tough to get at this point, its not even worth considering. However, §6Sodium§r is plentiful. You can get Sodium by smelting §6Salt§r, with other options becoming available later.",
+          "desc:8": "§6Batteries§r are §bGregTech §rpower storage for §aEU§r energy.\n\nAlthough there are several types of rechargeable batteries you can make, §6Cadmium Batteries§r are the best ones, as they have the most storage capacity. §6Lithium§r is second best, and §6Sodium§r is third.\n\n§6Lithium§r is possible to find inside of §6Tungsten§r veins, however, they are fairly rare.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -14650,7 +14650,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Arsenic§r can be obtained through the electrolysis of §6Cobaltite§r or §6Tennantite§r.\n\nThe latter comes renewably from a Tier Five Micro Miner mission, and Cobaltite can be found or purchased with §dOmnicoins§r.",
+          "desc:8": "§6Arsenic§r can be obtained through the electrolysis of §6Cobaltite§r or §6Tennantite§r.\n\nThe latter comes renewably from a Tier Five Micro Miner mission.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19348,7 +19348,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §aHang Glider§f is a great way to cross long distances, if you\u0027re so inclined.\n\nIf you don\u0027t want to go exploring for Cows, just buy a pair of \"§6Spawn Cow§f\" eggs and breed them. Seriously, spend your §dcoins§f!",
+          "desc:8": "The §aHang Glider§f is a great way to cross long distances, if you\u0027re so inclined.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25875,7 +25875,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Great for automatically converting between Nuggets, Ingots, and Blocks of metals, or simply storing massive amounts of things. Also works with §dOmnicoins§r.\n\nThe appearance can be customized by crafting the drawer into §aFramed Compacting Drawer§r and putting it into a §aFraming Table§r.",
+          "desc:8": "Great for automatically converting between Nuggets, Ingots, and Blocks of metals, or simply storing massive amounts of things.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28599,7 +28599,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A good way to find a specific ore you\u0027re missing is the §6Scanner Module: Block§r for your Scanner. §6Sneak-right click§f a piece of ore you want to search for with a Module in your hand, then §6sneak-right click§f the §aScanner§f, put the module inside, and go wander around scanning. \n\nThe range is significantly longer than it is when using the modules which detect all ores, and you even have room for a second §6Range Module§f if you\u0027ve got an §6Ender Pearl§f to craft one.\n\nYou can combo this with ores bought from §dOmnicoins§f to act as a \"sample\" to easily find a full vein with the Block Module.",
+          "desc:8": "A good way to find a specific ore you\u0027re missing is the §6Scanner Module: Block§r for your Scanner. §6Sneak-right click§f a piece of ore you want to search for with a Module in your hand, then §6sneak-right click§f the §aScanner§f, put the module inside, and go wander around scanning. \n\nThe range is significantly longer than it is when using the modules which detect all ores, and you even have room for a second §6Range Module§f if you\u0027ve got an §6Ender Pearl§f to craft one.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -34789,7 +34789,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Take a peek at The §eEnd Game quest book tab§f. This might seem a bit premature to suggest, but it has a reason.\n\nThese are quests for a full stack of many of the materials in the game. Those are the materials you\u0027ll need to synthesize §5Omnium§r, the basic end game resource. Its the pack\u0027s way of letting you know what materials you should be prepared to mass produce as you approach the end.\n\nOf course, its not necessary or even advisable to try to finish up all of these quests the moment they become available. Some will be incredibly easy (like §6Iron§f and §6Copper§f), others will be brutally grindy at early tech levels. The rewards are all the same: §d25 Omnicoins each§f, so use your best judgement on which ones to complete and which to ignore for later.",
+          "desc:8": "Take a peek at The §eEnd Game quest book tab§f. This might seem a bit premature to suggest, but it has a reason.\n\nThese are quests for a full stack of many of the materials in the game. Those are the materials you\u0027ll need to synthesize §5Omnium§r, the basic end game resource. Its the pack\u0027s way of letting you know what materials you should be prepared to mass produce as you approach the end.\n\nOf course, its not necessary or even advisable to try to finish up all of these quests the moment they become available. Some will be incredibly easy (like §6Iron§f and §6Copper§f), others will be brutally grindy at early tech levels.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -37544,7 +37544,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Hard Carbon Alloy§r is an alloy made from §6Graphite§r and §6Diamonds§r.\n\nGraphite is an important ingredient for §bNuclearCraft§r and is found principally as a byproduct of processing §6Diamond Ore§r. §6Graphite Ore§r spawns alongside Diamond Ore, but unlike Diamond Ore it is not renewable through automation (though it can be purchased using §dOmnicoins§r).",
+          "desc:8": "§6Hard Carbon Alloy§r is an alloy made from §6Graphite§r and §6Diamonds§r.\n\nGraphite is an important ingredient for §bNuclearCraft§r and is found principally as a byproduct of processing §6Diamond Ore§r. §6Graphite Ore§r spawns alongside Diamond Ore, but unlike Diamond Ore it is not renewable through automation.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40892,20 +40892,7 @@
         }
       },
       "questID:3": 798,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin25"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -41009,20 +40996,7 @@
         }
       },
       "questID:3": 800,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 0,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 2,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
@@ -41079,20 +41053,7 @@
         }
       },
       "questID:3": 801,
-      "rewards:9": {
-        "0:10": {
-          "index:3": 1,
-          "rewardID:8": "bq_standard:item",
-          "rewards:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "contenttweaker:omnicoin5"
-            }
-          }
-        }
-      },
+      "rewards:9": {},
       "tasks:9": {
         "0:10": {
           "autoConsume:1": 0,
