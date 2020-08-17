@@ -325,13 +325,6 @@ makeFluid("moltencreativeportabletank", "a02cba",   false,  1,          "EPIC", 
 makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
 
-makeFluid("moltenempoweredrestonia",    "ff0000",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredpalis",       "0026ff",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredenori",       "e6e6e6",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempowereddiamatine",   "00fbff",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredemeradic",    "00ff00",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredvoid",        "e0e0e0",   false,  10000,      "COMMON",   15);
-
 var universalnavigator = VanillaFactory.createItem("universalnavigator");
 universalnavigator.maxStackSize = 64;
 universalnavigator.rarity = "epic";
