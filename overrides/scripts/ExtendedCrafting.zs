@@ -253,6 +253,12 @@ solidifier.recipeBuilder()
     .duration(500).EUt(16).buildAndRegister();
 
 solidifier.recipeBuilder()
+    .fluidInputs([<liquid:plutonium241> * 144])
+    .notConsumable(<gregtech:meta_item_1:32307>)
+    .outputs(<contenttweaker:stabilizedplutonium> * 2)
+    .duration(500).EUt(16).buildAndRegister();
+
+solidifier.recipeBuilder()
     .fluidInputs([<liquid:plutonium2> * 144])
     .notConsumable(<gregtech:meta_item_1:32307>)
     .outputs(<contenttweaker:stabilizedplutonium> * 2)
@@ -357,16 +363,6 @@ fluid_extractor.recipeBuilder()
     .duration(20).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
-    .inputs([<nuclearcraft:uranium:4>])
-    .fluidOutputs([<liquid:uranium235> * 144])
-    .duration(180).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<nuclearcraft:uranium:6>])
-    .fluidOutputs([<liquid:uranium235> * 16])
-    .duration(20).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:uranium:8>])
     .fluidOutputs([<liquid:uranium> * 144])
     .duration(180).EUt(16).buildAndRegister();
@@ -396,11 +392,6 @@ fluid_extractor.recipeBuilder()
     .fluidOutputs([<liquid:neptunium> * 16])
     .duration(20).EUt(16).buildAndRegister();
 
-fluid_extractor.findRecipe(32, [<gregtech:meta_item_1:10052>], []).remove();
-fluid_extractor.findRecipe(32, [<gregtech:meta_item_1:10053>], []).remove();
-fluid_extractor.findRecipe(32, [<gregtech:meta_item_1:9052>], []).remove();
-fluid_extractor.findRecipe(32, [<gregtech:meta_item_1:9053>], []).remove();
-
 fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:plutonium>])
     .fluidOutputs([<liquid:plutonium2> * 144])
@@ -422,16 +413,6 @@ fluid_extractor.recipeBuilder()
     .duration(20).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
-    .inputs([<nuclearcraft:plutonium:8>])
-    .fluidOutputs([<liquid:plutonium2> * 144])
-    .duration(180).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<nuclearcraft:plutonium:10>])
-    .fluidOutputs([<liquid:plutonium2> * 16])
-    .duration(20).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
     .inputs([<nuclearcraft:plutonium:12>])
     .fluidOutputs([<liquid:plutonium2> * 144])
     .duration(180).EUt(16).buildAndRegister();
@@ -443,22 +424,12 @@ fluid_extractor.recipeBuilder()
 
 fluid_extractor.recipeBuilder()
     .inputs([<gregtech:meta_item_1:10052>])
-    .fluidOutputs([<liquid:plutonium2> * 144])
-    .duration(180).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<gregtech:meta_item_1:10053>])
-    .fluidOutputs([<liquid:plutonium2> * 144])
+    .fluidOutputs([<liquid:plutonium> * 144])
     .duration(180).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<gregtech:meta_item_1:9052>])
-    .fluidOutputs([<liquid:plutonium2> * 16])
-    .duration(20).EUt(16).buildAndRegister();
-
-fluid_extractor.recipeBuilder()
-    .inputs([<gregtech:meta_item_1:9053>])
-    .fluidOutputs([<liquid:plutonium2> * 16])
+    .fluidOutputs([<liquid:plutonium> * 16])
     .duration(20).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
