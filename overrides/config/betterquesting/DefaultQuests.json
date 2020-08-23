@@ -20041,7 +20041,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You win.\n\nCongratulations.\n\nI hope you enjoyed playing §5Omnifactory: Self-Torture Edition§f.\n\nI really do.",
+          "desc:8": "You win.\n\n\nCongratulations.\n\n\nI hope you enjoyed playing §5Omnifactory: Self-Torture Edition§f.\n\n\nI really do.\n\n\nHow did you even...",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20093,7 +20093,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oNow this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.§r\n\nThe §d§dCreative Portable Tank§r is a major milestone. Great work!\n\nThis tank is your first proper creative item, which can be set to a fluid and then provides an infinite quantity of that fluid. The first fluid you should do this with is §dMolten Creative Portable Tank§r, so you can make as many more tanks as you want! You get exactly enough from a §6Heart of a Universe§r to do this.\n\nFrom there you can set up tanks with infinite quantities of every fluid you can think of.  §3Fluid Solidifiers§r can be used to make infinite of every element you can melt and solidify.\n\nThis is quite a game-changer as far as infrastructure goes. You\u0027ll find that many machines won\u0027t need to be used for their original purpose anymore. Some major base redesign is in order. Have you considered moving to space?\n\nAll that said, §ethe pack will still be challenging to complete§r. Infinite resources and power is nice, but it\u0027s not everything. There are plenty of materials you can\u0027t melt, and creative items will push your factory automation engineering skills to their limits.\n\nOnward to the final challenge: the §dCreative Vending Upgrade§r!\n\n",
+          "desc:8": "I know you\u0027re expecting this quest to talk about the §d§dCreative Portable Tank§r\n\n\nBut here\u0027s the catch...\n\n\nThis pack doesn\u0027t offer one.\n\n\nYour final goal will be the §dCreative Vending Upgrade§r, however you will need to continue getting resources from micro miners like you\u0027ve been doing during this entire run. \n\nConsider saving this §6Heart of a Universe§r for the §dCreative Energy Source§r, which is going to be your next goal.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -20125,26 +20125,8 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "thermalexpansion:tank",
-              "tag:10": {
-                "Creative:1": 1,
-                "Level:1": 4,
-                "RSControl:1": 0
-              }
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -39659,7 +39641,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Hello.\n\nThis modpack is the embodiment of shitpost and satire, driven purely by the idea of making fun of self-imposed challenges. If what you wanted instead is to play §aOmnifactory§r, this is §cnot Omnifactory§r but a rather mod to make it considerably harder. §cHowever, this is NOT the promised Omega mode which is still being worked on§r.\n\nIt incorporates several different views on how things should be, what is not balanced and what should be removed from the modpack entirely.\n\nIt\u0027s perfectly playable on its own, but previous experience with Omnifactory is highly recommended so you don\u0027t get lost.\n\nHave fun!\n- NotMyWing",
+          "desc:8": "Hello.\n\nThis modpack is the embodiment of shitpost and satire, driven purely by the idea of making fun of self-imposed challenges. If what you wanted instead is to play §aOmnifactory§r, then §cthis is not Omnifactory§r but rather a \"mod\" to make it considerably harder. §cHowever, this is NOT the promised Omega mode which is still being worked on§r.\n\nIt incorporates several different views on how things should be, what is not balanced and what should be removed from the modpack entirely.\n\nIt\u0027s perfectly playable on its own, but previous experience with Omnifactory is highly recommended so you don\u0027t get lost.\n\nHave fun!\n- NotMyWing",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
