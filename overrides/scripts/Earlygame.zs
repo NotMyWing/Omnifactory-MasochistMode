@@ -973,3 +973,7 @@ makeShaped("me_controller", <appliedenergistics2:controller>,
 	{ F : <ore:crystalPureFluix>,
 	  P : <ore:plateDarkSteel>,
 	  A : <appliedenergistics2:energy_acceptor>});
+
+// i heard you like duping chlorine
+electrolyzer.findRecipe(60, [<ore:dustPolyvinylChloride>.firstItem * 6], [null]).remove();
+electrolyzer.findRecipe(60, [<ore:dustPolytetrafluoroethylene>.firstItem * 6], [null]).remove();
