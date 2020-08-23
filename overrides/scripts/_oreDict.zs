@@ -1852,40 +1852,8 @@ recipes.addShapeless(<ore:dustWood>.firstItem, [<thermalfoundation:material:800>
 
 
 
-//Molten Nether Star
+//Nether Star Block
 recipes.addShapeless(<minecraft:nether_star> * 9, [<extendedcrafting:storage:2>]);
-solidifier.recipeBuilder().fluidInputs(<liquid:moltennetherstar> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<extendedcrafting:storage:2>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<minecraft:nether_star>).fluidOutputs([<liquid:moltennetherstar> * 144]).duration(40).EUt(30).buildAndRegister();
-
-//Molten Empowered Restonia
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredrestonia> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<actuallyadditions:block_crystal_empowered>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredrestonia> * 576).notConsumable(<gregtech:meta_item_1:32303>).outputs([<moreplates:empowered_restonia_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered>).fluidOutputs([<liquid:moltenempoweredrestonia> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Palis
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredpalis> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<actuallyadditions:block_crystal_empowered:1>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredpalis> * 576).notConsumable(<gregtech:meta_item_1:32303>).outputs([<moreplates:empowered_palis_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:1>).fluidOutputs([<liquid:moltenempoweredpalis> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Enori
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredenori> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<actuallyadditions:block_crystal_empowered:5>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredenori> * 576).notConsumable(<gregtech:meta_item_1:32303>).outputs([<moreplates:empowered_enori_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:5>).fluidOutputs([<liquid:moltenempoweredenori> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Diamatine
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempowereddiamatine> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<actuallyadditions:block_crystal_empowered:2>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempowereddiamatine> * 576).notConsumable(<gregtech:meta_item_1:32303>).outputs([<moreplates:empowered_diamatine_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:2>).fluidOutputs([<liquid:moltenempowereddiamatine> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Emeradic
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredemeradic> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<actuallyadditions:block_crystal_empowered:4>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredemeradic> * 576).notConsumable(<gregtech:meta_item_1:32303>).outputs([<moreplates:empowered_emeradic_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:4>).fluidOutputs([<liquid:moltenempoweredemeradic> * 1296]).duration(200).EUt(30).buildAndRegister();
-
-//Molten Empowered Void
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredvoid> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<actuallyadditions:block_crystal_empowered:3>]).duration(400).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:moltenempoweredvoid> * 576).notConsumable(<gregtech:meta_item_1:32303>).outputs([<moreplates:empowered_void_gear>]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<actuallyadditions:block_crystal_empowered:3>).fluidOutputs([<liquid:moltenempoweredvoid> * 1296]).duration(200).EUt(30).buildAndRegister();
 
 //Molten Dark Soularium
 solidifier.recipeBuilder().fluidInputs(<liquid:moltendarksoularium> * 144).notConsumable(<gregtech:meta_item_1:32306>).outputs([<simplyjetpacks:metaitemmods:3>]).duration(40).EUt(30).buildAndRegister();
@@ -1916,16 +1884,9 @@ alloy.findRecipe(32, [<gregtech:meta_item_1:10709> * 9,<gregtech:meta_item_1:323
 fluidextractor.findRecipe(32, [<gregtech:meta_item_1:10709>], [null]).remove();
 fluidextractor.findRecipe(32, [<gregtech:meta_item_1:9709>], [null]).remove();
 fluidextractor.findRecipe(32, [<gregtech:compressed_17:8>], [null]).remove();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:33>).fluidOutputs([<liquid:omnium> * 16]).duration(25).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:material:32>).fluidOutputs([<liquid:omnium> * 144]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<extendedcrafting:storage:4>).fluidOutputs([<liquid:omnium> * 1296]).duration(1800).EUt(30).buildAndRegister();
 solidifier.findRecipe(8, [<gregtech:meta_item_1:32309>], [<liquid:omnium> * 144]).remove();
 solidifier.findRecipe(8, [<gregtech:meta_item_1:32306>], [<liquid:omnium> * 144]).remove();
 solidifier.findRecipe(8, [<gregtech:meta_item_1:32308>], [<liquid:omnium> * 1296]).remove();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 144).notConsumable(<gregtech:meta_item_1:32309>).outputs([<extendedcrafting:material:33> * 9]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 144).notConsumable(<gregtech:meta_item_1:32306>).outputs([<extendedcrafting:material:32>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<extendedcrafting:storage:4>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:omnium> * 16).notConsumable(<gregtech:meta_item_1:32307>).outputs([<extendedcrafting:singularity_ultimate>]).duration(200).EUt(30).buildAndRegister();
 furnace.remove(<gregtech:meta_item_1:10709>);
 furnace.addRecipe(<extendedcrafting:material:32>, <gregtech:meta_item_1:2709>, 0.0);
 recipes.addShapeless(<extendedcrafting:material:32>, [<gregtech:meta_item_1:10709>]);
@@ -1948,15 +1909,6 @@ recipes.addShapeless(<draconicevolution:draconium_dust>, [<gregtech:meta_item_1:
 recipes.addShapeless(<draconicevolution:draconium_dust>, [<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>,<gregtech:meta_item_1:710>]);
 furnace.remove(<gregtech:meta_item_1:9710>);
 recipes.addShapeless(<draconicevolution:draconium_ingot>, [<gregtech:meta_item_1:10710>]);
-
-//Awakened Draconium
-fluidextractor.recipeBuilder().inputs(<draconicevolution:nugget:1>).fluidOutputs([<liquid:awakeneddraconium> * 16]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<draconicevolution:draconic_ingot>).fluidOutputs([<liquid:awakeneddraconium> * 144]).duration(200).EUt(30).buildAndRegister();
-fluidextractor.recipeBuilder().inputs(<draconicevolution:draconic_block>).fluidOutputs([<liquid:awakeneddraconium> * 1296]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 144).notConsumable(<gregtech:meta_item_1:32309>).outputs([<draconicevolution:nugget:1> * 9]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 144).notConsumable(<gregtech:meta_item_1:32306>).outputs([<draconicevolution:draconic_ingot>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 1296).notConsumable(<gregtech:meta_item_1:32308>).outputs([<draconicevolution:draconic_block>]).duration(200).EUt(30).buildAndRegister();
-solidifier.recipeBuilder().fluidInputs(<liquid:awakeneddraconium> * 144).notConsumable(<gregtech:meta_item_1:32301>).outputs([<moreplates:awakened_draconium_plate>]).duration(200).EUt(30).buildAndRegister();
 
 //Neutronium
 <ore:ingotNeutronium>.add(<avaritia:resource:4>);
@@ -1985,13 +1937,6 @@ solidifier.recipeBuilder()
 solidifier.recipeBuilder()
     .outputs([<ore:plateEnderium>.firstItem])
     .fluidInputs(<liquid:enderium> * 144)
-    .notConsumable(<gregtech:meta_item_1:32301>)
-    .duration(200).EUt(30).buildAndRegister();
-
-// Crystal Matrix Plate
-solidifier.recipeBuilder()
-    .outputs([<ore:plateCrystalMatrix>.firstItem])
-    .fluidInputs(<liquid:moltencrystalmatrix> * 144)
     .notConsumable(<gregtech:meta_item_1:32301>)
     .duration(200).EUt(30).buildAndRegister();
 

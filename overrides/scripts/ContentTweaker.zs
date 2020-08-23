@@ -24,10 +24,6 @@ var helium3rover = VanillaFactory.createItem("helium3rover");
 helium3rover.maxStackSize = 64;
 helium3rover.register();
 
-var creativeportabletankmold = VanillaFactory.createItem("creativeportabletankmold");
-creativeportabletankmold.maxStackSize = 64;
-creativeportabletankmold.register();
-
 var woodenwidget = VanillaFactory.createItem("woodenwidget");
 woodenwidget.maxStackSize = 64;
 woodenwidget.register();
@@ -322,18 +318,8 @@ makeFluid("plutonium2",                 "f73663",   false,  1024,       "COMMON"
 makeFluid("uranium233",                 "187a30",   false,  1024,       "COMMON",   0);
 
 makeFluid("moltencreativeportabletank", "a02cba",   false,  1,          "EPIC",     0);
-makeFluid("awakeneddraconium",          "ff890c",   false,  2000,       "COMMON",   0);
-makeFluid("moltencrystalmatrix",        "4cffed",   false,  2000,       "COMMON",   0);
 makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
-makeFluid("moltennetherstar",           "f2f2d8",   false,  100,        "COMMON",   15);
-
-makeFluid("moltenempoweredrestonia",    "ff0000",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredpalis",       "0026ff",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredenori",       "e6e6e6",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempowereddiamatine",   "00fbff",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredemeradic",    "00ff00",   false,  10000,      "COMMON",   15);
-makeFluid("moltenempoweredvoid",        "e0e0e0",   false,  10000,      "COMMON",   15);
 
 var universalnavigator = VanillaFactory.createItem("universalnavigator");
 universalnavigator.maxStackSize = 64;
