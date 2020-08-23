@@ -24,10 +24,6 @@ var helium3rover = VanillaFactory.createItem("helium3rover");
 helium3rover.maxStackSize = 64;
 helium3rover.register();
 
-var creativeportabletankmold = VanillaFactory.createItem("creativeportabletankmold");
-creativeportabletankmold.maxStackSize = 64;
-creativeportabletankmold.register();
-
 var woodenwidget = VanillaFactory.createItem("woodenwidget");
 woodenwidget.maxStackSize = 64;
 woodenwidget.register();

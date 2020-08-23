@@ -1138,7 +1138,6 @@ mods.extendedcrafting.TableCrafting.addShapeless(<contenttweaker:ultimate_gem>,
 
 ////////////////////////// Creative Vending Upgrade ///////////////////////
 val creativecell = <thermalexpansion:cell>.withTag({Recv: 250000, RSControl: 0 as byte, Facing: 3 as byte, Energy: 500000000, Creative: 1 as byte, SideCache: [2, 2, 2, 2, 2, 2] as byte[] as byte[], Level: 4 as byte, Send: 250000});
-val creativetank = <thermalexpansion:tank>.withTag({RSControl: 0 as byte, Creative: 1 as byte, Level: 4 as byte});
 val creativebuffer = <appliedenergistics2:creative_energy_cell>;
 
 makeExtremeRecipe9(<storagedrawers:upgrade_creative:1> * 2,
@@ -1165,16 +1164,10 @@ makeExtremeRecipe9(<storagedrawers:upgrade_creative:1> * 2,
       L : <avaritia:infinity_pants>,
       M : <avaritia:infinity_boots>,
       S : <solarflux:solar_panel_infinity>,
-      T : creativetank,
-      U : creativebuffer,
+      T : <avaritia:resource:6>,
+      U : <avaritia:resource:6>,
       W : <thermalcultivation:watering_can:32000>,
       X : <thermalexpansion:capacitor:32000> });
-
-solidifier.recipeBuilder()
-    .fluidInputs([<liquid:moltencreativeportabletank> * 144])
-    .notConsumable(<contenttweaker:creativeportabletankmold>)
-    .outputs(creativetank)
-    .duration(500).EUt(100000).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
     .inputs([<contenttweaker:heartofauniverse>])
@@ -1302,24 +1295,6 @@ makeExtremeRecipe9(<extrautils2:creativeenergy>,
       G : <extrautils2:opinium:7>,
       H : <extrautils2:opinium:8>,
       I : <extrautils2:rainbowgenerator> });
-
-makeExtremeRecipe9(<extrautils2:drum:4>,
-    ["BBBCDCBBB",
-     "BBCDEDCBB",
-     "BCDEFEDCB",
-     "CDEFFFEDC",
-     "DEFFAFFED",
-     "CDEFFFEDC",
-     "BCDEFEDCB",
-     "BBCDEDCBB",
-     "BBBCDCBBB"],
-    { A : <avaritia:resource:5>,
-      B : <gregtech:machine:2196>,
-      C : <gregtech:machine:2197>,
-      D : <gregtech:machine:2198>,
-      E : <gregtech:machine:2199>,
-      F : <gregtech:machine:2200> });
-
 
 makeExtremeRecipe9(creativebuffer,
     ["IBCDEDCBI",

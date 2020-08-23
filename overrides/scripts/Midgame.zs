@@ -326,11 +326,6 @@ recipes.addShaped(<contenttweaker:smallgearextrudershape>, [
 	[<gregtech:meta_item_1:32300>,null,null],
 	[null,<gregtech:meta_tool:13>,null], 
 	[null,null,null]]);
-	
-recipes.addShaped(<contenttweaker:creativeportabletankmold>, [
-	[null,null,<gregtech:meta_tool:6>],
-	[null,<gregtech:meta_item_1:32300>,null], 
-	[null,null,null]]);
 
 extruder.recipeBuilder().inputs([<gregtech:meta_item_1:10184>]).notConsumable(<contenttweaker:smallgearextrudershape>).outputs([<gregtech:meta_item_2:17184>]).duration(130).EUt(64).buildAndRegister();	//steel	small gear
 extruder.recipeBuilder().inputs([<gregtech:meta_item_1:10001>]).notConsumable(<contenttweaker:smallgearextrudershape>).outputs([<gregtech:meta_item_2:17001>]).duration(130).EUt(64).buildAndRegister();	//aluminium	small gear
