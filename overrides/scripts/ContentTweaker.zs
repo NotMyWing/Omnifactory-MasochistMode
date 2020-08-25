@@ -626,6 +626,10 @@ var denseoilshale = VanillaFactory.createBlock("denseoilshale", <blockmaterial:r
 denseoilshale.blockSoundType = <soundtype:stone>;
 denseoilshale.register();
 
+var densemagma = VanillaFactory.createBlock("densemagma", <blockmaterial:rock>);
+densemagma.blockSoundType = <soundtype:stone>;
+densemagma.register();
+
 var densehydrogen = VanillaFactory.createItem("densehydrogen");
 densehydrogen.maxStackSize = 64;
 densehydrogen.rarity = "uncommon";

@@ -1620,6 +1620,18 @@ small_microverse.recipeMap
              <gregtech:ore_sapphire_0:6> * 64)
     .buildAndRegister();
 
+// Tier 3: Tungsten Carbide Microminer - Mission 3: Magma
+small_microverse.recipeMap
+    .recipeBuilder()
+    .duration(700)
+    .EUt(2000)
+    .inputs(<contenttweaker:tierthreeship>,
+            <contenttweaker:quantumflux> * 4,
+            <gregtech:machine:1020>)
+    .fluidInputs(<liquid:rocket_fuel> * 20000)
+    .outputs(<contenttweaker:densemagma> * 64, <contenttweaker:densemagma> * 64)
+    .buildAndRegister();
+
 // Tier 4: Signalum Microminer - Mission 1: Dense Oil / Infinity Blocks
 medium_microverse.recipeMap
     .recipeBuilder()
