@@ -215,20 +215,6 @@ async function createStabilizedMMSprites(cb) {
 			shipName + extension + ".mcmeta"
 		), JSON.stringify(mcmeta, null, "  "))
 
-		const model = {
-			"parent": "item/generated",
-			"textures": {
-				"layer0": `contenttweaker:items/${shipName}`
-			}
-		}
-
-		fs.writeFileSync(path.join(
-			CLIENT_DEST_FOLDER,
-			global.OVERRIDES_FOLDER,
-			"resources/contenttweaker/models/item/",
-			shipName + ".json"
-		), JSON.stringify(model, null, "  "))
-
 		const colorfulMatter = new Jimp(matter);
 		colorfulMatter.scan(0, 0, colorfulMatter.getWidth(), colorfulMatter.getHeight(), (x, y, idx) => {
 			for (let color = 0; color < 3; color++) {
@@ -244,20 +230,6 @@ async function createStabilizedMMSprites(cb) {
 			"resources/contenttweaker/textures/items/",
 			shipName + "_matter" + extension
 		));
-
-		const colorfulMatterModel = {
-			"parent": "item/generated",
-			"textures": {
-				"layer0": `contenttweaker:items/${shipName}_matter`
-			}
-		}
-
-		fs.writeFileSync(path.join(
-			CLIENT_DEST_FOLDER,
-			global.OVERRIDES_FOLDER,
-			"resources/contenttweaker/models/item/",
-			shipName + "_matter" + ".json"
-		), JSON.stringify(colorfulMatterModel, null, "  "))
 	}
 
 	await fs.promises.writeFile(path.join(
