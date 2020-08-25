@@ -6,6 +6,7 @@ const Promise = require("bluebird");
 const Jimp = require("jimp");
 const glob = require("glob");
 const mustache = require("mustache");
+const colorThief = require("color-thief-jimp");
 
 const { retryRequest } = require("../../util/downloaders.js");
 
@@ -132,7 +133,6 @@ async function createStabilizedMMSprites(cb) {
 		+ "\nimport mods.contenttweaker.Item;"
 		+ "\n\n";
 
-	let imageId = 0;
 	for (const imagePath of files) {
 		const extension = path.extname(imagePath);
 		const shipName = path.basename(imagePath)
@@ -145,9 +145,13 @@ async function createStabilizedMMSprites(cb) {
 
 		const ship = await Jimp.read(imagePath);
 		const infinity = new Jimp(overlay);
+		const dominantColor = colorThief.getColor(new Jimp(ship)
+			.gaussian(1)
+			.contrast(0.33)
+			.brightness(0.33)
+		);
 
 		infinity.resize(ship.getWidth(), ship.getHeight());
-
 		infinity.scan(0, 0, infinity.getWidth(), infinity.getHeight(), (x, y, idx) => {
 			infinity.bitmap.data[idx + 3] = ship.bitmap.data[idx + 3]
 		});
@@ -225,9 +229,14 @@ async function createStabilizedMMSprites(cb) {
 			shipName + ".json"
 		), JSON.stringify(model, null, "  "))
 
-		const colorfulMatter = new Jimp(matter).color([{
-			apply: "hue", params: [(imageId / files.length) * 360]
-		}])
+		const colorfulMatter = new Jimp(matter);
+		colorfulMatter.scan(0, 0, colorfulMatter.getWidth(), colorfulMatter.getHeight(), (x, y, idx) => {
+			for (let color = 0; color < 3; color++) {
+				colorfulMatter.bitmap.data[idx + color] = Math.floor(
+					(colorfulMatter.bitmap.data[idx + color] / 255) * dominantColor[color]
+				);
+			}
+		});
 
 		await colorfulMatter.write(path.join(
 			CLIENT_DEST_FOLDER,
@@ -249,8 +258,6 @@ async function createStabilizedMMSprites(cb) {
 			"resources/contenttweaker/models/item/",
 			shipName + "_matter" + ".json"
 		), JSON.stringify(colorfulMatterModel, null, "  "))
-
-		imageId++;
 	}
 
 	await fs.promises.writeFile(path.join(
