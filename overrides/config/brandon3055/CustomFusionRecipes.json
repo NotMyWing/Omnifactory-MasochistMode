@@ -372,7 +372,7 @@
 		"tier": 3,
 		"ingredients": [
 			"contenttweaker:heartofauniverse"
-		}
+		]
 	},{
 		"mode": "ADD",
 		"result": "contenttweaker:tiersixship_stabilized",
