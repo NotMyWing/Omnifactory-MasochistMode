@@ -3,3 +3,4 @@
 import mods.gregtech.render.ITextureArea;
 
 val rocket_arrow as ITextureArea = ITextureArea.fullImage("multiblocktweaker:textures/gui/progress_bar/rocket.png");
+val actualization as ITextureArea = ITextureArea.fullImage("multiblocktweaker:textures/gui/progress_bar/actualization.png");

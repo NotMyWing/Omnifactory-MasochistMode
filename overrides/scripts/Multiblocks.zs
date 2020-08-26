@@ -23,6 +23,7 @@ import mods.gregtech.render.ICubeRenderer;
 import mods.gregtech.render.Textures;
 
 import scripts.CommonVars.makeShaped as makeShaped;
+import scripts.CommonVars.makeExtremeRecipe5 as makeExtremeRecipe5;
 
 ///////////////////////////////////////////////
 /////////////     Multiblocks     /////////////
@@ -242,10 +243,10 @@ val small_microverse = Builder.start(loc, id)
     .withRecipeMap(
         FactoryRecipeMap.start(loc)
                         .maxFluidInputs(1)
-                        .minInputs(2)
+                        .minInputs(1)
                         .maxInputs(3)
                         .minOutputs(1)
-                        .maxOutputs(15)
+                        .maxOutputs(16)
                         .setProgressBar(ROCKET_ARROW, MoveType.HORIZONTAL)
                         .build())
     .buildAndRegister() as Multiblock;
@@ -347,7 +348,7 @@ val medium_microverse = Builder.start(loc, id)
             .build())
     .withRecipeMap(
         FactoryRecipeMap.start(loc)
-                        .minInputs(2)
+                        .minInputs(1)
                         .maxInputs(4)
                         .minOutputs(1)
                         .maxOutputs(15)
@@ -552,7 +553,7 @@ val large_microverse = Builder.start(loc, id)
             .build())
     .withRecipeMap(
         FactoryRecipeMap.start(loc)
-                        .minInputs(2)
+                        .minInputs(1)
                         .maxInputs(8)
                         .minOutputs(1)
                         .maxOutputs(16)
@@ -1276,7 +1277,76 @@ val reinforced_coke_oven_2 = Builder.start(loc, id)
     .withRecipeMap(reinforced_coke_oven.recipeMap)
     .buildAndRegister() as Multiblock;
 
-reinforced_coke_oven_2.noEnergy = true;    
+reinforced_coke_oven_2.noEnergy = true;
+
+id += 1;
+loc = "actualization_matrix";
+
+val ACTUALIZATION as ITextureArea = ITextureArea.fullImage("multiblocktweaker:textures/gui/progress_bar/actualization.png");
+
+val actualization_matrix = Builder.start(loc, id)
+    .withPattern(
+        FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
+            .aisle(
+                    "CCC",
+                    "GGG",
+                    "CSC")
+            .aisle(
+                    "CCC",
+                    "GFG",
+                    "CCC")
+            .aisle(
+                    "CCC",
+                    "GGG",
+                    "CCC")
+            .where('S', IBlockMatcher.controller(loc))
+            .where('G', <metastate:extrautils2:ineffableglass:0>)
+            .where('F', <metastate:gregtech:wire_coil:8>)
+            .whereOr('C', <metastate:gregtech:multiblock_casing:4>,
+                            IBlockMatcher.abilityPartPredicate(MultiblockAbility.INPUT_ENERGY,
+                                                                MultiblockAbility.IMPORT_ITEMS,
+                                                                MultiblockAbility.EXPORT_ITEMS))
+
+            .setAmountAtMost('@', 2)
+            .where('@', IBlockMatcher.abilityPartPredicate(MultiblockAbility.INPUT_ENERGY))
+            .setAmountAtLeast('I', 1)
+            .where('I', IBlockMatcher.abilityPartPredicate(MultiblockAbility.IMPORT_ITEMS))
+            .setAmountAtLeast('O', 1)
+            .where('O', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_ITEMS))
+            .setAmountAtLeast('#', 14)
+            .where('#', <gregtech:multiblock_casing:4>)
+            .build())
+    .addDesign(
+        FactoryMultiblockShapeInfo.start()
+            .aisle(
+                    "ICC",
+                    "GGG",
+                    "CCC")
+            .aisle(
+                    "SC@",
+                    "GFG",
+                    "CCC")
+            .aisle(
+                    "OCC",
+                    "GGG",
+                    "CCC")
+            .where('S', IBlockInfo.controller(loc))
+            .where('G', <metastate:extrautils2:ineffableglass:0>)
+            .where('F', <metastate:gregtech:wire_coil:8>)
+            .where('C', <metastate:gregtech:multiblock_casing:4>)
+            .where('@', MetaTileEntities.ENERGY_INPUT_HATCH[5], IFacing.east())
+            .where('O', MetaTileEntities.ITEM_EXPORT_BUS[5], IFacing.west())
+            .where('I', MetaTileEntities.ITEM_IMPORT_BUS[1], IFacing.west())
+            .build())
+    .withRecipeMap(
+        FactoryRecipeMap.start(loc)
+                        .minInputs(2)
+                        .maxInputs(2)
+                        .minOutputs(1)
+                        .maxOutputs(15)
+                        .setProgressBar(ACTUALIZATION, MoveType.HORIZONTAL)
+                        .build())
+    .buildAndRegister() as Multiblock;
 
 ///////////////////////////////////////////////
 ////////////   Crafting Recipes   /////////////
@@ -1475,6 +1545,21 @@ recipes.addShapeless(<gregtech:machine:3009>, [
 	<gregtech:machine:3008>
 ]);
 
+// Actualization Matrix
+
+makeExtremeRecipe5(<gregtech:machine:3010>,
+    ["PPPPP",
+     "PEFSP",
+     "PWGWP",
+     "PSFEP",
+     "PPPPP"],
+    { G : <metaitem:field.generator.uv>,
+      W : <ore:circuitInfinite>,
+      P : <ore:plateAmericium>,
+      E : <metaitem:emitter.uv>,
+      S : <metaitem:sensor.uv>,
+      F : <gregtech:wire_coil:8> });
+
 ///////////////////////////////////////////////
 ////////////  Multiblock Recipes  /////////////
 ///////////////////////////////////////////////
@@ -1490,6 +1575,25 @@ small_microverse.recipeMap
             <contenttweaker:quantumflux>,
             <minecraft:chest>)
     .fluidInputs(<liquid:rocket_fuel> * 8000)
+    .outputs(<densemetals:dense_iron_ore> * 64,
+             <gregtech:ore_cassiterite_0:3> * 64,
+             <gregtech:ore_redstone_0> * 64,
+             <gregtech:ore_nickel_0> * 64,
+             <gregtech:ore_rutile_0> * 64,
+             <gregtech:ore_rutile_0> * 64,
+             <gregtech:ore_uraninite_0:3> * 64,
+             <gregtech:ore_galena_0> * 64,
+             <gregtech:ore_galena_0> * 64,
+             <advancedrocketry:moonturf> * 64,
+             <libvulpes:ore0> * 64,
+             <gregtech:ore_salt_0> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>, <gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<densemetals:dense_iron_ore> * 64,
              <gregtech:ore_cassiterite_0:3> * 64,
              <gregtech:ore_redstone_0> * 64,
@@ -1522,6 +1626,21 @@ small_microverse.recipeMap
              <gregtech:ore_quartzite_0> * 64)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+    .outputs(<gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:ore_apatite_0> * 64,
+             <gregtech:ore_phosphor_0> * 64,
+             <gregtech:ore_quartzite_0> * 64)
+    .buildAndRegister();
+
 // Tier 1 Steel Microminer: Mission 3 - Stellar Creation Data
 small_microverse.recipeMap
     .recipeBuilder()
@@ -1533,6 +1652,26 @@ small_microverse.recipeMap
     .outputs(<contenttweaker:stellarcreationdata>)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<contenttweaker:stellarcreationdata>)
+    .buildAndRegister();
+
+// Tier 1 Steel Microminer: Mission 4 - Stabilized Matter
+small_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tieroneship_stabilized>)
+    .outputs(
+        <contenttweaker:tieroneship_stabilized>,
+        <contenttweaker:tieroneship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 2 Titanium Microminer - Mission 1: Radium and Early/Midgame Ores
 small_microverse.recipeMap
     .recipeBuilder()
@@ -1541,6 +1680,29 @@ small_microverse.recipeMap
     .inputs(<contenttweaker:tiertwoship>,
             <contenttweaker:quantumflux> * 2)
     .fluidInputs(<liquid:rocket_fuel> * 12000)
+    .outputs(<gregtech:ore_bauxite_0:1> * 64,
+             <gregtech:ore_bauxite_0:1> * 64,
+             <gregtech:ore_niobium_0:1> * 64,
+             <gregtech:ore_copper_0:1> * 64,
+             <gregtech:ore_copper_0:1> * 64,
+             <gregtech:ore_copper_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_scheelite_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <gregtech:ore_tungstate_0:1> * 64,
+             <contenttweaker:radiumsalt> * 64,
+             <contenttweaker:radiumsalt> * 64,
+             <gregtech:ore_cassiterite_0:1> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_niobium_0:1> * 64,
@@ -1569,6 +1731,26 @@ small_microverse.recipeMap
     .outputs(<contenttweaker:stellarcreationdata> * 4)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<contenttweaker:stellarcreationdata> * 4)
+    .buildAndRegister();
+
+// Tier 2 Titanium Microminer: Mission 3 - Stabilized Matter
+small_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiertwoship_stabilized>)
+    .outputs(
+        <contenttweaker:tiertwoship_stabilized>,
+        <contenttweaker:tiertwoship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 3: Tungsten Carbide Microminer - Mission 1: Exquisite Gems
 small_microverse.recipeMap
     .recipeBuilder()
@@ -1578,6 +1760,29 @@ small_microverse.recipeMap
             <contenttweaker:quantumflux> * 4,
             <contenttweaker:gemsensor>)
     .fluidInputs(<liquid:rocket_fuel> * 20000)
+    .outputs(<gregtech:meta_item_2:25113> * 16,
+             <gregtech:meta_item_2:25113> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25111> * 16,
+             <gregtech:meta_item_2:25154> * 16,
+             <gregtech:meta_item_2:25154> * 16,
+             <gregtech:meta_item_2:25154> * 16,
+             <gregtech:meta_item_2:25154> * 16,
+             <gregtech:ore_almandine_0:6> * 64,
+             <gregtech:ore_gold_0:6> * 64,
+             <gregtech:ore_silver_0:6> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<gregtech:meta_item_2:25113> * 16,
              <gregtech:meta_item_2:25113> * 16,
              <gregtech:meta_item_2:25111> * 16,
@@ -1620,6 +1825,28 @@ small_microverse.recipeMap
              <gregtech:ore_sapphire_0:6> * 64)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<gregtech:ore_scheelite_0:6> * 64,
+             <gregtech:ore_scheelite_0:6> * 64,
+             <gregtech:ore_scheelite_0:6> * 64,
+             <gregtech:ore_tungstate_0:6> * 64,
+             <gregtech:ore_tungstate_0:6> * 64,
+             <gregtech:ore_tungstate_0:6> * 64,
+             <gregtech:ore_rutile_0:6> * 64,
+             <gregtech:ore_vanadium_magnetite_0:6> * 64,
+             <gregtech:ore_tetrahedrite_0:6> * 64,
+             <gregtech:ore_cassiterite_0:6> * 64,
+             <gregtech:ore_tin_0:6> * 64,
+             <gregtech:ore_redstone_0:6> * 64,
+             <gregtech:ore_certus_quartz_0:6> * 64,
+             <gregtech:ore_sapphire_0:6> * 64)
+    .buildAndRegister();
+
 // Tier 3: Tungsten Carbide Microminer - Mission 3: Magma
 small_microverse.recipeMap
     .recipeBuilder()
@@ -1632,6 +1859,26 @@ small_microverse.recipeMap
     .outputs(<contenttweaker:densemagma> * 64, <contenttweaker:densemagma> * 64)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
+    .outputs(<contenttweaker:densemagma> * 64, <contenttweaker:densemagma> * 64)
+    .buildAndRegister();
+
+// Tier 3 Tungsten Microminer: Mission 4 - Stabilized Matter
+small_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierthreeship_stabilized>)
+    .outputs(
+        <contenttweaker:tierthreeship_stabilized>,
+        <contenttweaker:tierthreeship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 4: Signalum Microminer - Mission 1: Dense Oil / Infinity Blocks
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1641,6 +1888,17 @@ medium_microverse.recipeMap
             <contenttweaker:quantumflux> * 8,
             <advancedrocketry:satelliteprimaryfunction:1>,
             <thermalfoundation:material:1027> * 64)
+    .outputs(<contenttweaker:denseoilshale> * 64,
+             <contenttweaker:denseoilshale> * 64,
+             <enderio:block_infinity> * 16)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<contenttweaker:denseoilshale> * 64,
              <contenttweaker:denseoilshale> * 64,
              <enderio:block_infinity> * 16)
@@ -1663,6 +1921,20 @@ medium_microverse.recipeMap
              <densemetals:dense_redstone_ore> * 16)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<densemetals:dense_lapis_ore> * 64,
+             <densemetals:dense_diamond_ore> * 64,
+             <densemetals:dense_diamond_ore> * 64,
+             <densemetals:dense_coal_ore>  * 64,
+             <densemetals:dense_emerald_ore> * 32,
+             <densemetals:dense_redstone_ore> * 16)
+    .buildAndRegister();
+
 // Tier 4: Signalum Microminer - Mission 3: Osmium / Iridium
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1677,6 +1949,28 @@ medium_microverse.recipeMap
              <gregtech:ore_osmium_0> * 16)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
+    .outputs(<gregtech:ore_iridium_0> * 64,
+             <gregtech:ore_iridium_0> * 64,
+             <gregtech:ore_osmium_0> * 16)
+    .buildAndRegister();
+
+// Tier 4 Signalum Microminer: Mission 4 - Stabilized Matter
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourship_stabilized>)
+    .outputs(
+        <contenttweaker:tierfourship_stabilized>,
+        <contenttweaker:tierfourship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 4.5: Lumium Microminer - Mission 1: Overworld Mobs
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1686,6 +1980,26 @@ medium_microverse.recipeMap
             <contenttweaker:quantumflux> * 8,
             <thermalfoundation:material:1026> * 64,
             <ore:treeSapling>)
+    .outputs(<minecraft:skull> * 32,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:bone> * 64,
+             <minecraft:skull:2> * 32,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:rotten_flesh> * 64,
+             <minecraft:skull:4> * 32,
+             <minecraft:gunpowder> * 64,
+             <minecraft:slime> * 64,
+             <armorplus:material:1> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<minecraft:skull> * 32,
              <minecraft:bone> * 64,
              <minecraft:bone> * 64,
@@ -1718,6 +2032,21 @@ medium_microverse.recipeMap
              <minecraft:magma_cream> * 64)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<minecraft:blaze_rod> * 64,
+             <minecraft:blaze_rod> * 64,
+             <minecraft:ghast_tear> * 64,
+             <minecraft:skull:1>* 32,
+             <armorplus:material:2> * 64,
+             <armorplus:material:2> * 64,
+             <minecraft:magma_cream> * 64)
+    .buildAndRegister();
+
 // Tier 4.5: Lumium Microminer - Mission 3: End Mobs
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1727,6 +2056,19 @@ medium_microverse.recipeMap
             <contenttweaker:quantumflux> * 8,
             <thermalfoundation:material:1026> * 64,
             <minecraft:end_stone>)
+    .outputs(<enderio:block_enderman_skull> * 32,
+             <gregtech:compressed_9:14> * 16,
+             <minecraft:shulker_shell> * 64,
+             <minecraft:shulker_shell> * 64,
+             <darkutils:shulker_pearl> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
     .outputs(<enderio:block_enderman_skull> * 32,
              <gregtech:compressed_9:14> * 16,
              <minecraft:shulker_shell> * 64,
@@ -1750,7 +2092,20 @@ medium_microverse.recipeMap
              <minecraft:skull:5>)
     .buildAndRegister();
 
-// Tier 4.5: Lumium Microminer - Mission 4: Wither Fight
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 4}))
+    .outputs(<contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <contenttweaker:dragonlairdata> * 64,
+             <minecraft:skull:5>)
+    .buildAndRegister();
+
+// Tier 4.5: Lumium Microminer - Mission 5: Wither Fight
 medium_microverse.recipeMap
     .recipeBuilder()
     .duration(2000)
@@ -1764,6 +2119,28 @@ medium_microverse.recipeMap
              <extendedcrafting:storage:2> * 64)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 5}))
+    .outputs(<contenttweaker:witherrealmdata> * 64,
+             <contenttweaker:witherrealmdata> * 64,
+             <extendedcrafting:storage:2> * 64)
+    .buildAndRegister();
+
+// Tier 4.5 Lumium Microminer: Mission 6 - Stabilized Matter
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfourandhalfship_stabilized>)
+    .outputs(
+        <contenttweaker:tierfourandhalfship_stabilized>,
+        <contenttweaker:tierfourandhalfship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 5: Iridium Microminer - Mission 1: Marble Ores
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1772,6 +2149,26 @@ medium_microverse.recipeMap
     .inputs(<contenttweaker:tierfiveship>,
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizeduranium> * 32)
+    .outputs(<gregtech:ore_uranium_0:12> * 64,
+             <gregtech:ore_palladium_0:12> * 64,
+             <gregtech:ore_tennantite_0:12> * 64,
+             <gregtech:ore_bastnasite_0:12> * 64,
+             <gregtech:ore_sphalerite_0:12> * 64,
+             <gregtech:ore_monazite_0:12> * 64,
+             <gregtech:compressed_9:14> * 64,
+             <gregtech:ore_osmium_0:12> * 16,
+             <gregtech:meta_item_1:2009> * 64,
+             <gregtech:ore_molybdenite_0:12> * 64,
+             <gregtech:ore_beryllium_0:12> * 64,
+             <gregtech:ore_beryllium_0:12> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<gregtech:ore_uranium_0:12> * 64,
              <gregtech:ore_palladium_0:12> * 64,
              <gregtech:ore_tennantite_0:12> * 64,
@@ -1800,6 +2197,29 @@ medium_microverse.recipeMap
              <gregtech:meta_item_1:2307> * 64)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<gregtech:meta_item_1:2307> * 64,
+             <gregtech:meta_item_1:2307> * 64,
+             <gregtech:meta_item_1:2307> * 64,
+             <gregtech:meta_item_1:2307> * 64)
+    .buildAndRegister();
+
+// Tier 5 Iridium Microminer: Mission 4 - Stabilized Matter
+small_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tierfiveship_stabilized>)
+    .outputs(
+        <contenttweaker:tierfiveship_stabilized>,
+        <contenttweaker:tierfiveship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 6: Enderium Microminer - Mission 1: Uranium / Osmium / Iridium
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1809,6 +2229,23 @@ medium_microverse.recipeMap
             <contenttweaker:quantumflux> * 16,
             <contenttweaker:stabilizeduranium> * 32,
             <contenttweaker:witherrealmdata> * 16)
+    .outputs(<gregtech:ore_uranium_0:10> * 64,
+             <gregtech:ore_uranium_0:10> * 64,
+             <gregtech:ore_uranium_0:10> * 64,
+             <gregtech:ore_uranium_0:10> * 64,
+             <gregtech:ore_osmium_0:10> * 64,
+             <gregtech:ore_osmium_0:10> * 64,
+             <gregtech:ore_osmium_0:10> * 64,
+             <gregtech:ore_iridium_0:10> * 64,
+             <gregtech:ore_iridium_0:10> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<gregtech:ore_uranium_0:10> * 64,
              <gregtech:ore_uranium_0:10> * 64,
              <gregtech:ore_uranium_0:10> * 64,
@@ -1832,6 +2269,15 @@ medium_microverse.recipeMap
     .outputs(<contenttweaker:stabilizedeinsteinium> * 32)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<contenttweaker:stabilizedeinsteinium> * 32)
+    .buildAndRegister();
+
 // Tier 6: Enderium Microminer - Mission 3: Dragon Eggs
 medium_microverse.recipeMap
     .recipeBuilder()
@@ -1844,6 +2290,26 @@ medium_microverse.recipeMap
     .outputs(<minecraft:dragon_egg> * 32)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
+    .outputs(<minecraft:dragon_egg> * 32)
+    .buildAndRegister();
+
+// Tier 6 Enderium Microminer: Mission 4 - Stabilized Matter
+medium_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersixship_stabilized>)
+    .outputs(
+        <contenttweaker:tiersixship_stabilized>,
+        <contenttweaker:tiersixship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 7: Draconium Microminer - Mission 1: Dragon Hearts
 large_microverse.recipeMap
     .recipeBuilder()
@@ -1854,6 +2320,30 @@ large_microverse.recipeMap
             <ore:crystalDilithium>.firstItem * 64,
             <ore:crystalDilithium>.firstItem * 64,
             <contenttweaker:dragonlairdata> * 32)
+    .outputs(<draconicevolution:dragon_heart> * 32,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_egg> * 64,
+             <minecraft:dragon_breath> * 64,
+             <armorplus:material:3> * 64,
+             <armorplus:material:3> * 64,
+             <armorplus:material:3> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <minecraft:gold_block> * 64,
+             <gregtech:compressed_3> * 64,
+             <gregtech:compressed_3> * 64,
+             <minecraft:diamond_block> * 64,
+             <minecraft:diamond_block> * 64,
+             <gregtech:compressed_2:6> * 64)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<draconicevolution:dragon_heart> * 32,
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64,
@@ -1888,6 +2378,26 @@ large_microverse.recipeMap
     .outputs(<contenttweaker:lairofthechaosguardiandata>)
     .buildAndRegister();
 
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<contenttweaker:lairofthechaosguardiandata>)
+    .buildAndRegister();
+
+// Tier 7 Draconium Microminer: Mission 3 - Stabilized Matter
+large_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiersevenship_stabilized>)
+    .outputs(
+        <contenttweaker:tiersevenship_stabilized>,
+        <contenttweaker:tiersevenship_stabilized_matter>
+    ).buildAndRegister();
+
 // Tier 8: Crystal Microminer - Mission 1: Gravi Star et al.
 large_microverse.recipeMap
     .recipeBuilder()
@@ -1901,6 +2411,19 @@ large_microverse.recipeMap
             <ore:crystalDilithium>.firstItem * 64,
             <contenttweaker:witherrealmdata> * 64,
             <contenttweaker:witherrealmdata> * 64)
+    .outputs(<gregtech:meta_item_1:32725> * 32,
+             <gregtech:meta_item_1:32724> * 64,
+             <avaritia:resource:2> * 64,
+             <avaritia:resource:2> * 64,
+             <gregtech:meta_item_1:32726>)
+    .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<gregtech:meta_item_1:32725> * 32,
              <gregtech:meta_item_1:32724> * 64,
              <avaritia:resource:2> * 64,
@@ -1926,6 +2449,27 @@ large_microverse.recipeMap
              <minecraft:dragon_egg> * 64,
              <minecraft:dragon_egg> * 64)
     .buildAndRegister();
+
+actualization_matrix.recipeMap
+    .recipeBuilder()
+    .duration(780)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .outputs(<draconicevolution:chaos_shard>,
+             <minecraft:dragon_egg> * 64)
+    .buildAndRegister();
+
+// Tier 8 Crystal Microminer: Mission 3 - Stabilized Matter
+large_microverse.recipeMap
+    .recipeBuilder()
+    .duration(9408)
+    .EUt(30720)
+    .inputs(<contenttweaker:tiereightship_stabilized>)
+    .outputs(
+        <contenttweaker:tiereightship_stabilized>,
+        <contenttweaker:tiereightship_stabilized_matter>
+    ).buildAndRegister();
 
 // Tier 9: QFE Microminer - Mission 1: Neutronium Stuff
 large_microverse.recipeMap
