@@ -127,11 +127,14 @@ async function createStabilizedMMSprites(cb) {
 	const overlay = await Jimp.read("assets/ste_infinity_overlay.png");
 	const matter = await Jimp.read("assets/ste_matter.png");
 	const ctPattern = (await fs.promises.readFile("assets/ste_mmPattern.zs")).toString();
+	const tooltipPattern = (await fs.promises.readFile("assets/ste_mmTooltip.zs")).toString();
 
-	let zs = "#loader contenttweaker"
+	let contentTweakerZS = "#loader contenttweaker"
 		+ "\nimport mods.contenttweaker.VanillaFactory;"
 		+ "\nimport mods.contenttweaker.Item;"
 		+ "\n\n";
+
+	let tooltipZS = "";
 
 	for (const imagePath of files) {
 		const extension = path.extname(imagePath);
@@ -139,7 +142,11 @@ async function createStabilizedMMSprites(cb) {
 			.replace(new RegExp(`\\.${extension.substr(1)}$`), "")
 			+ "_stabilized";
 
-		zs += mustache.render(ctPattern, {
+		contentTweakerZS += mustache.render(ctPattern, {
+			name: shipName
+		});
+
+		tooltipZS += mustache.render(tooltipPattern, {
 			name: shipName
 		});
 
@@ -232,11 +239,23 @@ async function createStabilizedMMSprites(cb) {
 		));
 	}
 
+	await fs.promises.mkdir(path.join(
+		CLIENT_DEST_FOLDER,
+		global.OVERRIDES_FOLDER,
+		"scripts/StabilizedShips"
+	));
+
 	await fs.promises.writeFile(path.join(
 		CLIENT_DEST_FOLDER,
 		global.OVERRIDES_FOLDER,
-		"scripts/StabilizedShips.zs"
-	), zs);
+		"scripts/StabilizedShips/Content.zs"
+	), contentTweakerZS);
+
+	await fs.promises.writeFile(path.join(
+		CLIENT_DEST_FOLDER,
+		global.OVERRIDES_FOLDER,
+		"scripts/StabilizedShips/Tooltips.zs"
+	), tooltipZS);
 
 	cb();
 }
