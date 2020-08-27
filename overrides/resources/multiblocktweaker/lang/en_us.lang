@@ -8,6 +8,7 @@ multiblocktweaker.machine.naquadahreactormk2.name=Naquadah Reactor Mk2
 multiblocktweaker.machine.lunarminingstation.name=Lunar Mining Station
 multiblocktweaker.machine.reinforced_coke_oven.name=Coke Oven
 multiblocktweaker.machine.reinforced_coke_oven_2.name=Sideways Coke Oven
+multiblocktweaker.machine.actualization_matrix.name=Actualization Chamber
 
 multiblocktweaker.multiblock.cryogenicairdistillation.description=A cryogenic air separation unit for fractional distillation of liquefied air and noble gases.
 multiblocktweaker.multiblock.small_microverse.description=A machine capable of stabilizing projection into microverses for basic Micro Miner missions.
@@ -19,6 +20,7 @@ multiblocktweaker.multiblock.naquadahreactormk2.description=An elite reactor cap
 multiblocktweaker.multiblock.lunarminingstation.description=A mining installation that §lonly forms on the moon§r. It deploys rovers to collect rare isotopes of helium and hydrogen.
 multiblocktweaker.multiblock.reinforced_coke_oven.description=An oven designed specifically for increasing the yield of creosote oil from various types of coal.
 multiblocktweaker.multiblock.reinforced_coke_oven_2.description=An oven designed specifically for increasing the yield of creosote oil from various types of coal. Now sideways.
+multiblocktweaker.multiblock.actualization_matrix.description=Extracts loot from pristine Microverse data.
 
 recipemap.cryogenicairdistillation.name=Cryogenic Air Distillation
 recipemap.small_microverse.name=Small Microverse Mission
@@ -29,3 +31,4 @@ recipemap.naquadahreactormk1.name=Naquadah Decay (Mk1)
 recipemap.naquadahreactormk2.name=Naquadah Decay (Mk2)
 recipemap.lunarminingstation.name=Lunar Mining
 recipemap.reinforced_coke_oven.name=Coke Oven
+recipemap.actualization_matrix.name=Actualization
