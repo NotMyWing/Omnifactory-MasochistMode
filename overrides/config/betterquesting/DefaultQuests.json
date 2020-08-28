@@ -3816,7 +3816,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Experience Obelisk§r is a mass storage device for player experience in the form of §9Liquid XP§r.\n\nVia the GUI you can insert or extract levels as needed, as well as configure interactions with neighboring blocks (as is typical of §bEnderIO§r machines).\n\nLiquid XP can also be pumped in directly from your automation such as §3Fluid Extractors§r.",
+          "desc:8": "The §3Experience Obelisk§r is a mass storage device for player experience in the form of §9Liquid XP§r.\n\nVia the GUI you can insert or extract levels as needed, as well as configure interactions with neighboring blocks (as is typical of §bEnderIO§r machines).",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16203,7 +16203,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A gear forged from §6Empowered Restonia Crystal§r.\n\nWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "desc:8": "A gear forged from §6Empowered Restonia Crystal§r, as well as various other components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -16794,8 +16794,7 @@
     },
     "305:10": {
       "preRequisites:11": [
-        309,
-        756
+        309
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16847,8 +16846,7 @@
     },
     "306:10": {
       "preRequisites:11": [
-        309,
-        756
+        309
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16900,8 +16898,7 @@
     },
     "307:10": {
       "preRequisites:11": [
-        309,
-        756
+        309
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -16953,8 +16950,7 @@
     },
     "308:10": {
       "preRequisites:11": [
-        309,
-        756
+        309
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -17011,7 +17007,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "If you don\u0027t feel like searching for a Thermal Elemental, or can\u0027t because you\u0027re playing on Peaceful, you will need to make §eone§r batch of §9Elemental Reduction Fluid§r.",
+          "desc:8": "§9Elemental Reduction Fluid§r is required for crafting various §6Elemental Dusts§r, and can be automated pretty efficiently later.\n\nRight now, §9Fluorine§r is somewhat hard to source from what\u0027s available to you, check§b JEI§r for all available sources.\n\n§6Granite§r is an excellent renewable source of both Fluorine and Thorium, but can only be produced by §3Igneous Extruders§r which you\u0027ll unlock later.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17619,7 +17615,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A gear forged from §6Empowered Void Crystal§r.\n\nWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "desc:8": "A gear forged from §6Empowered Void Crystal§r, as well as various other components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17671,7 +17667,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A gear forged from §6Empowered Palis Crystal§r.\n\nWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "desc:8": "A gear forged from §6Empowered Palis Crystal§r, as well as various other components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -17723,7 +17719,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A gear forged from §6Empowered Emeradic Crystal§r.\n\nWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "desc:8": "A gear forged from §6Empowered Emeradic Crystal§r, as well as various other components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19400,7 +19396,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A gear forged from §6Empowered Enori Crystal§r.\n\nWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "desc:8": "A gear forged from §6Empowered Enori Crystal§r, as well as various other components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -19566,7 +19562,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This ingot is the most advanced basic material.\n\nWith creative fluids and all the automation you hopefully set up for your first §c§cInfinity Catalyst§r, these ingots should be easy.\n\nWell, not easy. But... Reasonable.\n\nFrom here, you are going to be crafting a multitude of Creative-Tier items from various mods. In addition to being useful for their regular functionality, they are needed for the final goal: the §dCreative Vending Upgrade§r.\n\n§bJEI§r is your friend: beyond noting a few more items, I will not be holding your hand anymore. I\u0027ve taught you everything you need to know to beat the pack.\n\nYou can do it!",
+          "desc:8": "This ingot is the most advanced basic material.\n\nWith stabilized miners and all the automation you hopefully set up for your first §c§cInfinity Catalyst§r, these ingots should be easy.\n\nWell, not easy. But... Reasonable.\n\nFrom here, you are going to be crafting a multitude of Creative-Tier items from various mods. In addition to being useful for their regular functionality, they are needed for the final goal: the §dCreative Vending Upgrade§r.\n\n§bJEI§r is your friend: beyond noting a few more items, I will not be holding your hand anymore. I\u0027ve taught you everything you need to know to beat the pack.\n\nYou can do it!",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -38756,24 +38752,22 @@
       }
     },
     "756:10": {
-      "preRequisites:11": [
-        270
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "...or, well, you might just do some exploration and kill a wild thermal elemental for a rod.\n\nUse it to craft a §aThermal Elemental Model§r. The rest of the dusts can be crafted from pristine matter.\n\nSaves you from having to make a bucket of §9Elemental Reduction Fluid§r if you\u0027re not playing on Peaceful.",
+          "desc:8": "",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 2048,
+            "Count:3": 0,
+            "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "thermalfoundation:material"
+            "id:8": "minecraft:air"
           },
           "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "I Don\u0027t Like Chemistry",
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -38782,7 +38776,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 756,
@@ -39679,7 +39673,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A gear forged from §6Empowered Diamantine Crystal§6§r.\n\n§rWhile you can empower gears directly, it makes much more sense to solidify them.",
+          "desc:8": "A gear forged from §6Empowered Diamantine Crystal§r, as well as various other components.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -42779,7 +42773,7 @@
           "id:3": 309,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": -876,
+          "x:3": -852,
           "y:3": -36
         },
         "80:10": {
@@ -43091,13 +43085,6 @@
           "y:3": 180
         },
         "124:10": {
-          "id:3": 756,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -828,
-          "y:3": -36
-        },
-        "125:10": {
           "id:3": 773,
           "sizeX:3": 0,
           "sizeY:3": 0,
