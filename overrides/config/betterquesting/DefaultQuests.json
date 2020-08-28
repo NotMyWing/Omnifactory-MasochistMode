@@ -19504,8 +19504,7 @@
     "356:10": {
       "preRequisites:11": [
         355,
-        367,
-        293
+        604
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -20083,29 +20082,22 @@
       }
     },
     "367:10": {
-      "preRequisites:11": [
-        604
-      ],
+      "preRequisites:11": [],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "I know you\u0027re expecting this quest to talk about the §d§dCreative Portable Tank§r\n\n\nBut here\u0027s the catch...\n\n\nThis pack doesn\u0027t offer one.\n\n\nYour final goal will be the §dCreative Vending Upgrade§r, however you will need to continue getting resources from micro miners like you\u0027ve been doing during this entire run. \n\nConsider saving this §6Heart of a Universe§r for the §dCreative Energy Source§r, which is going to be your next goal.",
+          "desc:8": "",
           "globalshare:1": 0,
           "icon:10": {
-            "Count:3": 1,
+            "Count:3": 0,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "thermalexpansion:tank",
-            "tag:10": {
-              "Creative:1": 1,
-              "Level:1": 4,
-              "RSControl:1": 0
-            }
+            "id:8": "minecraft:air"
           },
-          "ismain:1": 1,
-          "issilent:1": 0,
-          "lockedprogress:1": 1,
-          "name:8": "Creative Tank",
+          "ismain:1": 0,
+          "issilent:1": 1,
+          "lockedprogress:1": 0,
+          "name:8": "Gap",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -20114,7 +20106,7 @@
           "snd_complete:8": "minecraft:entity.player.levelup",
           "snd_update:8": "minecraft:entity.player.levelup",
           "tasklogic:8": "AND",
-          "visibility:8": "ALWAYS"
+          "visibility:8": "HIDDEN"
         }
       },
       "questID:3": 367,
@@ -40997,6 +40989,122 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "801:10": {
+      "preRequisites:11": [
+        802
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The §6Stabilized Tier Eight Micro Miner§r might be the best investment, but the final decision is down to you, since this quest doesn\u0027t gate anything.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "contenttweaker:tiereightship_stabilized"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Stabilized Micro Miners",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 801,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "contenttweaker:tiereightship_stabilized"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "802:10": {
+      "preRequisites:11": [
+        604
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "§dStabilized Micro Miners§r are the end game way of generating infinite resources.\n\n\"Stabilization\" is a process of injecting §6Micro Miners§r with §6Heart of a Universe§r, which makes them reusable at a reasonable cost.\n\nMuch like regular Micro Miners, the stabilized versions must be inserted into appropriate §3Microverse Projectors§r. However, running stabilized missions doesn\u0027t require any catalysts.\n\nStabilized missions don\u0027t bring loot, but rather §dPristine Microverse Matter§r that can be exchanged for loot using an §3Actualization Chamber§r.\n\nIt\u0027s a good idea to invest into multiple chambers to be able to round-robin Pristine Matter between them, since you can\u0027t take integrated circuits out.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 3010,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 1,
+          "name:8": "Actualization Chamber",
+          "partysinglereward:1": 0,
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 802,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 14,
+              "Damage:2": 4,
+              "OreDict:8": "",
+              "id:8": "gregtech:multiblock_casing"
+            },
+            "1:10": {
+              "Count:3": 9,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "extrautils2:ineffableglass"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 3010,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -44552,7 +44660,7 @@
           "sizeX:3": 72,
           "sizeY:3": 72,
           "x:3": -564,
-          "y:3": -84
+          "y:3": -132
         },
         "2:10": {
           "id:3": 294,
@@ -44605,10 +44713,10 @@
         },
         "9:10": {
           "id:3": 357,
-          "sizeX:3": 120,
-          "sizeY:3": 120,
-          "x:3": -360,
-          "y:3": 180
+          "sizeX:3": 72,
+          "sizeY:3": 72,
+          "x:3": -336,
+          "y:3": 168
         },
         "10:10": {
           "id:3": 358,
@@ -44674,626 +44782,633 @@
           "y:3": 456
         },
         "19:10": {
-          "id:3": 367,
-          "sizeX:3": 120,
-          "sizeY:3": 120,
-          "x:3": -360,
-          "y:3": -264
+          "id:3": 397,
+          "sizeX:3": 72,
+          "sizeY:3": 72,
+          "x:3": -336,
+          "y:3": 72
         },
         "20:10": {
-          "id:3": 397,
-          "sizeX:3": 96,
-          "sizeY:3": 96,
-          "x:3": -348,
-          "y:3": 60
-        },
-        "21:10": {
           "id:3": 501,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -552,
           "y:3": 12
         },
-        "22:10": {
+        "21:10": {
           "id:3": 503,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
           "y:3": 72
         },
-        "23:10": {
+        "22:10": {
           "id:3": 508,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 72
         },
-        "24:10": {
+        "23:10": {
           "id:3": 513,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 72
         },
-        "25:10": {
+        "24:10": {
           "id:3": 543,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -468,
           "y:3": 72
         },
-        "26:10": {
+        "25:10": {
           "id:3": 582,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
           "y:3": 108
         },
-        "27:10": {
+        "26:10": {
           "id:3": 583,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 108
         },
-        "28:10": {
+        "27:10": {
           "id:3": 584,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 108
         },
-        "29:10": {
+        "28:10": {
           "id:3": 585,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -468,
           "y:3": 108
         },
-        "30:10": {
+        "29:10": {
           "id:3": 586,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
           "y:3": 144
         },
-        "31:10": {
+        "30:10": {
           "id:3": 587,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 144
         },
-        "32:10": {
+        "31:10": {
           "id:3": 588,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 144
         },
-        "33:10": {
+        "32:10": {
           "id:3": 589,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -468,
           "y:3": 144
         },
-        "34:10": {
+        "33:10": {
           "id:3": 591,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -468,
           "y:3": 180
         },
-        "35:10": {
+        "34:10": {
           "id:3": 592,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -468,
           "y:3": 216
         },
-        "36:10": {
+        "35:10": {
           "id:3": 593,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 180
         },
-        "37:10": {
+        "36:10": {
           "id:3": 594,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 180
         },
-        "38:10": {
+        "37:10": {
           "id:3": 595,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
           "y:3": 180
         },
-        "39:10": {
+        "38:10": {
           "id:3": 596,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -576,
           "y:3": 216
         },
-        "40:10": {
+        "39:10": {
           "id:3": 597,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -540,
           "y:3": 216
         },
-        "41:10": {
+        "40:10": {
           "id:3": 598,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -504,
           "y:3": 216
         },
-        "42:10": {
+        "41:10": {
           "id:3": 599,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -612,
           "y:3": 216
         },
-        "43:10": {
+        "42:10": {
           "id:3": 600,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -612,
           "y:3": 180
         },
-        "44:10": {
+        "43:10": {
           "id:3": 601,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -612,
           "y:3": 144
         },
-        "45:10": {
+        "44:10": {
           "id:3": 602,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -612,
           "y:3": 108
         },
-        "46:10": {
+        "45:10": {
           "id:3": 603,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -612,
           "y:3": 72
         },
-        "47:10": {
+        "46:10": {
           "id:3": 604,
           "sizeX:3": 96,
           "sizeY:3": 96,
-          "x:3": -468,
-          "y:3": -252
+          "x:3": -348,
+          "y:3": -324
         },
-        "48:10": {
+        "47:10": {
           "id:3": 605,
           "sizeX:3": 96,
           "sizeY:3": 96,
           "x:3": -576,
-          "y:3": -252
+          "y:3": -324
         },
-        "49:10": {
+        "48:10": {
           "id:3": 606,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -588,
-          "y:3": -144
+          "y:3": -204
         },
-        "50:10": {
+        "49:10": {
           "id:3": 607,
           "sizeX:3": 48,
           "sizeY:3": 48,
           "x:3": -516,
-          "y:3": -144
+          "y:3": -204
         },
-        "51:10": {
+        "50:10": {
           "id:3": 613,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 72
         },
-        "52:10": {
+        "51:10": {
           "id:3": 614,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 72
         },
-        "53:10": {
+        "52:10": {
           "id:3": 615,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 72
         },
-        "54:10": {
+        "53:10": {
           "id:3": 616,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 72
         },
-        "55:10": {
+        "54:10": {
           "id:3": 617,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 72
         },
-        "56:10": {
+        "55:10": {
           "id:3": 618,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 72
         },
-        "57:10": {
+        "56:10": {
           "id:3": 619,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 72
         },
-        "58:10": {
+        "57:10": {
           "id:3": 620,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 102
         },
-        "59:10": {
+        "58:10": {
           "id:3": 621,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 102
         },
-        "60:10": {
+        "59:10": {
           "id:3": 622,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 102
         },
-        "61:10": {
+        "60:10": {
           "id:3": 623,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 102
         },
-        "62:10": {
+        "61:10": {
           "id:3": 624,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 102
         },
-        "63:10": {
+        "62:10": {
           "id:3": 625,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 102
         },
-        "64:10": {
+        "63:10": {
           "id:3": 626,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 102
         },
-        "65:10": {
+        "64:10": {
           "id:3": 627,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 132
         },
-        "66:10": {
+        "65:10": {
           "id:3": 628,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 132
         },
-        "67:10": {
+        "66:10": {
           "id:3": 629,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 132
         },
-        "68:10": {
+        "67:10": {
           "id:3": 630,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 132
         },
-        "69:10": {
+        "68:10": {
           "id:3": 631,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 132
         },
-        "70:10": {
+        "69:10": {
           "id:3": 632,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 132
         },
-        "71:10": {
+        "70:10": {
           "id:3": 633,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 222
         },
-        "72:10": {
+        "71:10": {
           "id:3": 634,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 132
         },
-        "73:10": {
+        "72:10": {
           "id:3": 635,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 162
         },
-        "74:10": {
+        "73:10": {
           "id:3": 636,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 162
         },
-        "75:10": {
+        "74:10": {
           "id:3": 637,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 162
         },
-        "76:10": {
+        "75:10": {
           "id:3": 638,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 162
         },
-        "77:10": {
+        "76:10": {
           "id:3": 639,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 162
         },
-        "78:10": {
+        "77:10": {
           "id:3": 640,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 162
         },
-        "79:10": {
+        "78:10": {
           "id:3": 641,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 162
         },
-        "80:10": {
+        "79:10": {
           "id:3": 642,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 192
         },
-        "81:10": {
+        "80:10": {
           "id:3": 643,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 192
         },
-        "82:10": {
+        "81:10": {
           "id:3": 644,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 192
         },
-        "83:10": {
+        "82:10": {
           "id:3": 645,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 192
         },
-        "84:10": {
+        "83:10": {
           "id:3": 646,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 192
         },
-        "85:10": {
+        "84:10": {
           "id:3": 647,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 192
         },
-        "86:10": {
+        "85:10": {
           "id:3": 648,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 192
         },
-        "87:10": {
+        "86:10": {
           "id:3": 649,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 222
         },
-        "88:10": {
+        "87:10": {
           "id:3": 650,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 222
         },
-        "89:10": {
+        "88:10": {
           "id:3": 651,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 222
         },
-        "90:10": {
+        "89:10": {
           "id:3": 652,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 222
         },
-        "91:10": {
+        "90:10": {
           "id:3": 653,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 222
         },
-        "92:10": {
+        "91:10": {
           "id:3": 654,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 222
         },
-        "93:10": {
+        "92:10": {
           "id:3": 655,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 252
         },
-        "94:10": {
+        "93:10": {
           "id:3": 656,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 252
         },
-        "95:10": {
+        "94:10": {
           "id:3": 657,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 252
         },
-        "96:10": {
+        "95:10": {
           "id:3": 658,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 252
         },
-        "97:10": {
+        "96:10": {
           "id:3": 659,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 252
         },
-        "98:10": {
+        "97:10": {
           "id:3": 660,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 252
         },
-        "99:10": {
+        "98:10": {
           "id:3": 661,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 252
         },
-        "100:10": {
+        "99:10": {
           "id:3": 662,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -162,
           "y:3": 282
         },
-        "101:10": {
+        "100:10": {
           "id:3": 663,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -132,
           "y:3": 282
         },
-        "102:10": {
+        "101:10": {
           "id:3": 664,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -102,
           "y:3": 282
         },
-        "103:10": {
+        "102:10": {
           "id:3": 665,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -72,
           "y:3": 282
         },
-        "104:10": {
+        "103:10": {
           "id:3": 666,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -42,
           "y:3": 282
         },
-        "105:10": {
+        "104:10": {
           "id:3": 667,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 282
         },
-        "106:10": {
+        "105:10": {
           "id:3": 668,
           "sizeX:3": 24,
           "sizeY:3": 24,
           "x:3": 18,
           "y:3": 282
         },
-        "107:10": {
+        "106:10": {
           "id:3": 777,
           "sizeX:3": 42,
           "sizeY:3": 42,
           "x:3": -57,
+          "y:3": -204
+        },
+        "107:10": {
+          "id:3": 801,
+          "sizeX:3": 60,
+          "sizeY:3": 60,
+          "x:3": -288,
+          "y:3": -204
+        },
+        "108:10": {
+          "id:3": 802,
+          "sizeX:3": 60,
+          "sizeY:3": 60,
+          "x:3": -372,
           "y:3": -204
         }
       }
