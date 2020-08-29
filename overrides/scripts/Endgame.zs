@@ -197,11 +197,6 @@ assembly_line.recipeBuilder()
 
 extractor.findRecipe(512, [<minecraft:egg>], [null]).remove();
 
-extractor.recipeBuilder()
-    .inputs(<contenttweaker:impossiblerealmdata>)
-    .outputs([<contenttweaker:quantumflux>])
-    .duration(100).EUt(3000).buildAndRegister();
-
 recipes.remove(<extrautils2:rainbowgenerator>);
 makeShaped("of_rainbow_generator", <extrautils2:rainbowgenerator>,
     ["OTO",
