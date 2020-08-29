@@ -1140,12 +1140,6 @@ makeExtremeRecipe9(<storagedrawers:upgrade_creative:1> * 2,
       W : <thermalcultivation:watering_can:32000>,
       X : <thermalexpansion:capacitor:32000> });
 
-fluid_extractor.recipeBuilder()
-    .inputs([<contenttweaker:heartofauniverse>])
-    .fluidOutputs([<liquid:moltencreativeportabletank> * 145])
-    .duration(500).EUt(100000).buildAndRegister();
-
-
 ////////////////////////// Creative Items ///////////////////////
 
 //Skullfire Sword

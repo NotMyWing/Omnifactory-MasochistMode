@@ -317,7 +317,6 @@ makeFluid("neptunium",                  "c3dbc6",   false,  1024,       "COMMON"
 makeFluid("plutonium2",                 "f73663",   false,  1024,       "COMMON",   0);
 makeFluid("uranium233",                 "187a30",   false,  1024,       "COMMON",   0);
 
-makeFluid("moltencreativeportabletank", "a02cba",   false,  1,          "EPIC",     0);
 makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
 
