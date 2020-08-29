@@ -7,7 +7,7 @@ solidifier.recipeBuilder()
     .duration(500).EUt(16).buildAndRegister();
 
 fluid_extractor.recipeBuilder()
-	.inputs(<gregtech:meta_item_1:32500>)
+	.inputs(<actuallyadditions:item_solidified_experience>)
 	.fluidOutputs(<liquid:xpjuice> * 160)
 	.duration(80).EUt(32).buildAndRegister();
 
