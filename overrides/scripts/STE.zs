@@ -48,3 +48,17 @@ mixer.recipeBuilder()
 	.outputs(<contenttweaker:quantumflux> * 8)
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
+
+// Rabbits
+macerator.findRecipe(16, [<minecraft:rabbit>], [null]).remove();
+centrifuge.findRecipe(5, [<minecraft:rabbit>], [null]).remove();
+centrifuge.findRecipe(5, [<minecraft:cooked_rabbit>], [null]).remove();
+recipes.removeByRecipeName("minecraft:rabbit_stew_from_red_mushroom");
+recipes.removeByRecipeName("minecraft:rabbit_stew_from_brown_mushroom");
+recipes.removeByRecipeName("minecraft:leather");
+mods.jei.JEI.removeAndHide(<minecraft:rabbit>);
+mods.jei.JEI.removeAndHide(<minecraft:cooked_rabbit>);
+mods.jei.JEI.removeAndHide(<minecraft:rabbit_stew>);
+mods.jei.JEI.removeAndHide(<minecraft:rabbit_foot>);
+mods.jei.JEI.removeAndHide(<minecraft:rabbit_hide>);
+furnace.remove(<minecraft:cooked_rabbit>);

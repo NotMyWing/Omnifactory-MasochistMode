@@ -7,3 +7,9 @@ val jungleTemple = LootTweaker.getTable("minecraft:chests/jungle_temple");
 val pool = jungleTemple.getPool("main");
 
 pool.removeEntry("#gregtech:loot_1xitem.meta_item@32599");
+
+// Disable Rabbit loot
+val rabbit = LootTweaker.getTable("minecraft:entities/rabbit");
+rabbit.removePool("main");
+rabbit.removePool("pool1");
+rabbit.removePool("pool2");
