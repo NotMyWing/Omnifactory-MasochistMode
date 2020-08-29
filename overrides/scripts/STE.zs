@@ -38,7 +38,7 @@ mixer.recipeBuilder()
 
 mixer.recipeBuilder()
 	.inputs(<ore:itemEnderCrystalPowder>)
-    .fluidOutputs(<liquid:xpjuice> * 8960) // 40L
+    .fluidOutputs(<liquid:xpjuice> * 11200) // 40L
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
 
