@@ -592,11 +592,6 @@ witherrealmdata.rarity = "epic";
 witherrealmdata.maxStackSize = 64;
 witherrealmdata.register();
 
-var impossiblerealmdata = VanillaFactory.createItem("impossiblerealmdata");
-impossiblerealmdata.rarity = "rare";
-impossiblerealmdata.maxStackSize = 64;
-impossiblerealmdata.register();
-
 var universecreationdata = VanillaFactory.createItem("universecreationdata");
 universecreationdata.rarity = "epic";
 universecreationdata.maxStackSize = 1;
