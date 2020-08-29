@@ -41,3 +41,10 @@ mixer.recipeBuilder()
     .fluidOutputs(<liquid:xpjuice> * 8960) // 40L
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
+
+// Quantum Flux
+mixer.recipeBuilder()
+	.inputs(<ore:gemCrystalFlux>)
+	.outputs(<contenttweaker:quantumflux> * 8)
+    .fluidInputs(<liquid:mana> * 250)
+    .duration(100).EUt(480).buildAndRegister();
