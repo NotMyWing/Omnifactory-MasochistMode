@@ -63,7 +63,7 @@ async function deployCurseForge(cb) {
 					metadata: JSON.stringify({
 						changelog: "",
 						releaseType: process.env.CURSEFORGE_RELEASE_TYPE || "release",
-						display: clientFileID ? global.MODPACK_MANIFEST.name : global.SERVER_PACK_NAME,
+						displayName: clientFileID ? global.MODPACK_MANIFEST.name : global.SERVER_PACK_NAME,
 						parentFileID: clientFileID,
 						gameVersions: clientFileID ? undefined : [ version.id ],
 					}),
