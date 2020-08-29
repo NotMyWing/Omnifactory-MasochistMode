@@ -55,6 +55,7 @@ async function transformManifestVersion(cb) {
 
 			const version = tagInfo.data.tag.replace(/^v/, "");
 
+			global.SERVER_PACK_NAME = `${versionTitle} Server ${version}`;
 			versionTitle += ` - ${version} - ${tagInfo.data.message.replace(/\n/g, "")}`;
 		}
 	} else {
