@@ -1631,7 +1631,7 @@ actualization_matrix.recipeMap
     .duration(780)
     .EUt(30720)
     .inputs(<contenttweaker:tieroneship_stabilized_matter>)
-    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
     .outputs(<gregtech:meta_item_2:25111> * 16,
              <gregtech:meta_item_2:25111> * 16,
              <gregtech:meta_item_2:25111> * 16,
@@ -1657,7 +1657,7 @@ actualization_matrix.recipeMap
     .duration(780)
     .EUt(30720)
     .inputs(<contenttweaker:tieroneship_stabilized_matter>)
-    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
     .outputs(<contenttweaker:stellarcreationdata>)
     .buildAndRegister();
 
