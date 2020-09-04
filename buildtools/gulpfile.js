@@ -27,9 +27,12 @@ const serverTasks = require("./tasks/server");
 const clientTasks = require("./tasks/client");
 const travisTasks = require("./tasks/travis");
 const travisChecksTasks = require("./tasks/travis/checks");
+const curseForgeTasks = require("./tasks/deploy/curseforge");
+const metaTasks = require("./tasks/meta");
 
 const buildServer = series(
 	cleanup,
+	...metaTasks,
 	...sharedTasks,
 	...serverTasks,
 	postCleanup
@@ -37,6 +40,7 @@ const buildServer = series(
 
 const buildClient = series(
 	cleanup,
+	...metaTasks,
 	...sharedTasks,
 	...clientTasks,
 	postCleanup,
@@ -44,6 +48,7 @@ const buildClient = series(
 
 const buildAll = series(
 	cleanup,
+	...metaTasks,
 	...sharedTasks,
 	...serverTasks,
 	...clientTasks,
@@ -58,11 +63,16 @@ const travisChecks = series(
 	...travisChecksTasks
 )
 
+const deployCurseForge = series(
+	...metaTasks,
+	...curseForgeTasks
+)
+
 module.exports = {
 	buildServer: buildServer,
 	buildClient: buildClient,
 	buildAll: buildAll,
 	travis: travis,
 	travisChecks: travisChecks,
-	deployCurseForge: series(require("./tasks/deploy/curseforge"))
+	deployCurseForge: deployCurseForge
 }
