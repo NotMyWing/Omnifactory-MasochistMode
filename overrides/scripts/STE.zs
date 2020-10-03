@@ -76,3 +76,11 @@ makeShaped("ae2stuff_nvt", <ae2stuff:visualiser>, [
         P: <ore:itemIlluminatedPanel>,
         F: <ore:crystalPureFluix>
 	});
+
+// Dense Conduit
+assembler.recipeBuilder()
+    .inputs([<enderio:item_me_conduit> * 4, <ore:itemConduitBinder> * 5])
+    .outputs([<enderio:item_me_conduit:1> * 2])
+    .duration(80)
+    .EUt(16)
+    .buildAndRegister();
