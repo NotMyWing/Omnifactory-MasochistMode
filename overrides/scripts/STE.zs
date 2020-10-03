@@ -1,3 +1,4 @@
+import scripts.CommonVars.makeShaped as makeShaped;
 
 // Solidified Experience
 solidifier.recipeBuilder()
@@ -62,3 +63,16 @@ mods.jei.JEI.removeAndHide(<minecraft:rabbit_stew>);
 mods.jei.JEI.removeAndHide(<minecraft:rabbit_foot>);
 mods.jei.JEI.removeAndHide(<minecraft:rabbit_hide>);
 furnace.remove(<minecraft:cooked_rabbit>);
+
+// Network Visualization Tool
+recipes.removeByRecipeName("ae2stuff:recipe5");
+makeShaped("ae2stuff_nvt", <ae2stuff:visualiser>, [
+		"S S",
+		"EPE",
+		"FFF",
+	], {
+		S: <metaitem:sensor.lv>,
+        E: <appliedenergistics2:material:24>, // Eng Processor
+        P: <ore:itemIlluminatedPanel>,
+        F: <ore:crystalPureFluix>
+	});
