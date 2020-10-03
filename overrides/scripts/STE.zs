@@ -84,3 +84,10 @@ assembler.recipeBuilder()
     .duration(80)
     .EUt(16)
     .buildAndRegister();
+
+// Conduit Binder Composite
+mixer.recipeBuilder()
+	.inputs([<ore:gravel> * 4, <ore:sand> * 4])
+    .fluidInputs(<liquid:glue> * 50)
+    .outputs([<ore:itemBinderComposite>.firstItem * 16])
+    .duration(80).EUt(30).buildAndRegister();
