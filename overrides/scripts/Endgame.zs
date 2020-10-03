@@ -134,6 +134,12 @@ assembler.findRecipe(512,
      <metaitem:electric.pump.lv>],
     [<liquid:nitrogen> * 2000]).remove();
 
+freezer.recipeBuilder()
+    .inputs(<gregtech:cable:710>)
+    .fluidInputs([<liquid:moltennetherstar> * 144])
+    .outputs(<gregtech:cable:354>)
+    .duration(100).EUt(6000).buildAndRegister();
+
 //t6 circuits
 val t6c as IIngredient[] = [
     <metaitem:component.smd.capacitor> * 2,
