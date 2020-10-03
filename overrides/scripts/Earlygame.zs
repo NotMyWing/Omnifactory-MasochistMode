@@ -890,7 +890,7 @@ recipes.removeByRecipeName("thermalfoundation:clay_ball");
 // Fireclay Dust
 recipes.removeByRecipeName("gregtech:fireclay_dust");
 recipes.addShapeless(<ore:dustFireclay>.firstItem, [
-	<ore:dustClay> * 2, <ore:dustBrick> * 2
+	<ore:dustClay>, <ore:dustClay>, <ore:dustBrick>, <ore:dustBrick>
 ]);
 
 centrifuge.findRecipe(30, [<ore:dustFireclay>.firstItem * 2], [null]).remove();
