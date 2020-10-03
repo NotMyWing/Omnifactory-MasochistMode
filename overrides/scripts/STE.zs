@@ -91,3 +91,19 @@ mixer.recipeBuilder()
     .fluidInputs(<liquid:glue> * 50)
     .outputs([<ore:itemBinderComposite>.firstItem * 16])
     .duration(80).EUt(30).buildAndRegister();
+
+// Nether Star
+solidifier.recipeBuilder()
+    .fluidInputs(<liquid:moltennetherstar> * 1296)
+    .notConsumable(<gregtech:meta_item_1:32308>)
+    .outputs([<extendedcrafting:storage:2>])
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister();
+
+fluidextractor.recipeBuilder()
+    .inputs(<minecraft:nether_star>)
+    .fluidOutputs([<liquid:moltennetherstar> * 144])
+    .duration(40)
+    .EUt(30)
+    .buildAndRegister();
