@@ -192,6 +192,7 @@ fluid.plutonium2=Plutonium
 fluid.uranium233=Uranium 233
 fluid.moltensoularium=Molten Soularium
 fluid.moltendarksoularium=Molten Dark Soularium
+fluid.moltennetherstar=Molten Nether Star
 
 item.contenttweaker.stabilizedeinsteinium.name=Stabilized Einsteinium
 item.contenttweaker.stabilizedberkelium.name=Stabilized Berkelium

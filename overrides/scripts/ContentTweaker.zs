@@ -319,6 +319,7 @@ makeFluid("uranium233",                 "187a30",   false,  1024,       "COMMON"
 
 makeFluid("moltensoularium",            "6b4411",   false,  1000,       "COMMON",   0);
 makeFluid("moltendarksoularium",        "422805",   false,  1000,       "COMMON",   0);
+makeFluid("moltennetherstar",           "f2f2d8",   false,  100,        "COMMON",   15);
 
 var universalnavigator = VanillaFactory.createItem("universalnavigator");
 universalnavigator.maxStackSize = 64;
