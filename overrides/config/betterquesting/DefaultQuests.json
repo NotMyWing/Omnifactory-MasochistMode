@@ -40000,7 +40000,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "You\u0027ll need to get into cooking§6 Steel§r, which is going to be your main resource a bit later.  Don\u0027t get confused: both recipes aren\u0027t shown in §bJEI§r.\n\nTo get started, you\u0027ll need a decent amount of both clay and firebricks. In order to construct a §6Primitive Blast Furnace§r, you\u0027ll need §632 Primitive Bricks§r and a §6PBF Controller§r. \n\nYou can find the multiblock preview in JEI, and you can also sneak-right click the controller to enable the in-world preview.\n\nIt\u0027s not a bad idea to build several of these.",
+          "desc:8": "You\u0027ll need to get into cooking§6 Steel§r, which is going to be your main resource a bit later.  Don\u0027t get confused: both recipes aren\u0027t shown in §bJEI§r.\n\nTo get started, you\u0027ll need a decent amount of both clay and firebricks. In order to construct a §6Primitive Blast Furnace§r, you\u0027ll need §632 Primitive Bricks§r and a §6PBF Controller§r. \n\nYou can find the multiblock preview in JEI, and you can also sneak-right click the controller to enable the in-world preview.\n\nOnce the multiblock is built, right-click the Controller and insert a piece of either §6Iron§r or §6Wrought Iron§r alongside some Coal or Coal coke to begin cooking Steel. §aUsing Wrought Iron is better since it\u0027s 250% faster compared to regular Iron, so make sure to smelt your Iron beforehand.§r \n\nIt\u0027s not a bad idea to build several of these.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
