@@ -5227,7 +5227,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§9Sulfuric Acid§r is produced from §6Sulfur§r and §9Water§r. You\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.\n\nSulfur can be electrolyzed from many things, but is also easily available via §bDeepMobLearning§r\u0027s §aBlaze Model§r.",
+          "desc:8": "§9Sulfuric Acid§r is produced from §6Sulfur§r and §9Water§r. You\u0027ll need huge amounts of this for a whole range of chemical reactions, as it is a very common ingredient.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -8907,7 +8907,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nFish Oil and Canola Oil are probably the easiest, but it\u0027s up to you to choose.\n\nFish are easiest to get from §aGuardian Models§r from §bDML§r.",
+          "desc:8": "A whole host of fluids can be used as the feedstock for your §9Bio Diesel§r, including §9Seed Oil§r, §9Fish Oil§r, and the various tiers of §9Canola Oils§r.\n\nCanola Oil is probably the easiest, but it\u0027s up to you to choose.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -28104,7 +28104,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "These two dusts will be used in a variety of upcoming chemical reactions.\n\n§6Phosphorous§r can be obtained by processing §6Phosphor Ore§r into dust and electrolyzing several times. This ore is found in §6Apatite§r veins.\n\n§6Sulfur§r can be electrolyzed easily from §6Sphalerite§r (which also provides §6Gallium§r), §6Cinnabar§r, and §6Pyrite§r. Alternately, Sulfur can be acquired through §bDeep Mob Learning§r- look into that quest line if you haven\u0027t already.",
+          "desc:8": "These two dusts will be used in a variety of upcoming chemical reactions.\n\n§6Phosphorous§r can be obtained by processing §6Phosphor Ore§r into dust and electrolyzing several times. This ore is found in §6Apatite§r veins.\n\n§6Sulfur§r can be electrolyzed easily from §6Sphalerite§r (which also provides §6Gallium§r), §6Cinnabar§r, and §6Pyrite§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
