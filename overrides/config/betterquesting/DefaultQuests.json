@@ -26135,7 +26135,7 @@
     },
     "502:10": {
       "preRequisites:11": [
-        19,
+        787,
         52
       ],
       "properties:10": {
@@ -31047,7 +31047,7 @@
     },
     "599:10": {
       "preRequisites:11": [
-        19,
+        787,
         23
       ],
       "properties:10": {
@@ -37510,7 +37510,7 @@
     },
     "732:10": {
       "preRequisites:11": [
-        19
+        787
       ],
       "properties:10": {
         "betterquesting:10": {
