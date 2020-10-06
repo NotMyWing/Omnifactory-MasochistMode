@@ -25433,7 +25433,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A variant of §6Alloy Smelter§r that requires power instead of steam.",
+          "desc:8": "§3Compressor§r is an indirect upgrade to §3Forge Hammer§r; this machine doesn\u0027t suffer from inefficient recipes and allows you to turn ingots to plates in the 1:1 ratio.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -25444,7 +25444,7 @@
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Powered Compressor",
+          "name:8": "LV Compressor",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
