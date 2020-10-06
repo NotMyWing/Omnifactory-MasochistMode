@@ -1468,7 +1468,8 @@ mods.jei.JEI.removeAndHide(<extrautils2:analogcrafter>);
 
 
 //Gregtech Removals
-mods.jei.JEI.removeAndHide(<gregtech:machine:80>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:11>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:12>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:80>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:81>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:82>);
