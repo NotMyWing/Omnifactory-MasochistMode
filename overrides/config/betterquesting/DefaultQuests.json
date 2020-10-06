@@ -40115,18 +40115,18 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Compressor§r is a machine that compresses things into denser things. In particular, you\u0027ll need it for compressing §6Fireclay Dust§r into §6Compressed Fireclay§r.\n\nThis machine is capable of processing all recipes listed as §a32 EU/t and less§r in §bJEI§r.",
+          "desc:8": "§6Forge Hammer§r is a machine that\u0027s useful for compressing things into denser things... in a rather inefficient manner. In particular, you\u0027ll need it for compressing §6Fireclay Dust§r into §6Compressed Fireclay§r and §6Raw Rubber§r into §6Rubber Sheets§r.\n\nThis machine is capable of processing all recipes listed as §a32 EU/t and less§r in §bJEI§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
-            "Damage:2": 11,
+            "Damage:2": 13,
             "OreDict:8": "",
             "id:8": "gregtech:machine"
           },
           "ismain:1": 1,
           "issilent:1": 0,
           "lockedprogress:1": 1,
-          "name:8": "Compressor",
+          "name:8": "Forge Hammer",
           "partysinglereward:1": 0,
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
@@ -40151,7 +40151,7 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
-              "Damage:2": 11,
+              "Damage:2": 13,
               "OreDict:8": "",
               "id:8": "gregtech:machine"
             }
