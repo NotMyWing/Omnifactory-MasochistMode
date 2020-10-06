@@ -13169,7 +13169,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6Chaos Shards§r are an endgame component for §bDraconic Evolution§r.\n\nThey are the base material for Chaotic Tier materials and come exclusively from Tier Eight Micro Miners.\n\nTechnically they also come from Chaos Guardians, but in the quantities you\u0027ll need these? That would be a silly prospect.",
+          "desc:8": "§6Chaos Shards§r are an endgame component for §bDraconic Evolution§r.\n\nThey are the base material for Chaotic Tier materials and come exclusively from Tier Eight Micro Miners.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
