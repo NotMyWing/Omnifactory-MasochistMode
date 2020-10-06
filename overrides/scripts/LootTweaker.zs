@@ -13,3 +13,8 @@ val rabbit = LootTweaker.getTable("minecraft:entities/rabbit");
 rabbit.removePool("main");
 rabbit.removePool("pool1");
 rabbit.removePool("pool2");
+
+// Disable Iron Golem loot
+val golem = LootTweaker.getTable("minecraft:entities/iron_golem");
+golem.removePool("main");
+golem.removePool("pool1");
