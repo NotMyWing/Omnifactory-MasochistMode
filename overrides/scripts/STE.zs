@@ -131,3 +131,9 @@ compressor.recipeBuilder()
     .inputs(<gregtech:meta_item_1:32627> * 4)
     .outputs(<ore:plateRubber>.firstItem)
     .duration(200).EUt(8).buildAndRegister();
+
+// Fireclay Brick
+hammer.recipeBuilder()
+    .inputs([<ore:dustFireclay> * 3])
+    .outputs(<gregtech:meta_item_2:32014> * 2)
+    .duration(200).EUt(8).buildAndRegister();
