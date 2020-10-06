@@ -18189,7 +18189,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The highest tier of fusion crafting injectors. You will need at least ten of these to reach the §dCreative Portable Tank§r.\n\nEach injector requires four ingots of §6Neutronium§r and four §6Chaos Shards§r, as well as two §6Crystal Matrix§r blocks.\n\nHope you\u0027ve got those Tier Eight Micro Miners automated.",
+          "desc:8": "The highest tier of fusion crafting injectors. You will need at least ten of these to reach the §dHeart of a Universe§r.\n\nEach injector requires four ingots of §6Neutronium§r and four §6Chaos Shards§r, as well as two §6Crystal Matrix§r blocks.\n\nHope you\u0027ve got those Tier Eight Micro Miners automated.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -27955,7 +27955,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§6ZPM Machine Hulls§r are made with §6Iridium Plates§r, but you\u0027ll notice they also need §9Polytetrafluoroethylene§r (more commonly known as Teflon™), a special plastic which will be required for all machine hulls going forward.\n\nZPM stands for Zero Point Module.\n\nThis is the last tier of machine that\u0027s sensible to produce before you reach the §dCreative Portable Tank§r. Multiblock hatches are a different matter- feel free to upgrade your §3EBF§rs to Ultimate Voltage, if you can handle the power drain. There\u0027s no usable tier above that, though.",
+          "desc:8": "§6ZPM Machine Hulls§r are made with §6Iridium Plates§r, but you\u0027ll notice they also need §9Polytetrafluoroethylene§r (more commonly known as Teflon™), a special plastic which will be required for all machine hulls going forward.\n\nZPM stands for Zero Point Module.\n\nThis is the last tier of machine that\u0027s sensible to produce before you reach the §dHeart of a Universe§r. Multiblock hatches are a different matter- feel free to upgrade your §3EBF§rs to Ultimate Voltage, if you can handle the power drain. There\u0027s no usable tier above that, though.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -36135,7 +36135,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "The §3Naquadah Reactor Mk2§r is an upgraded reactor that can generate immense amounts of EU energy from the same types of fuels as the Mk1. The materials it requires are similar to the Mk1, and you can almost reuse the same structure. Make sure you are prepared for the UV power output by adding a §6UV Energy Output Hatch§r.\n\nThis is a pretty expensive structure though, as it needs blocks of §dOmnium§r. Maybe wait until after you get the §dCreative Portable Tank§r?\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
+          "desc:8": "The §3Naquadah Reactor Mk2§r is an upgraded reactor that can generate immense amounts of EU energy from the same types of fuels as the Mk1. The materials it requires are similar to the Mk1, and you can almost reuse the same structure. Make sure you are prepared for the UV power output by adding a §6UV Energy Output Hatch§r.\n\nThis is a pretty expensive structure though, as it needs blocks of §dOmnium§r.\n\n§6Sneak-right click§r the controller to enable the in-world preview.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -40889,7 +40889,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate it.\n\nIt is recommended to postpone Tier 8 until after you reach the §dCreative Portable Tank§r, as it requires large amounts of §6Awakened Draconium§r.\n\n",
+          "desc:8": "Now that you have §6Awakened Cores§r, you can make the §eEnergy Storage Core§r from §bDraconic Evolution§r. It\u0027s a great way to store all the energy required to craft power-hungry late game items.\n\nThe §eEnergy Storage Core§r is a multiblock structure that can be upgraded to store increasingly immense amounts of RF energy. See the §bDraconic Evolution§r manual for more information on the material requirements for each tier.\n\n§6Energy Pylons§r are required to input and output energy from the core. Each pylon allows movement in a single direction, so you need at least two.\n\nOnce you have the materials together for your desired tier, § the structure can build itself: simply access the GUI of the §6Energy Core§r, set the tier, and click Assemble. Items will be automatically used from your inventory. Once the structure is built, you can access the core\u0027s GUI again through §6Energy Core Stabilizers§r to activate.\n\n",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
