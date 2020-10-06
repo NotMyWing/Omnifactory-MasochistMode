@@ -31314,7 +31314,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No hypothetical aliens were harmed in the harvesting of this item.\n\nProbably.\n\nMelting the heart of a universe provides a rather useful liquid: §dMolten Creative Portable Tank§r.",
+          "desc:8": "No hypothetical aliens were harmed in the harvesting of this item.\n\nProbably.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
