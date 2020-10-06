@@ -119,3 +119,15 @@ centrifuge.recipeBuilder()
     .chancedOutput(<ore:nuggetGold>.firstItem, 250, 80)
     .chancedOutput(<ore:dustSmallTungstate>.firstItem, 250, 70)
     .duration(1600).EUt(192).buildAndRegister();
+
+// Rubber Plate
+hammer.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32627> * 6)
+    .outputs(<ore:plateRubber>.firstItem)
+    .duration(400).EUt(8).buildAndRegister();
+
+compressor.findRecipe(8, [<gregtech:meta_item_1:32627>], [null]).remove();
+compressor.recipeBuilder()
+    .inputs(<gregtech:meta_item_1:32627> * 4)
+    .outputs(<ore:plateRubber>.firstItem)
+    .duration(200).EUt(8).buildAndRegister();
