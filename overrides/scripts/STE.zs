@@ -107,3 +107,15 @@ fluidextractor.recipeBuilder()
     .duration(40)
     .EUt(30)
     .buildAndRegister();
+
+// Lava Centrifungus
+centrifuge.findRecipe(80, [null], [<liquid:lava> * 100]).remove();
+centrifuge.recipeBuilder()
+    .fluidInputs(<liquid:lava> * 200)
+    .chancedOutput(<ore:nuggetSilver>.firstItem, 250, 80)
+    .chancedOutput(<ore:nuggetTin>.firstItem, 1000, 270)
+    .chancedOutput(<ore:nuggetCopper>.firstItem, 2000, 320)
+    .chancedOutput(<ore:nuggetTantalum>.firstItem, 2500, 90)
+    .chancedOutput(<ore:nuggetGold>.firstItem, 250, 80)
+    .chancedOutput(<ore:dustSmallTungstate>.firstItem, 250, 70)
+    .duration(1600).EUt(192).buildAndRegister();
