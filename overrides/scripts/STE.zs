@@ -137,3 +137,14 @@ hammer.recipeBuilder()
     .inputs([<ore:dustFireclay> * 3])
     .outputs(<gregtech:meta_item_2:32014> * 2)
     .duration(200).EUt(8).buildAndRegister();
+
+// Airtight Seal
+<ore:spaceSuit>.add(<advancedrocketry:spacehelmet>);
+<ore:spaceSuit>.add(<advancedrocketry:spaceleggings>);
+<ore:spaceSuit>.add(<advancedrocketry:spacechestplate>);
+<ore:spaceSuit>.add(<advancedrocketry:spaceboots>);
+
+recipes.addShapeless(
+    <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}), 
+    [<minecraft:writable_book>, <ore:spaceSuit>]
+);
