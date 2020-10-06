@@ -15420,7 +15420,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Man, that\u0027s a LOT of quests linked to this one.\n\n§dOmnium§r, as the name suggests, is an incredible material composed of all elements and alloys you\u0027ve encountered so far.\n\nFun fact: you\u0027ll need to make 487 motes. You\u0027ve got all this automated, right?",
+          "desc:8": "Man, that\u0027s a LOT of quests linked to this one.\n\n§dOmnium§r, as the name suggests, is an incredible material composed of all elements and alloys you\u0027ve encountered so far.\n\nYou will be making a lot of these. Make sure to set up proper automation for each element mentioned below.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
