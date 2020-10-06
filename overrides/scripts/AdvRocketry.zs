@@ -307,12 +307,12 @@ makeShaped("pauto_packager",
 recipes.remove(<packagedauto:unpackager>);
 makeShaped("pauto_unpackager",
 	<packagedauto:unpackager>, [
-		"TMT",
+		"TIT",
 		"CXC",
-		"TET",
+		"TMT",
 	], {
 		M: <packagedauto:me_package_component>, // ME Packaging Component
-		E: <appliedenergistics2:interface>,      // ME Interface
+		I: <appliedenergistics2:interface>,     // ME Interface
 		T: <ore:plateTitanium>,   // Titanium Plate
 		C: <ore:circuitExtreme>,  // T4 Circuit
 		X: <extrautils2:crafter>, // ExU2 Crafter
