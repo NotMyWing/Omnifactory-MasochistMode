@@ -963,3 +963,6 @@ makeShaped("me_controller", <appliedenergistics2:controller>,
 // i heard you like duping chlorine
 electrolyzer.findRecipe(60, [<ore:dustPolyvinylChloride>.firstItem * 6], [null]).remove();
 electrolyzer.findRecipe(60, [<ore:dustPolytetrafluoroethylene>.firstItem * 6], [null]).remove();
+
+// late game clay automation
+reactor.recipeBuilder().inputs([<contenttweaker:block_dust>]).fluidInputs([<liquid:water> * 1000]).outputs(<minecraft:clay>).EUt(131072).duration(20).buildAndRegister();
