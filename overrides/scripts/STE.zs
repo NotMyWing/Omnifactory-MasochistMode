@@ -140,3 +140,6 @@ recipes.addShapeless(
     <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}),
     [<minecraft:writable_book>, <ore:spaceSuit>]
 );
+
+// Disable osmium smelting
+furnace.remove(<gregtech:meta_item_1:10047>);
