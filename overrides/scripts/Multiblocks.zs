@@ -1,5 +1,6 @@
 import crafttweaker.world.IFacing;
 import crafttweaker.block.IBlock;
+import crafttweaker.block.IBlockState;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
@@ -254,6 +255,80 @@ val small_microverse = Builder.start(loc, id)
 id += 1;
 loc = "medium_microverse";
 
+function checkSpace(blockState as IBlockState, color as string) as IBlockMatcher {
+    return blockState as IBlockMatcher & function(state as IBlockWorldState) as bool {
+        return state.matchContext.getOrPut("space", color) == color;
+    } as IBlockMatcher;
+}
+
+function maxOf(key as string, count as int) as IBlockMatcher {
+    return function(state as IBlockWorldState) as bool {
+        if state.matchContext.getInt(key) < count {
+            state.matchContext.increment(key, 1);
+            return true;
+        } else {
+            return false;
+        }
+    } as IBlockMatcher;
+}
+
+function space(maxIron as int, maxGold as int) as IBlockMatcher {
+    return checkSpace(<metastate:chisel:diamond:3>, "purple") |
+           checkSpace(<metastate:chisel:diamond:4>, "black") |
+           ((checkSpace(<metastate:chisel:gold:11>, "purple") |
+             checkSpace(<metastate:chisel:gold:12>, "black"))
+            & maxOf("gold", maxGold)) |
+           ((checkSpace(<metastate:chisel:iron:11>, "purple") |
+             checkSpace(<metastate:chisel:iron:12>, "black"))
+            & maxOf("iron", maxIron));
+}
+
+<ore:questbookSpace>.add(<chisel:diamond:3>,
+                         <chisel:diamond:4>
+                         // including the other blocks may cause confusion,
+                         // so this feature will be kept secret
+                         );
+
+var infoBuilder = FactoryMultiblockShapeInfo.start()
+    .aisle(
+        "CCCCC",
+        "CGGGC",
+        "CGGGC",
+        "CGGGC",
+        "CCCCC")
+    .aisle(
+        "ICCCC",
+        "GDDDG",
+        "GDDDG",
+        "GDDDG",
+        "CVCVC")
+    .aisle(
+        "SCCC@",
+        "GDDDG",
+        "GD*DG",
+        "GDDDG",
+        "CCCCC")
+    .aisle(
+        "OCCCC",
+        "GDDDG",
+        "GDDDG",
+        "GDDDG",
+        "CVCVC")
+    .aisle(
+        "CCCCC",
+        "CGGGC",
+        "CGGGC",
+        "CGGGC",
+        "CCCCC")
+    .where('S', IBlockInfo.controller(loc))
+    .where('C', <contenttweaker:microverse_casing>)
+    .where('G', <metastate:extrautils2:ineffableglass:2>)
+    .where('V', <contenttweaker:microverse_vent>)
+    .where('*', <extendedcrafting:compressor>)
+    .where('@', MetaTileEntities.ENERGY_INPUT_HATCH[4], IFacing.east())
+    .where('I', MetaTileEntities.ITEM_IMPORT_BUS[1], IFacing.west())
+    .where('O', MetaTileEntities.ITEM_EXPORT_BUS[3], IFacing.west());
+
 val medium_microverse = Builder.start(loc, id)
     .withPattern(
         FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.DOWN, RelativeDirection.FRONT)
@@ -288,9 +363,9 @@ val medium_microverse = Builder.start(loc, id)
                     "CGGGC",
                     "CCCCC")
             .where('S', IBlockMatcher.controller(loc))
-            .where('D', <metastate:chisel:diamond:3>)
             .where('G', <metastate:extrautils2:ineffableglass:2>)
             .where('V', <contenttweaker:microverse_vent>)
+            .where('D', space(2, 4))
             .where('*', <extendedcrafting:compressor>)
             .whereOr('C', <contenttweaker:microverse_casing> as IBlock as IBlockMatcher,
                             IBlockMatcher.abilityPartPredicate(MultiblockAbility.INPUT_ENERGY,
@@ -304,48 +379,8 @@ val medium_microverse = Builder.start(loc, id)
             .setAmountAtLeast('#', 50)
             .where('#', <contenttweaker:microverse_casing>)
             .build())
-    .addDesign(
-        FactoryMultiblockShapeInfo.start()
-            .aisle(
-                    "CCCCC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CCCCC")
-            .aisle(
-                    "ICCCC",
-                    "GDDDG",
-                    "GDDDG",
-                    "GDDDG",
-                    "CVCVC")
-            .aisle(
-                    "SCCC@",
-                    "GDDDG",
-                    "GD*DG",
-                    "GDDDG",
-                    "CCCCC")
-            .aisle(
-                    "OCCCC",
-                    "GDDDG",
-                    "GDDDG",
-                    "GDDDG",
-                    "CVCVC")
-            .aisle(
-                    "CCCCC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CGGGC",
-                    "CCCCC")
-            .where('S', IBlockInfo.controller(loc))
-            .where('C', <contenttweaker:microverse_casing>)
-            .where('G', <metastate:extrautils2:ineffableglass:2>)
-            .where('V', <contenttweaker:microverse_vent>)
-            .where('D', <metastate:chisel:diamond:3>)
-            .where('*', <extendedcrafting:compressor>)
-            .where('@', MetaTileEntities.ENERGY_INPUT_HATCH[4], IFacing.east())
-            .where('I', MetaTileEntities.ITEM_IMPORT_BUS[1], IFacing.west())
-            .where('O', MetaTileEntities.ITEM_EXPORT_BUS[3], IFacing.west())
-            .build())
+    .addDesign(infoBuilder.where('D', <metastate:chisel:diamond:3>).build())
+    .addDesign(infoBuilder.where('D', <metastate:chisel:diamond:4>).build())
     .withRecipeMap(
         FactoryRecipeMap.start(loc)
                         .minInputs(1)
@@ -359,106 +394,117 @@ val medium_microverse = Builder.start(loc, id)
 id += 1;
 loc = "large_microverse";
 
+infoBuilder = FactoryMultiblockShapeInfo.start()
+    .aisle(
+        "         ",
+        "         ",
+        "  CCCCC  ",
+        "  CGGGC  ",
+        "  CGGGC  ",
+        "  CGGGC  ",
+        "  CCCCC  ",
+        "         ",
+        "         ")
+    .aisle(
+        "         ",
+        "  CGGGC  ",
+        " CDDDDDC ",
+        " GDDDDDG ",
+        " GDDDDDG ",
+        " GDDDDDG ",
+        " CDDDDDC ",
+        "  CGGGC  ",
+        "         ")
+    .aisle(
+        "  CCCCC  ",
+        " CDDDDDC ",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        " CDDDDDC ",
+        "  CCCCC  ")
+    .aisle(
+        "  ICCCC  ",
+        " GDDDDDG ",
+        "CDDDDDDDC",
+        "GDDQQQDDG",
+        "GDDQQQDDG",
+        "GDDQQQDDG",
+        "CDDDDDDDC",
+        " GDDDDDG ",
+        "  CVCVC  ")
+    .aisle(
+        "  SCCCE  ",
+        " GDDDDDG ",
+        "CDDDDDDDC",
+        "GDDQQQDDG",
+        "GDDQQQDDG",
+        "GDDQQQDDG",
+        "CDDDDDDDC",
+        " GDDDDDG ",
+        "  CCCCC  ")
+    .aisle(
+        "  OCCCC  ",
+        " GDDDDDG ",
+        "CDDDDDDDC",
+        "GDDQQQDDG",
+        "GDDQQQDDG",
+        "GDDQQQDDG",
+        "CDDDDDDDC",
+        " GDDDDDG ",
+        "  CVCVC  ")
+    .aisle(
+        "  CCCCC  ",
+        " CDDDDDC ",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        "CDDDDDDDC",
+        " CDDDDDC ",
+        "  CCCCC  ")
+    .aisle(
+        "         ",
+        "  CGGGC  ",
+        " CDDDDDC ",
+        " GDDDDDG ",
+        " GDDDDDG ",
+        " GDDDDDG ",
+        " CDDDDDC ",
+        "  CGGGC  ",
+        "         ")
+    .aisle(
+        "         ",
+        "         ",
+        "  CCCCC  ",
+        "  CGGGC  ",
+        "  CGGGC  ",
+        "  CGGGC  ",
+        "  CCCCC  ",
+        "         ",
+        "         ")
+    .where('S', IBlockInfo.controller(loc))
+    .where('C', <contenttweaker:microverse_casing>)
+    .where('V', <contenttweaker:microverse_vent>)
+    .where('G', <metastate:extrautils2:ineffableglass:2>)
+    .where('Q', <extendedcrafting:compressor>)
+    .where('I', MetaTileEntities.ITEM_IMPORT_BUS[3], IFacing.west())
+    .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[8], IFacing.east())
+    .where('O', MetaTileEntities.ITEM_EXPORT_BUS[4], IFacing.west());
+
 val large_microverse = Builder.start(loc, id)
     .withPattern(
         FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-        .aisle(
-            "         ",
-            "         ",
-            "  CCCCC  ",
-            "  CCCCC  ",
-            "  CCCCC  ",
-            "  CCCCC  ",
-            "  CCSCC  ",
-            "         ",
-            "         ")
-        .aisle(
-            "         ",
-            "  CGGGC  ",
-            " CDDDDDC ",
-            " GDDDDDG ",
-            " GDDDDDG ",
-            " GDDDDDG ",
-            " CDDDDDC ",
-            "  CGGGC  ",
-            "         ")
-        .aisle(
-            "  CCCCC  ",
-            " CDDDDDC ",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            " CDDDDDC ",
-            "  CCCCC  ")
-        .aisleRepeatable(3,
-            "  CGGGC  ",
-            " GDDDDDG ",
-            "CDDDDDDDC",
-            "GDDQQQDDG",
-            "GDDQQQDDG",
-            "GDDQQQDDG",
-            "CDDDDDDDC",
-            " GDDDDDG ",
-            "  CGGGC  ")
-        .aisle(
-            "  CCCCC  ",
-            " CDDDDDC ",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            "CDDDDDDDC",
-            " CDDDDDC ",
-            "  CCCCC  ")
-        .aisle(
-            "         ",
-            "  CGGGC  ",
-            " CDDDDDC ",
-            " GDDDDDG ",
-            " GDDDDDG ",
-            " GDDDDDG ",
-            " CDDDDDC ",
-            "  CGGGC  ",
-            "         ")
-        .aisle(
-            "         ",
-            "         ",
-            "  CCCCC  ",
-            "  CVCVC  ",
-            "  CCCCC  ",
-            "  CVCVC  ",
-            "  CCCCC  ",
-            "         ",
-            "         ")
-        .where('S', IBlockMatcher.controller(loc))
-        .where('V', <contenttweaker:microverse_vent>)
-        .where('G', <metastate:extrautils2:ineffableglass:2>)
-        .where('D', <metastate:chisel:diamond:3>)
-        .where('Q', <extendedcrafting:compressor>)
-        .whereOr('C', <contenttweaker:microverse_casing> as IBlock as IBlockMatcher,
-                        IBlockMatcher.abilityPartPredicate(MultiblockAbility.IMPORT_ITEMS,
-                                                            MultiblockAbility.EXPORT_ITEMS,
-                                                            MultiblockAbility.INPUT_ENERGY))
-
-        .setAmountAtMost('@', 2)
-        .where('@', IBlockMatcher.abilityPartPredicate(MultiblockAbility.INPUT_ENERGY))
-        .setAmountAtLeast('I', 1)
-        .where('I', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_ITEMS))
-        .setAmountAtLeast('#', 125)
-        .where('#', <contenttweaker:microverse_casing>)
-        .build())
-    .addDesign(
-        FactoryMultiblockShapeInfo.start()
             .aisle(
                 "         ",
                 "         ",
                 "  CCCCC  ",
-                "  CGGGC  ",
-                "  CGGGC  ",
-                "  CGGGC  ",
                 "  CCCCC  ",
+                "  CCCCC  ",
+                "  CCCCC  ",
+                "  CCSCC  ",
                 "         ",
                 "         ")
             .aisle(
@@ -481,8 +527,8 @@ val large_microverse = Builder.start(loc, id)
                 "CDDDDDDDC",
                 " CDDDDDC ",
                 "  CCCCC  ")
-            .aisle(
-                "  ICCCC  ",
+            .aisleRepeatable(3,
+                "  CGGGC  ",
                 " GDDDDDG ",
                 "CDDDDDDDC",
                 "GDDQQQDDG",
@@ -490,27 +536,7 @@ val large_microverse = Builder.start(loc, id)
                 "GDDQQQDDG",
                 "CDDDDDDDC",
                 " GDDDDDG ",
-                "  CVCVC  ")
-            .aisle(
-                "  SCCCE  ",
-                " GDDDDDG ",
-                "CDDDDDDDC",
-                "GDDQQQDDG",
-                "GDDQQQDDG",
-                "GDDQQQDDG",
-                "CDDDDDDDC",
-                " GDDDDDG ",
-                "  CCCCC  ")
-            .aisle(
-                "  OCCCC  ",
-                " GDDDDDG ",
-                "CDDDDDDDC",
-                "GDDQQQDDG",
-                "GDDQQQDDG",
-                "GDDQQQDDG",
-                "CDDDDDDDC",
-                " GDDDDDG ",
-                "  CVCVC  ")
+                "  CGGGC  ")
             .aisle(
                 "  CCCCC  ",
                 " CDDDDDC ",
@@ -535,22 +561,31 @@ val large_microverse = Builder.start(loc, id)
                 "         ",
                 "         ",
                 "  CCCCC  ",
-                "  CGGGC  ",
-                "  CGGGC  ",
-                "  CGGGC  ",
+                "  CVCVC  ",
+                "  CCCCC  ",
+                "  CVCVC  ",
                 "  CCCCC  ",
                 "         ",
                 "         ")
-            .where('S', IBlockInfo.controller(loc))
-            .where('C', <contenttweaker:microverse_casing>)
+            .where('S', IBlockMatcher.controller(loc))
             .where('V', <contenttweaker:microverse_vent>)
             .where('G', <metastate:extrautils2:ineffableglass:2>)
-            .where('D', <metastate:chisel:diamond:3>)
+            .where('D', space(8, 16))
             .where('Q', <extendedcrafting:compressor>)
-            .where('I', MetaTileEntities.ITEM_IMPORT_BUS[3], IFacing.west())
-            .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[8], IFacing.east())
-            .where('O', MetaTileEntities.ITEM_EXPORT_BUS[4], IFacing.west())
+            .whereOr('C', <contenttweaker:microverse_casing> as IBlock as IBlockMatcher,
+                            IBlockMatcher.abilityPartPredicate(MultiblockAbility.IMPORT_ITEMS,
+                                                                MultiblockAbility.EXPORT_ITEMS,
+                                                                MultiblockAbility.INPUT_ENERGY))
+
+            .setAmountAtMost('@', 2)
+            .where('@', IBlockMatcher.abilityPartPredicate(MultiblockAbility.INPUT_ENERGY))
+            .setAmountAtLeast('I', 1)
+            .where('I', IBlockMatcher.abilityPartPredicate(MultiblockAbility.EXPORT_ITEMS))
+            .setAmountAtLeast('#', 125)
+            .where('#', <contenttweaker:microverse_casing>)
             .build())
+    .addDesign(infoBuilder.where('D', <metastate:chisel:diamond:3>).build())
+    .addDesign(infoBuilder.where('D', <metastate:chisel:diamond:4>).build())
     .withRecipeMap(
         FactoryRecipeMap.start(loc)
                         .minInputs(1)
@@ -840,9 +875,9 @@ val naquadahreactormk1 = Builder.start(loc, id)
                         .build())
     .buildAndRegister() as Multiblock;
 
-id += 1; 
+id += 1;
 loc = "naquadahreactormk2";
- 
+
 val naquadahreactormk2 = Builder.start(loc,id)
     .withPattern(
         FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
@@ -1216,7 +1251,7 @@ val reinforced_coke_oven = Builder.start(loc, id)
                         .build())
     .buildAndRegister() as Multiblock;
 
-reinforced_coke_oven.noEnergy = true;    
+reinforced_coke_oven.noEnergy = true;
 
 id += 1;
 loc = "reinforced_coke_oven_2";
@@ -1366,7 +1401,7 @@ for meta in 0 .. 7 {
         <ore:ingotMicroversium>.firstItem * count,
         [itemUtils.getItem("modularmachinery:blockinputbus", meta)]);
 
-    recipes.addShapeless("mm_outputbus_conversion__" ~ meta, 
+    recipes.addShapeless("mm_outputbus_conversion__" ~ meta,
         <ore:ingotMicroversium>.firstItem * count,
         [itemUtils.getItem("modularmachinery:blockoutputbus", meta)]);
 }
@@ -1375,12 +1410,12 @@ for meta in 0 .. 7 {
 for meta in 0 .. 8 {
     // tiny returns 4 from the casing, then there's 3 more ingots per tier
     val count as int = (4 + meta * 3);
-    
+
     recipes.addShapeless("mm_fluidinput_refund_" ~ meta,
         <ore:ingotMicroversium>.firstItem * count,
         [itemUtils.getItem("modularmachinery:blockfluidinputhatch", meta)]);
 
-    recipes.addShapeless("mm_fluidoutput_refund_" ~ meta, 
+    recipes.addShapeless("mm_fluidoutput_refund_" ~ meta,
         <ore:ingotMicroversium>.firstItem * count,
         [itemUtils.getItem("modularmachinery:blockfluidoutputhatch", meta)]);
 }
@@ -1452,7 +1487,6 @@ makeShaped("multiblock_controller_base", <gregtech:machine:3000>,
 );
 
 // Small Microverse Projector
-
 makeShaped("small_microverse_controller", <gregtech:machine:3001>,
     ["CBC",
      "BSB",
@@ -1462,7 +1496,6 @@ makeShaped("small_microverse_controller", <gregtech:machine:3001>,
       S : <extrautils2:screen> });
 
 // Medium Microverse Projector
-
 makeShaped("medium_microverse_controller", <gregtech:machine:3002>,
     ["CBC",
      "BSB",
@@ -1472,7 +1505,6 @@ makeShaped("medium_microverse_controller", <gregtech:machine:3002>,
       S : <extrautils2:screen> });
 
 // Large Microverse Projector
-
 makeShaped("large_microverse_controller", <gregtech:machine:3003>,
     ["CBC",
      "BSB",
@@ -1482,7 +1514,6 @@ makeShaped("large_microverse_controller", <gregtech:machine:3003>,
       S : <extrautils2:screen> });
 
 // Oil Drilling Rig
-
 makeShaped("oil_drilling_rig", <gregtech:machine:3004>,
     ["CBC",
      "BSB",
@@ -1493,8 +1524,7 @@ makeShaped("oil_drilling_rig", <gregtech:machine:3004>,
       P : <inspirations:pipe>,
       F : <gregtech:frame_steel>});
 
-// Naquadah Reactor MK 1
-
+// Naquadah Reactor Mk1
 makeShaped("naquadah_reactor_1", <gregtech:machine:3005>,
     ["NCN",
      "GSG",
@@ -1505,8 +1535,7 @@ makeShaped("naquadah_reactor_1", <gregtech:machine:3005>,
       P : <appliedenergistics2:spatial_pylon>,
       N : <extendedcrafting:material:33>}); //Omnium Nugget
 
-// Naquadah Reactor MK 2
-
+// Naquadah Reactor Mk2
 makeShaped("naquadah_reactor_2", <gregtech:machine:3006>,
     ["NCN",
      "GSG",
@@ -1518,14 +1547,13 @@ makeShaped("naquadah_reactor_2", <gregtech:machine:3006>,
       N : <extendedcrafting:material:32>}); //Omnium Ingot
 
 // Lunar Mining Station
-
 makeShaped("lunar_mining_station", <gregtech:machine:3007>,
     ["CLC",
      "LSL",
      "CLC"],
     { C : <ore:circuitExtreme>, //T4
       L : <gregtech:machine_casing:6>, //LuV Machine Casing
-      S : <extrautils2:screen>}); 
+      S : <extrautils2:screen>});
 
 // Reinforced Coke Oven
 
@@ -1535,7 +1563,7 @@ makeShaped("reinforced_coke_oven", <gregtech:machine:3008>,
      "CPC"],
     { C : <gregtech:metal_casing:1>, // Primitive Brick
       P : <gregtech:fluid_pipe:2095>, // Medium Bronze Pipe
-      F : <ore:frameGtBronze>}); 
+      F : <ore:frameGtBronze>});
 
 recipes.addShapeless(<gregtech:machine:3008>, [
 	<gregtech:machine:3009>
@@ -1684,8 +1712,8 @@ small_microverse.recipeMap
              <gregtech:ore_bauxite_0:1> * 64,
              <gregtech:ore_niobium_0:1> * 64,
              <gregtech:ore_copper_0:1> * 64,
-             <gregtech:ore_copper_0:1> * 64,
-             <gregtech:ore_copper_0:1> * 64,
+             <gregtech:ore_sphalerite_0:1> * 64,
+             <gregtech:ore_sphalerite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
              <gregtech:ore_scheelite_0:1> * 64,
@@ -1772,7 +1800,7 @@ small_microverse.recipeMap
              <gregtech:meta_item_2:25154> * 16,
              <gregtech:meta_item_2:25154> * 16,
              <gregtech:meta_item_2:25154> * 16,
-             <gregtech:ore_almandine_0:6> * 64,
+             <gregtech:ore_sapphire_0:6> * 64,
              <gregtech:ore_gold_0:6> * 64,
              <gregtech:ore_silver_0:6> * 64)
     .buildAndRegister();
@@ -1822,7 +1850,7 @@ small_microverse.recipeMap
              <gregtech:ore_tin_0:6> * 64,
              <gregtech:ore_redstone_0:6> * 64,
              <gregtech:ore_certus_quartz_0:6> * 64,
-             <gregtech:ore_sapphire_0:6> * 64)
+             <gregtech:ore_almandine_0:6> * 64)
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -2057,7 +2085,7 @@ medium_microverse.recipeMap
             <thermalfoundation:material:1026> * 64,
             <minecraft:end_stone>)
     .outputs(<enderio:block_enderman_skull> * 32,
-             <gregtech:compressed_9:14> * 16,
+             <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
              <darkutils:shulker_pearl> * 64)
@@ -2070,7 +2098,7 @@ actualization_matrix.recipeMap
     .inputs(<contenttweaker:tierfourandhalfship_stabilized_matter>)
     .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
     .outputs(<enderio:block_enderman_skull> * 32,
-             <gregtech:compressed_9:14> * 16,
+             <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
              <darkutils:shulker_pearl> * 64)
@@ -2155,7 +2183,7 @@ medium_microverse.recipeMap
              <gregtech:ore_bastnasite_0:12> * 64,
              <gregtech:ore_sphalerite_0:12> * 64,
              <gregtech:ore_monazite_0:12> * 64,
-             <gregtech:compressed_9:14> * 64,
+             <gregtech:meta_block_compressed_13:10> * 64, //Ender Pearl Block
              <gregtech:ore_osmium_0:12> * 16,
              <gregtech:meta_item_1:2009> * 64,
              <gregtech:ore_molybdenite_0:12> * 64,
@@ -2175,7 +2203,7 @@ actualization_matrix.recipeMap
              <gregtech:ore_bastnasite_0:12> * 64,
              <gregtech:ore_sphalerite_0:12> * 64,
              <gregtech:ore_monazite_0:12> * 64,
-             <gregtech:compressed_9:14> * 64,
+             <gregtech:meta_block_compressed_13:10> * 64,
              <gregtech:ore_osmium_0:12> * 16,
              <gregtech:meta_item_1:2009> * 64,
              <gregtech:ore_molybdenite_0:12> * 64,
@@ -2331,11 +2359,11 @@ large_microverse.recipeMap
              <minecraft:gold_block> * 64,
              <minecraft:gold_block> * 64,
              <minecraft:gold_block> * 64,
-             <gregtech:compressed_3> * 64,
-             <gregtech:compressed_3> * 64,
+             <gregtech:meta_block_compressed_3:14> * 64, //Silver block
+             <gregtech:meta_block_compressed_3:14> * 64, //Silver Block
              <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
-             <gregtech:compressed_2:6> * 64)
+             <gregtech:meta_block_compressed_3:3> * 64) //Platinum Block
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -2355,11 +2383,11 @@ actualization_matrix.recipeMap
              <minecraft:gold_block> * 64,
              <minecraft:gold_block> * 64,
              <minecraft:gold_block> * 64,
-             <gregtech:compressed_3> * 64,
-             <gregtech:compressed_3> * 64,
+             <gregtech:meta_block_compressed_3:14> * 64, //Silver block
+             <gregtech:meta_block_compressed_3:14> * 64, //Silver Block
              <minecraft:diamond_block> * 64,
              <minecraft:diamond_block> * 64,
-             <gregtech:compressed_2:6> * 64)
+             <gregtech:meta_block_compressed_3:3> * 64) //Platinum Block
     .buildAndRegister();
 
 // Tier 7: Draconium Microminer - Mission 2: Lair of the Chaos Guardian Data
@@ -2528,7 +2556,7 @@ cryodist.recipeMap
                   <liquid:noble_gases> * 1000)
     .buildAndRegister();
 
-// Cryogenic Distillation Recipe 1: Noble Gasses
+// Cryogenic Distillation Recipe 2: Noble Gasses
 cryodist.recipeMap
     .recipeBuilder()
     .duration(1000)
@@ -2542,7 +2570,6 @@ cryodist.recipeMap
     .buildAndRegister();
 
 // Naquadah Reactor Mk1 Recipes
-
 naquadahreactormk1.recipeMap
     .recipeBuilder()
     .duration(3000)
@@ -2584,18 +2611,17 @@ oildrillingrig.recipeMap
     .inputs(<inspirations:pipe>)
     .fluidInputs(<liquid:drilling_fluid> * 10)
     .fluidOutputs(<liquid:oil> * 1000)
-	.property("consumeChance", 1)
+    .property("consumeChance", 1)
     .buildAndRegister();
 
 // Lunar Mining Station Rover Missions
-
 lunarminingstation.recipeMap
     .recipeBuilder()
     .duration(12000)
     .EUt(125)
     .inputs(<contenttweaker:deuteriumrover>)
     .fluidOutputs(<liquid:deuterium> * 48000)
-	.property("consumeChance", 10)
+    .property("consumeChance", 10)
     .buildAndRegister();
 
 lunarminingstation.recipeMap
@@ -2604,7 +2630,7 @@ lunarminingstation.recipeMap
     .EUt(125)
     .inputs(<contenttweaker:helium3rover>)
     .fluidOutputs(<liquid:helium3> * 48000)
-	.property("consumeChance", 10)
+    .property("consumeChance", 10)
     .buildAndRegister();
 
 // Reinforced Coke Oven

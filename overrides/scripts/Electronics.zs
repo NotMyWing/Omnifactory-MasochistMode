@@ -10,35 +10,29 @@ import mods.gregtech.material.MaterialRegistry;
 import mods.gregtech.material.Material;
 import scripts.CommonVars.makeShaped as makeShaped;
 
-/////////////////   Tier One Circuits | Basic Tier   ///////////////////////	
+/////////////////   Tier One Circuits | Basic Tier   ///////////////////////
 
 
 //Primitive Circuit
 recipes.remove(<metaitem:circuit.basic>);
 recipes.addShaped(<metaitem:circuit.basic>, [
-	[<metaitem:component.resistor>, <ore:plateSteel>, <metaitem:component.resistor>], 
-	[<metaitem:circuit.vacuum_tube>, <metaitem:board.coated>, <metaitem:circuit.vacuum_tube>], 
+	[<metaitem:component.resistor>, <ore:plateSteel>, <metaitem:component.resistor>],
+	[<metaitem:circuit.vacuum_tube>, <metaitem:board.coated>, <metaitem:circuit.vacuum_tube>],
 	[<ore:cableGtSingleRedAlloy>,<ore:cableGtSingleRedAlloy>,<ore:cableGtSingleRedAlloy>]]);
 
-<gregtech:meta_item_2:32487>.displayName = "Primitive Circuit";
-<gregtech:meta_item_2:32487>.clearTooltip();
-<gregtech:meta_item_2:32487>.addTooltip("Primitive Circuit");
+
 <gregtech:meta_item_2:32487>.addTooltip(format.aqua(format.italic("This is the first Tier One circuit.")));
-	
-	
-	
+
+
+
 //Primitive Circuit Board
 recipes.remove(<metaitem:board.coated>);
 recipes.addShaped(<metaitem:board.coated> * 3, [
 	[null,<metaitem:rubber_drop>,null],
 	[<ore:slabWood>,<ore:slabWood>,<ore:slabWood>],
 	[null,<metaitem:rubber_drop>,null]]);
-	
-//Electronic Circuit
 
-<metaitem:circuit.basic_electronic>.displayName = "Electronic Circuit";
-<metaitem:circuit.basic_electronic>.clearTooltip();
-<metaitem:circuit.basic_electronic>.addTooltip("Electronic Circuit");
+//Electronic Circuit
 <metaitem:circuit.basic_electronic>.addTooltip(format.aqua(format.italic("This is the second Tier One circuit.")));
 
 assembler.findRecipe(8, [<metaitem:plate.integrated_logic_circuit>, <metaitem:component.resistor> * 2, <metaitem:component.capacitor>, <metaitem:board.phenolic>, <ore:wireFineCopper>.firstItem], [<liquid:tin> * 144]).remove();
@@ -68,8 +62,8 @@ assembler.recipeBuilder().inputs([<metaitem:plate.central_processing_unit>, <met
 assembler.recipeBuilder().inputs([<metaitem:plate.central_processing_unit>, <metaitem:component.resistor> * 4, <metaitem:component.capacitor> * 4, <metaitem:component.transistor> * 4, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:soldering_alloy> * 72).outputs([<contenttweaker:refinedcircuit> * 4]).duration(200).EUt(60).buildAndRegister();
 assembler.recipeBuilder().inputs([<metaitem:plate.central_processing_unit>, <metaitem:component.smd.resistor> * 4, <metaitem:component.smd.capacitor> * 4, <metaitem:component.smd.transistor> * 4, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:tin> * 144).outputs([<contenttweaker:refinedcircuit> * 4]).duration(200).EUt(60).buildAndRegister();
 assembler.recipeBuilder().inputs([<metaitem:plate.central_processing_unit>, <metaitem:component.smd.resistor> * 4, <metaitem:component.smd.capacitor> * 4, <metaitem:component.smd.transistor> * 4, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:soldering_alloy> * 72).outputs([<contenttweaker:refinedcircuit> * 4]).duration(200).EUt(60).buildAndRegister();
-assembler.recipeBuilder().inputs([<metaitem:plate.system_on_chip>, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:tin> * 144).outputs([<contenttweaker:refinedcircuit> * 4]).duration(50).EUt(600).buildAndRegister();
-assembler.recipeBuilder().inputs([<metaitem:plate.system_on_chip>, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:soldering_alloy> * 72).outputs([<contenttweaker:refinedcircuit> * 4]).duration(50).EUt(600).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:plate.system_on_chip>, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:tin> * 144).outputs([<contenttweaker:refinedcircuit> * 8]).duration(50).EUt(600).buildAndRegister();
+assembler.recipeBuilder().inputs([<metaitem:plate.system_on_chip>, <metaitem:board.plastic>, <ore:wireFineTinAlloy> * 2]).fluidInputs(<liquid:soldering_alloy> * 72).outputs([<contenttweaker:refinedcircuit> * 8]).duration(50).EUt(600).buildAndRegister();
 
 
 
@@ -85,51 +79,51 @@ recipes.remove(<gregtech:machine:2038>);
 recipes.remove(<gregtech:machine:2039>);
 
 recipes.addShaped(<gregtech:machine:100>, [
-	[<gregtech:meta_item_1:32650>, <ore:circuitGood>, <gregtech:meta_item_1:32650>], 
-	[<gregtech:meta_item_1:32630>, <gregtech:machine:501>, <gregtech:meta_item_1:32630>], 
+	[<gregtech:meta_item_1:32650>, <ore:circuitGood>, <gregtech:meta_item_1:32650>],
+	[<gregtech:meta_item_1:32630>, <gregtech:machine:501>, <gregtech:meta_item_1:32630>],
 	[<ore:cableGtSingleTin>, <ore:circuitGood>, <ore:cableGtSingleTin>]]);
 
 recipes.addShaped(<gregtech:machine:101>, [
-	[<gregtech:meta_item_1:32651>, <ore:circuitAdvanced>, <gregtech:meta_item_1:32651>], 
-	[<gregtech:meta_item_1:32631>, <gregtech:machine:502>, <gregtech:meta_item_1:32631>], 
+	[<gregtech:meta_item_1:32651>, <ore:circuitAdvanced>, <gregtech:meta_item_1:32651>],
+	[<gregtech:meta_item_1:32631>, <gregtech:machine:502>, <gregtech:meta_item_1:32631>],
 	[<ore:cableGtSingleCopper>, <ore:circuitAdvanced>, <ore:cableGtSingleCopper>]]);
 
 recipes.addShaped(<gregtech:machine:102>, [
-	[<gregtech:meta_item_1:32652>, <ore:circuitExtreme>, <gregtech:meta_item_1:32652>], 
-	[<gregtech:meta_item_1:32632>, <gregtech:machine:503>, <gregtech:meta_item_1:32632>], 
+	[<gregtech:meta_item_1:32652>, <ore:circuitExtreme>, <gregtech:meta_item_1:32652>],
+	[<gregtech:meta_item_1:32632>, <gregtech:machine:503>, <gregtech:meta_item_1:32632>],
 	[<ore:cableGtSingleGold>, <ore:circuitExtreme>, <ore:cableGtSingleGold>]]);
-	
+
 recipes.addShaped(<gregtech:machine:103>, [
-	[<gregtech:meta_item_1:32653>, <ore:circuitElite>, <gregtech:meta_item_1:32653>], 
-	[<gregtech:meta_item_1:32633>, <gregtech:machine:504>, <gregtech:meta_item_1:32633>], 
+	[<gregtech:meta_item_1:32653>, <ore:circuitElite>, <gregtech:meta_item_1:32653>],
+	[<gregtech:meta_item_1:32633>, <gregtech:machine:504>, <gregtech:meta_item_1:32633>],
 	[<ore:cableGtSingleAluminium>, <ore:circuitElite>, <ore:cableGtSingleAluminium>]]);
-	
+
 recipes.addShaped(<gregtech:machine:104>, [
-	[<gregtech:meta_item_1:32654>, <ore:circuitMaster>, <gregtech:meta_item_1:32654>], 
-	[<gregtech:meta_item_1:32634>, <gregtech:machine:505>, <gregtech:meta_item_1:32634>], 
-	[<ore:cableGtSinglePlatinum>, <ore:circuitMaster>, <ore:cableGtSinglePlatinum>]]);	
-	
+	[<gregtech:meta_item_1:32654>, <ore:circuitMaster>, <gregtech:meta_item_1:32654>],
+	[<gregtech:meta_item_1:32634>, <gregtech:machine:505>, <gregtech:meta_item_1:32634>],
+	[<ore:cableGtSinglePlatinum>, <ore:circuitMaster>, <ore:cableGtSinglePlatinum>]]);
+
 recipes.addShaped(<gregtech:machine:2037>, [
-	[<gregtech:meta_item_1:32655>, <ore:circuitUltimate>, <gregtech:meta_item_1:32655>], 
-	[<gregtech:meta_item_1:32635>, <gregtech:machine:506>, <gregtech:meta_item_1:32635>], 
+	[<gregtech:meta_item_1:32655>, <ore:circuitUltimate>, <gregtech:meta_item_1:32655>],
+	[<gregtech:meta_item_1:32635>, <gregtech:machine:506>, <gregtech:meta_item_1:32635>],
 	[<ore:cableGtSingleNiobiumTitanium>, <ore:circuitUltimate>, <ore:cableGtSingleNiobiumTitanium>]]);
 
 recipes.addShaped(<gregtech:machine:2038>, [
-	[<gregtech:meta_item_1:32656>, <ore:circuitSuperconductor>, <gregtech:meta_item_1:32656>], 
-	[<gregtech:meta_item_1:32636>, <gregtech:machine:507>, <gregtech:meta_item_1:32636>], 
+	[<gregtech:meta_item_1:32656>, <ore:circuitSuperconductor>, <gregtech:meta_item_1:32656>],
+	[<gregtech:meta_item_1:32636>, <gregtech:machine:507>, <gregtech:meta_item_1:32636>],
 	[<ore:cableGtSingleNaquadah>, <ore:circuitSuperconductor>, <ore:cableGtSingleNaquadah>]]);
 
 recipes.addShaped(<gregtech:machine:2039>, [
-	[<gregtech:meta_item_1:32657>, <gregtech:meta_item_2:32501>, <gregtech:meta_item_1:32657>], 
-	[<gregtech:meta_item_1:32637>, <gregtech:machine:508>, <gregtech:meta_item_1:32637>], 
+	[<gregtech:meta_item_1:32657>, <gregtech:meta_item_2:32501>, <gregtech:meta_item_1:32657>],
+	[<gregtech:meta_item_1:32637>, <gregtech:machine:508>, <gregtech:meta_item_1:32637>],
 	[<ore:wireGtQuadrupleNaquadahAlloy>, <gregtech:meta_item_2:32501>, <ore:wireGtQuadrupleNaquadahAlloy>]]);
 
 
 
-	
 
 
-/////////////////   Tier Two Circuits | Good Tier   ///////////////////////	
+
+/////////////////   Tier Two Circuits | Good Tier   ///////////////////////
 
 
 
@@ -139,17 +133,11 @@ recipes.addShaped(<gregtech:machine:2039>, [
 
 recipes.remove(<metaitem:circuit.good>);
 recipes.addShaped(<contenttweaker:combinationcircuit>, [
-	[<ore:plateSteel>, <metaitem:circuit.basic>, <ore:cableGtSingleRedAlloy>], 
-	[<metaitem:circuit.basic>, <metaitem:component.diode>, <metaitem:circuit.basic>], 
-	[<ore:cableGtSingleRedAlloy>, <metaitem:circuit.basic>, <ore:plateSteel>]]);
+	[<ore:plateSteel>, <metaitem:circuit.basic>, <ore:cableGtSingleRedAlloy>],
+	[<metaitem:circuit.basic>, <metaitem:component.diode>, <metaitem:circuit.basic>],
+	[<ore:cableGtSingleRedAlloy>, <metaitem:circuit.basic>, <ore:plateWroughtIron>]]);
 
-<metaitem:board.phenolic>.displayName = "Phenolic Substrate";
-<metaitem:board.phenolic>.clearTooltip();
-<metaitem:board.phenolic>.addTooltip("Phenolic Substrate");	
-	
-	
-	
-//Electronic Processor	
+//Electronic Processor
 
 <contenttweaker:electronicprocessor>.addTooltip(format.aqua(format.italic("This is the second Tier Two circuit.")));
 mods.jei.JEI.removeAndHide(<gregtech:meta_item_2:32489>);
@@ -169,7 +157,7 @@ assembler.recipeBuilder().inputs([<metaitem:component.smd.resistor> * 4, <metait
 
 
 
-//Refined Processor	
+//Refined Processor
 
 <contenttweaker:refinedprocessor>.addTooltip(format.aqua(format.italic("This is the third Tier Two circuit.")));
 
@@ -202,7 +190,7 @@ assembler.recipeBuilder().inputs([<metaitem:plate.system_on_chip>, <metaitem:boa
 
 
 
-/////////////////   Tier Three Circuits | Advanced Tier   ///////////////////////	
+/////////////////   Tier Three Circuits | Advanced Tier   ///////////////////////
 
 //Electronic Processor Array
 
@@ -230,10 +218,6 @@ assembler.recipeBuilder().inputs([<metaitem:component.smd.resistor> * 2, <metait
 
 
 //Microprocessor
-
-<metaitem:circuit.processor_assembly>.displayName = "Microprocessor";
-<metaitem:circuit.processor_assembly>.clearTooltip();
-<metaitem:circuit.processor_assembly>.addTooltip("Microprocessor");
 <metaitem:circuit.processor_assembly>.addTooltip(format.aqua(format.italic("This is the third Tier Three circuit.")));
 
 assembler.findRecipe(90, [<metaitem:circuit.advanced> * 2, <metaitem:component.capacitor> * 4, <metaitem:component.small_coil> * 4, <metaitem:board.plastic>, <metaitem:plate.random_access_memory> * 4, <ore:wireFineRedAlloy>.firstItem * 12], [<liquid:tin> * 288]).remove();
@@ -249,10 +233,6 @@ assembler.recipeBuilder().inputs([<contenttweaker:microcircuit> * 3, <metaitem:p
 
 
 //Nanocircuit
-
-<metaitem:circuit.nano_processor>.displayName = "Nanocircuit";
-<metaitem:circuit.nano_processor>.clearTooltip();
-<metaitem:circuit.nano_processor>.addTooltip("Nanocircuit");
 <metaitem:circuit.nano_processor>.addTooltip(format.aqua(format.italic("This is the fourth and final Tier Three circuit.")));
 
 assembler.findRecipe(480, [<metaitem:component.smd.resistor> * 2, <metaitem:component.smd.capacitor> * 4, <metaitem:component.smd.transistor> * 2, <metaitem:board.epoxy>, <metaitem:plate.nano_central_processing_unit>, <ore:wireFineElectrum>.firstItem * 2], [<liquid:tin> * 144]).remove();
@@ -292,10 +272,6 @@ assembler.recipeBuilder().inputs([<metaitem:component.smd.diode> * 4, <metaitem:
 
 
 //Nanoprocessor
-
-<metaitem:circuit.nano_processor_assembly>.displayName = "Nanoprocessor";
-<metaitem:circuit.nano_processor_assembly>.clearTooltip();
-<metaitem:circuit.nano_processor_assembly>.addTooltip("Nanoprocessor");
 <metaitem:circuit.nano_processor_assembly>.addTooltip(format.aqua(format.italic("This is the third Tier Four circuit.")));
 
 assembler.findRecipe(480, [<metaitem:component.smd.capacitor> * 4, <metaitem:component.small_coil> * 4, <metaitem:circuit.nano_processor> * 2, <metaitem:board.epoxy>, <metaitem:plate.random_access_memory> * 4, <ore:wireFineElectrum>.firstItem * 6], [<liquid:tin> * 288]).remove();
@@ -307,10 +283,6 @@ assembler.recipeBuilder().inputs([<metaitem:circuit.nano_processor> * 3, <metait
 
 
 //Quantum Circuit
-
-<metaitem:circuit.quantum_processor>.displayName = "Quantum Circuit";
-<metaitem:circuit.quantum_processor>.clearTooltip();
-<metaitem:circuit.quantum_processor>.addTooltip("Quantum Circuit");
 <metaitem:circuit.quantum_processor>.addTooltip(format.aqua(format.italic("This is the fourth and final Tier Four circuit.")));
 
 assembler.findRecipe(1960, [<metaitem:component.smd.capacitor> * 4, <metaitem:component.smd.transistor> * 2, <metaitem:board.fiber_reinforced>, <metaitem:plate.nano_central_processing_unit>, <metaitem:plate.qbit_central_processing_unit>, <ore:wireFinePlatinum>.firstItem * 2], [<liquid:tin> * 144]).remove();
@@ -356,7 +328,7 @@ assembler.findRecipe(1960, [<metaitem:component.smd.capacitor> * 4, <metaitem:co
 assembler.recipeBuilder().inputs([<metaitem:component.smd.transistor> * 4, <metaitem:circuit.quantum_processor> * 3, <metaitem:plate.qbit_central_processing_unit> * 2, <metaitem:component.small_coil> * 4, <metaitem:board.multilayer.fiber_reinforced>, <metaitem:component.smd.diode> * 4, <ore:wireFinePlatinum> * 6]).fluidInputs(<liquid:tin> * 144).outputs([<contenttweaker:quantumprocessor>]).duration(100).EUt(4000).buildAndRegister();
 assembler.recipeBuilder().inputs([<metaitem:component.smd.transistor> * 4, <metaitem:circuit.quantum_processor> * 3, <metaitem:plate.qbit_central_processing_unit> * 2, <metaitem:component.small_coil> * 4, <metaitem:board.multilayer.fiber_reinforced>, <metaitem:component.smd.diode> * 4, <ore:wireFinePlatinum> * 6]).fluidInputs(<liquid:soldering_alloy> * 72).outputs([<contenttweaker:quantumprocessor>]).duration(100).EUt(4000).buildAndRegister();
 
-recipes.addShapeless(<contenttweaker:quantumprocessor>, [<gregtech:meta_item_2:32495>]);	
+recipes.addShapeless(<contenttweaker:quantumprocessor>, [<gregtech:meta_item_2:32495>]);
 
 
 //Crystal Circuit
@@ -373,7 +345,6 @@ assembler.recipeBuilder().inputs([<metaitem:component.smd.resistor> * 8, <metait
 assembler.recipeBuilder().inputs([<metaitem:board.multilayer.fiber_reinforced>, <metaitem:crystal.system_on_chip>, <ore:wireFineNiobiumTitanium> * 2]).fluidInputs(<liquid:tin> * 144).outputs([<contenttweaker:crystalcircuit> * 8]).duration(100).EUt(86000).buildAndRegister();
 assembler.recipeBuilder().inputs([<metaitem:board.multilayer.fiber_reinforced>, <metaitem:crystal.system_on_chip>, <ore:wireFineNiobiumTitanium> * 2]).fluidInputs(<liquid:soldering_alloy> * 72).outputs([<contenttweaker:crystalcircuit> * 8]).duration(100).EUt(86000).buildAndRegister();
 
-recipes.addShapeless(<contenttweaker:crystalcircuit>, [<gregtech:meta_item_2:32496>]);	
 
 
 /////////////////   Tier Six Circuits | Master Tier   ///////////////////////
@@ -396,10 +367,6 @@ assembler.recipeBuilder().inputs([<metaitem:component.smd.diode> * 8, <metaitem:
 
 
 //Crystal Processor
-
-<metaitem:circuit.energy_flow>.displayName = "Crystal Processor";
-<metaitem:circuit.energy_flow>.clearTooltip();
-<metaitem:circuit.energy_flow>.addTooltip("Crystal Processor");
 <metaitem:circuit.energy_flow>.addTooltip(format.aqua(format.italic("This is the third Tier Six circuit.")));
 
 assembler.findRecipe(7600, [<metaitem:component.smd.capacitor> * 4, <metaitem:component.small_coil> * 4, <metaitem:board.multilayer.fiber_reinforced>, <metaitem:plate.random_access_memory> * 4, <metaitem:circuit.crystal_processor> * 2, <ore:wireFineNiobiumTitanium>.firstItem * 6], [<liquid:tin> * 288]).remove();
@@ -411,10 +378,6 @@ assembler.recipeBuilder().inputs([<metaitem:component.smd.capacitor> * 4, <conte
 
 
 //Wetware Circuit
-
-<metaitem:circuit.wetware_processor>.displayName = "Wetware Circuit";
-<metaitem:circuit.wetware_processor>.clearTooltip();
-<metaitem:circuit.wetware_processor>.addTooltip("Wetware Circuit");
 <metaitem:circuit.wetware_processor>.addTooltip(format.aqua(format.italic("This is the fourth and final Tier Six circuit.")));
 
 assembler.recipeBuilder().inputs([<gregtech:meta_item_2:32476> * 4, <gregtech:cable:308> * 4, <gregtech:meta_item_2:32449>]).fluidInputs(<liquid:sterilized_growth_medium> * 1000).outputs([<metaitem:circuit.wetware_processor> * 4]).duration(200).EUt(120000).buildAndRegister();
@@ -441,10 +404,6 @@ assembly_line.recipeBuilder().inputs([<metaitem:component.smd.diode> * 8, <metai
 
 
 //Wetware Processor
-
-<metaitem:circuit.wetware_assembly>.displayName = "Wetware Processor";
-<metaitem:circuit.wetware_assembly>.clearTooltip();
-<metaitem:circuit.wetware_assembly>.addTooltip("Wetware Processor");
 <metaitem:circuit.wetware_assembly>.addTooltip(format.aqua(format.italic("This is the third and final Tier Seven circuit.")));
 
 assembly_line.recipeBuilder().inputs(<gregtech:meta_item_2:32459> * 16, <gregtech:meta_item_1:19391> * 16, <gregtech:meta_item_2:32460> * 16, <gregtech:meta_item_2:32458> * 8, <gregtech:meta_item_2:32457> * 8, <gregtech:meta_item_2:32498> * 2, <gregtech:meta_item_2:32449>, <enderio:item_material:42> * 2, <gregtech:meta_item_2:32485> * 4, <gregtech:cable:710> * 6).fluidInputs(<liquid:sterilized_growth_medium> * 2000).outputs(<gregtech:meta_item_2:32499>).duration(400).EUt(120000).buildAndRegister();
@@ -452,19 +411,15 @@ assembly_line.recipeBuilder().inputs(<gregtech:meta_item_2:32459> * 16, <gregtec
 
 
 /////////////////   Tier Eight Circuits | Superconductor Tier   ///////////////////////
- 
+
 //Crystal Processor Mainframe
 
 <contenttweaker:crystalprocessormainframe>.addTooltip(format.aqua(format.italic("This is the first Tier Eight circuit.")));
 
 assembly_line.recipeBuilder().inputs([<metaitem:component.smd.resistor> * 48, <gregtech:meta_item_2:32479>, <metaitem:component.smd.transistor> * 36, <metaitem:component.smd.capacitor> * 32, <metaitem:component.smd.diode> * 24, <enderio:item_material:19> * 4, <extendedcrafting:material:18> * 8, <contenttweaker:crystalprocessorarray> * 2, <gregtech:frame_hsse> * 4, <ore:wireGtSingleEnderium> * 8]).fluidInputs(<liquid:soldering_alloy> * 1440).outputs([<contenttweaker:crystalprocessormainframe>]).duration(500).EUt(30000).buildAndRegister();
- 
- 
-//Wetware Processor Array 
- 
-<metaitem:circuit.wetware_super_computer>.displayName = "Wetware Processor Array";
-<metaitem:circuit.wetware_super_computer>.clearTooltip();
-<metaitem:circuit.wetware_super_computer>.addTooltip("Wetware Processor Array");
+
+
+//Wetware Processor Array
 <metaitem:circuit.wetware_super_computer>.addTooltip(format.aqua(format.italic("This is the second and final Tier Eight circuit.")));
 
 assembly_line.recipeBuilder().inputs(<gregtech:meta_item_2:32459> * 32, <gregtech:meta_item_1:19391> * 32, <gregtech:meta_item_2:32460> * 32, <gregtech:meta_item_2:32458> * 16, <gregtech:meta_item_2:32457> * 16, <gregtech:meta_item_1:12022> * 4, <gregtech:cable:354> * 8, <gregtech:meta_item_2:32499> * 2, <enderio:item_material:44> * 8).fluidInputs(<liquid:soldering_alloy> * 1152).outputs(<gregtech:meta_item_2:32500>).duration(600).EUt(122880).buildAndRegister();
@@ -474,9 +429,7 @@ assembly_line.recipeBuilder().inputs(<gregtech:meta_item_2:32459> * 32, <gregtec
 /////////////////   Tier Nine Circuits | Infinite Tier   ///////////////////////
 
 
-<metaitem:circuit.wetware_mainframe>.displayName = "Wetware Processor Mainframe";
-<metaitem:circuit.wetware_mainframe>.clearTooltip();
-<metaitem:circuit.wetware_mainframe>.addTooltip("Wetware Processor Mainframe");
+
 <metaitem:circuit.wetware_mainframe>.addTooltip(format.aqua(format.italic("This is the first and only Tier Nine circuit.")));
 
 
@@ -499,7 +452,7 @@ assembly_line.recipeBuilder().inputs(<gregtech:meta_item_2:32459> * 32, <gregtec
 <enderio:item_basic_capacitor:2>.displayName = "Octadic RF Capacitor";
 
 
-	
+
 //Cables By Hand
 recipes.removeByRecipeName("gregtech:tin_cable_1");
 recipes.removeByRecipeName("gregtech:red_alloy_cable_1");
@@ -537,7 +490,7 @@ recipes.remove(<gregtech:machine:10661>);
 recipes.remove(<gregtech:machine:10664>);
 recipes.remove(<gregtech:machine:10665>);
 recipes.addShaped(<enderio:item_power_conduit> * 3, [									//Conductive Iron Conduit
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
 	[<gregtech:cable:700>,<gregtech:cable:700>,<gregtech:cable:700>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_power_conduit>.displayName = "Conductive Iron Energy Conduit";
@@ -559,8 +512,8 @@ recipes.remove(<gregtech:machine:10669>);
 recipes.remove(<gregtech:machine:10672>);
 recipes.remove(<gregtech:machine:10673>);
 recipes.addShaped(<enderio:item_power_conduit:1> * 3, [									//Energetic Alloy Conduit
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:701>,<enderio:item_power_conduit>,<gregtech:cable:701>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:701>,<enderio:item_power_conduit>,<gregtech:cable:701>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_power_conduit:1>.displayName = "Energetic Alloy Energy Conduit";
 assembler.recipeBuilder().inputs([<gregtech:cable:701> * 2, <enderio:item_power_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();
@@ -574,18 +527,18 @@ recipes.addShaped(<gregtech:machine:10672>, [[<ore:wireGtHexEnergeticAlloy>, <or
 recipes.addShaped(<gregtech:machine:10673>, [[<enderio:item_power_conduit:1>, <ore:circuitGood>, <enderio:item_power_conduit:1>], [<ore:wireGtHexEnergeticAlloy>, <gregtech:machine:502>, <ore:wireGtHexEnergeticAlloy>], [<enderio:item_power_conduit:1>, <ore:chestWood>, <enderio:item_power_conduit:1>]]);
 
 
-//HV Tier - Vibrant Alloy 
+//HV Tier - Vibrant Alloy
 
 recipes.remove(<gregtech:machine:10676>);
 recipes.remove(<gregtech:machine:10677>);
 recipes.remove(<gregtech:machine:10680>);
 recipes.remove(<gregtech:machine:10681>);
 recipes.addShaped(<enderio:item_power_conduit:2> * 3, [									//vibrant alloy conduit
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:702>,<enderio:item_power_conduit:1>,<gregtech:cable:702>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:702>,<enderio:item_power_conduit:1>,<gregtech:cable:702>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_power_conduit:2>.displayName = "Vibrant Alloy Energy Conduit";
-assembler.recipeBuilder().inputs([<gregtech:cable:702> * 2, <enderio:item_power_conduit:1>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:2> * 4]).duration(80).EUt(16).buildAndRegister();	
+assembler.recipeBuilder().inputs([<gregtech:cable:702> * 2, <enderio:item_power_conduit:1>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_power_conduit:2> * 4]).duration(80).EUt(16).buildAndRegister();
 //x4 HV ceu
 recipes.addShaped(<gregtech:machine:10676>, [[<ore:wireGtQuadrupleVibrantAlloy>, <ore:circuitAdvanced>, <ore:wireGtQuadrupleVibrantAlloy>], [<enderio:item_power_conduit:2>, <gregtech:machine:503>, <enderio:item_power_conduit:2>], [<ore:wireGtQuadrupleVibrantAlloy>, <ore:chestWood>, <ore:wireGtQuadrupleVibrantAlloy>]]);
 //x4 HV cef
@@ -604,11 +557,11 @@ recipes.remove(<gregtech:machine:10685>);
 recipes.remove(<gregtech:machine:10688>);
 recipes.remove(<gregtech:machine:10689>);
 recipes.addShaped(<enderio:item_endergy_conduit:1> * 3, [									//End Steel Conduit
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:712>,<enderio:item_power_conduit:2>,<gregtech:cable:712>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:712>,<enderio:item_power_conduit:2>,<gregtech:cable:712>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:1>.displayName = "End Steel Energy Conduit";
-assembler.recipeBuilder().inputs([<gregtech:cable:712> * 2, <enderio:item_power_conduit:2>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();	
+assembler.recipeBuilder().inputs([<gregtech:cable:712> * 2, <enderio:item_power_conduit:2>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:1> * 4]).duration(80).EUt(16).buildAndRegister();
 //x4 EV ceu
 recipes.addShaped(<gregtech:machine:10684>, [[<ore:wireGtQuadrupleEndSteel>, <ore:circuitExtreme>, <ore:wireGtQuadrupleEndSteel>], [<enderio:item_endergy_conduit:1>, <gregtech:machine:504>, <enderio:item_endergy_conduit:1>], [<ore:wireGtQuadrupleEndSteel>, <ore:chestWood>, <ore:wireGtQuadrupleEndSteel>]]);
 //x4 EV cef
@@ -618,16 +571,16 @@ recipes.addShaped(<gregtech:machine:10688>, [[<ore:wireGtHexEndSteel>, <ore:circ
 //x16 EV cef
 recipes.addShaped(<gregtech:machine:10689>, [[<enderio:item_endergy_conduit:1>, <ore:circuitExtreme>, <enderio:item_endergy_conduit:1>], [<ore:wireGtHexEndSteel>, <gregtech:machine:504>, <ore:wireGtHexEndSteel>], [<enderio:item_endergy_conduit:1>, <ore:chestWood>, <enderio:item_endergy_conduit:1>]]);
 
-	
+
 //IV Tier - Lumium Conduit
 
 recipes.remove(<gregtech:machine:10692>);
 recipes.remove(<gregtech:machine:10693>);
 recipes.remove(<gregtech:machine:10696>);
-recipes.remove(<gregtech:machine:10697>);	
+recipes.remove(<gregtech:machine:10697>);
 recipes.addShaped(<enderio:item_endergy_conduit:6> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:706>,<enderio:item_endergy_conduit:1> ,<gregtech:cable:706>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:706>,<enderio:item_endergy_conduit:1> ,<gregtech:cable:706>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:6>.displayName = "Lumium Energy Conduit";
 assembler.recipeBuilder().inputs([<gregtech:cable:706> * 2, <enderio:item_endergy_conduit:1> , <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:6> * 4]).duration(80).EUt(16).buildAndRegister();
@@ -650,8 +603,8 @@ recipes.remove(<gregtech:machine:10701>);
 recipes.remove(<gregtech:machine:10704>);
 recipes.remove(<gregtech:machine:10705>);
 recipes.addShaped(<enderio:item_endergy_conduit:4> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:707>,<enderio:item_endergy_conduit:6>,<gregtech:cable:707>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:707>,<enderio:item_endergy_conduit:6>,<gregtech:cable:707>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:4>.displayName = "Signalum Energy Conduit";
 assembler.recipeBuilder().inputs([<gregtech:cable:707> * 2, <enderio:item_endergy_conduit:6>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:4> * 4]).duration(80).EUt(16).buildAndRegister();
@@ -666,15 +619,15 @@ recipes.addShaped(<gregtech:machine:10705>, [[<enderio:item_endergy_conduit:4>, 
 
 
 
-//ZPM Tier - Enderium Conduit	
+//ZPM Tier - Enderium Conduit
 
 recipes.remove(<gregtech:machine:10708>);
 recipes.remove(<gregtech:machine:10709>);
 recipes.remove(<gregtech:machine:10712>);
 recipes.remove(<gregtech:machine:10713>);
 recipes.addShaped(<enderio:item_endergy_conduit> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:708>,<enderio:item_endergy_conduit:4>,<gregtech:cable:708>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:708>,<enderio:item_endergy_conduit:4>,<gregtech:cable:708>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit>.displayName = "Enderium Energy Conduit";
 assembler.recipeBuilder().inputs([<gregtech:cable:708>* 2, <enderio:item_endergy_conduit:4>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit> * 4]).duration(80).EUt(16).buildAndRegister();
@@ -695,8 +648,8 @@ recipes.remove(<gregtech:machine:10717>);
 recipes.remove(<gregtech:machine:10720>);
 recipes.remove(<gregtech:machine:10721>);
 recipes.addShaped(<enderio:item_endergy_conduit:10> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:710>,<enderio:item_endergy_conduit>,<gregtech:cable:710>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:710>,<enderio:item_endergy_conduit>,<gregtech:cable:710>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:10>.displayName = "Draconium Energy Conduit";
 assembler.recipeBuilder().inputs([<gregtech:cable:710>* 2, <enderio:item_endergy_conduit>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:10> * 4]).duration(80).EUt(16).buildAndRegister();
@@ -712,12 +665,12 @@ recipes.addShaped(<gregtech:machine:10721>, [[<enderio:item_endergy_conduit:10>,
 
 //MAX Tier - Superconductor
 recipes.addShaped(<enderio:item_endergy_conduit:11> * 3, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:354>,<enderio:item_endergy_conduit:10>,<gregtech:cable:354>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:354>,<enderio:item_endergy_conduit:10>,<gregtech:cable:354>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 <enderio:item_endergy_conduit:11>.displayName = "Superconductor Energy Conduit";
 assembler.recipeBuilder().inputs([<gregtech:cable:354>* 2, <enderio:item_endergy_conduit:10>, <ore:itemConduitBinder> * 6]).outputs([<enderio:item_endergy_conduit:11> * 4]).duration(80).EUt(16).buildAndRegister();
-	
+
 //removing bad field generator assembling recipes
 assembler.findRecipe(30, [<ore:circuitBasic>.firstItem * 4, <ore:dustEnderPearl>.firstItem], [<liquid:osmium> * 288]).remove();
 assembler.findRecipe(30, [<ore:circuitBasic>.firstItem * 4, <ore:dustEnderPearl>.firstItem], [<liquid:osmium> * 288]).remove();
@@ -732,26 +685,26 @@ assembler.findRecipe(7680, [<ore:circuitElite>.firstItem * 4, <gregtech:meta_ite
 
 //Item conduit - by hand
 recipes.addShaped(<enderio:item_item_conduit> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
 	[<ore:wireGtSinglePulsatingIron>,<ore:wireGtSinglePulsatingIron>,<ore:wireGtSinglePulsatingIron>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
 //redstone conduit - by hand
 recipes.addShaped(<enderio:item_redstone_conduit> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:237>,<gregtech:cable:237>,<gregtech:cable:237>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:237>,<gregtech:cable:237>,<gregtech:cable:237>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
 //me conduit - by hand
 recipes.addShaped(<enderio:item_me_conduit> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<appliedenergistics2:part:36>,<appliedenergistics2:part:36>,<appliedenergistics2:part:36>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<appliedenergistics2:part:36>,<appliedenergistics2:part:36>,<appliedenergistics2:part:36>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
 //ender fluid conduit - by hand
 recipes.addShaped(<enderio:item_liquid_conduit:2> * 4, [
-	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>], 
-	[<gregtech:cable:702>,<enderio:item_liquid_conduit:1>,<gregtech:cable:702>], 
+	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>],
+	[<gregtech:cable:702>,<enderio:item_liquid_conduit:1>,<gregtech:cable:702>],
 	[<ore:itemConduitBinder>, <ore:itemConduitBinder>, <ore:itemConduitBinder>]]);
 
 //redstone conduit - assembler
@@ -786,7 +739,7 @@ alloy.recipeBuilder().inputs([<minecraft:diamond>,<forestry:crafting_material>])
 //Wrought Iron
 furnace.remove(<gregtech:meta_item_1:9197>);
 furnace.addRecipe(<gregtech:meta_item_1:10197>, <minecraft:iron_ingot>, 0.0);
-	
+
 //LV Casing
 recipes.removeByRecipeName("gregtech:casing_lv");
 
@@ -807,25 +760,56 @@ assembler.recipeBuilder()
     .outputs([<minecraft:bucket>])
     .duration(30).EUt(16).buildAndRegister();
 
-	
-//LV Hull
-recipes.remove(<gregtech:machine:501>);	
-recipes.addShaped(<gregtech:machine:501>, [
-	[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>], 
-	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);	
-assembler.findRecipe(16, [<gregtech:cable:5071> * 2, <gregtech:machine_casing:1>], [<liquid:plastic> * 288]).remove();	
 
+//LV Hull
+recipes.remove(<gregtech:machine:501>);
+recipes.addShaped(<gregtech:machine:501>, [
+	[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
+	[<ore:cableGtSingleTin>, <gregtech:machine_casing:1>, <ore:cableGtSingleTin>]]);
+assembler.findRecipe(16, [<gregtech:cable:5071> * 2, <gregtech:machine_casing:1>], [<liquid:plastic> * 288]).remove();
+
+//LV Motor - with Fine Copper Wires
 recipes.addShaped(<gregtech:meta_item_1:32600>, [
-	[<ore:cableGtSingleTin>, <gregtech:meta_item_2:16018>, <ore:stickIron>], 
+	[<ore:cableGtSingleTin>, <gregtech:meta_item_2:16018>, <ore:stickIron>],
 	[<gregtech:meta_item_2:16018>, <ore:stickIronMagnetic>, <gregtech:meta_item_2:16018>],
 	[<ore:stickIron>, <gregtech:meta_item_2:16018>, <ore:cableGtSingleTin>]]);
 
+//LV Motor - Assembler (iron parts)
+assembler.findRecipe(10,
+    [<ore:cableGtSingleTin>.firstItem * 2,
+     <ore:stickIron>.firstItem * 2,
+     <ore:stickIronMagnetic>.firstItem],
+    [<liquid:copper> * 288]).remove();
+
+assembler.recipeBuilder()
+    .outputs(<gregtech:meta_item_1:32600>)
+    .inputs(<ore:cableGtSingleTin> * 2,
+            <ore:stickIron> * 2,
+            <ore:stickIronMagnetic>)
+    .fluidInputs(<liquid:copper> * 144)
+    .duration(600).EUt(10).buildAndRegister();
+
+//LV Motor - Assembler (steel parts)
+assembler.findRecipe(10,
+    [<ore:cableGtSingleTin>.firstItem * 2,
+     <ore:stickSteel>.firstItem * 2,
+     <ore:stickSteelMagnetic>.firstItem],
+    [<liquid:copper> * 288]).remove();
+
+assembler.recipeBuilder()
+    .outputs(<gregtech:meta_item_1:32600>)
+    .inputs(<ore:cableGtSingleTin> * 2,
+            <ore:stickSteel> * 2,
+            <ore:stickSteelMagnetic>)
+    .fluidInputs(<liquid:copper> * 144)
+    .duration(600).EUt(10).buildAndRegister();
+
 //Diode
 recipes.remove(<metaitem:component.diode>);
-recipes.addShaped(<metaitem:component.diode> * 4, [[null, <minecraft:glass_pane>, null], [<gregtech:meta_item_2:16071>, <ore:dustTinyGallium>, <gregtech:meta_item_2:16071>], [null, <minecraft:glass_pane>, null]]);	
-	
+recipes.addShaped(<metaitem:component.diode> * 4, [[null, <minecraft:glass_pane>, null], [<gregtech:meta_item_2:16071>, <ore:dustTinyGallium>, <gregtech:meta_item_2:16071>], [null, <minecraft:glass_pane>, null]]);
+
 //Wood Pulp
-recipes.addShapeless(<gregtech:meta_item_1:2196> * 4,[<ore:logWood>,<gregtech:meta_tool:12>]);	
+recipes.addShapeless(<gregtech:meta_item_1:2196> * 4,[<ore:logWood>,<gregtech:meta_tool:12>]);
 
 
 //Scannable
@@ -840,26 +824,25 @@ recipes.addShaped(<scannable:scanner>, [
 	[<gregtech:meta_item_1:32680>,null,<gregtech:meta_item_1:32680>],
 	[<gregtech:meta_item_1:12033>,<ore:circuitBasic>,<gregtech:meta_item_1:12033>],
 	[<gregtech:meta_item_1:12033>,<gregtech:meta_item_1:32518>,<gregtech:meta_item_1:12033>]]);
-	
+
 recipes.addShapeless(<extrautils2:endershard> * 2,[<enderio:item_material:62>]);
 recipes.addShapeless(<enderio:item_material:62>,[<extrautils2:endershard>,<extrautils2:endershard>]);
 recipes.removeByRecipeName("enderio:ender_defragmentation");
 recipes.addShaped(<minecraft:ender_pearl>,[[<enderio:item_material:62>,<enderio:item_material:62>],[<enderio:item_material:62>,<enderio:item_material:62>]]);
 
-autoclave.findRecipe(120, [<gregtech:meta_item_2:32572> * 9], [<liquid:water> * 1800]).remove();	
+autoclave.findRecipe(120, [<gregtech:meta_item_2:32572> * 9], [<liquid:water> * 1800]).remove();
 
 
-	
+
 //Pyrolyse Oven
-recipes.remove(<gregtech:machine:514>);	
+recipes.remove(<gregtech:machine:514>);
 recipes.addShaped(<gregtech:machine:514>, [
-	[<gregtech:meta_item_1:32640>, <ore:circuitGood>, <ore:wireGtQuadrupleCupronickel>], 
-	[<ore:circuitGood>, <gregtech:machine:500>, <ore:circuitGood>], 
+	[<gregtech:meta_item_1:32640>, <ore:circuitGood>, <ore:wireGtQuadrupleCupronickel>],
+	[<ore:circuitGood>, <gregtech:machine:500>, <ore:circuitGood>],
 	[<gregtech:meta_item_1:32640>, <gregtech:meta_item_1:32610>, <ore:wireGtQuadrupleCupronickel>]]);
-	
-<ore:wrenches>.addItems([<gregtech:meta_tool:8>.withEmptyTag(), <gregtech:meta_tool:29>.withEmptyTag(), <gregtech:meta_tool:30>.withEmptyTag(), <gregtech:meta_tool:31>.withEmptyTag()]);
 
-val wrench = <ore:wrenches>;
+
+val wrench = <ore:gtceWrenches>;
 
 
 // ULV Machine Casing
@@ -895,57 +878,113 @@ makeShaped("of_luv_casing", <gregtech:machine_casing:6>,
 	{ P : <ore:plateLumium>,  //Lumium Plate
 	  W : wrench});
 
-assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 2, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 2, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 6, <gregtech:meta_item_1:32766>.withTag({Configuration: 6})], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 6, <gregtech:meta_item_1:32766>.withTag({Configuration: 6})], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 7, <gregtech:meta_item_1:32766>.withTag({Configuration: 7})], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 7, <gregtech:meta_item_1:32766>.withTag({Configuration: 7})], [null]).remove();	
-assembler.findRecipe(2, [<gregtech:meta_item_1:12197> * 5, <minecraft:chest>], [null]).remove();	
-assembler.findRecipe(2, [<gregtech:meta_item_1:12033> * 5, <minecraft:chest>], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 4, <minecraft:redstone>], [null]).remove();	
-assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 4, <minecraft:redstone>], [null]).remove();	
+assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 2, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 2, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 6, <gregtech:meta_item_1:32766>.withTag({Configuration: 6})], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 6, <gregtech:meta_item_1:32766>.withTag({Configuration: 6})], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 7, <gregtech:meta_item_1:32766>.withTag({Configuration: 7})], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 7, <gregtech:meta_item_1:32766>.withTag({Configuration: 7})], [null]).remove();
+assembler.findRecipe(2, [<gregtech:meta_item_1:12197> * 5, <minecraft:chest>], [null]).remove();
+assembler.findRecipe(2, [<gregtech:meta_item_1:12033> * 5, <minecraft:chest>], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12197> * 4, <minecraft:redstone>], [null]).remove();
+assembler.findRecipe(4, [<gregtech:meta_item_1:12033> * 4, <minecraft:redstone>], [null]).remove();
 assembler.recipeBuilder().inputs(<ore:plateIron> * 8).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 8})).outputs([<gregtech:machine_casing>]).duration(30).EUt(16).buildAndRegister();
-assembler.findRecipe(16, [<gregtech:cable:5035> * 2, <gregtech:machine_casing>], [<liquid:plastic> * 288]).remove();	
+assembler.findRecipe(16, [<gregtech:cable:5035> * 2, <gregtech:machine_casing>], [<liquid:plastic> * 288]).remove();
 assembler.recipeBuilder().inputs(<ore:plateIron> * 3,<gregtech:machine_casing>,<gregtech:cable:5237> * 2).outputs([<gregtech:machine:500>]).duration(30).EUt(16).buildAndRegister();
 
 //ULV Hull
-recipes.remove(<gregtech:machine:500>);	
+recipes.remove(<gregtech:machine:500>);
 recipes.addShaped(<gregtech:machine:500>, [
-	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>], 
-	[<ore:cableGtSingleRedAlloy>, <gregtech:machine_casing>, <ore:cableGtSingleRedAlloy>]]);	
-	
-//Pyro Oven
-pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 0})], [null]).remove();	
-pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 1})], [<liquid:nitrogen> * 400]).remove();	
-pyro.findRecipe(192, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [null]).remove();	
-pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 3})], [null]).remove();	
-pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 4})], [<liquid:nitrogen> * 400]).remove();	
-pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 5})], [null]).remove();	
-pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 6})], [<liquid:nitrogen> * 400]).remove();	
-pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 7})], [null]).remove();	
-pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 8})], [<liquid:nitrogen> * 400]).remove();	
+	[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>],
+	[<ore:cableGtSingleRedAlloy>, <gregtech:machine_casing>, <ore:cableGtSingleRedAlloy>]]);
+
+//Pyrolyse Oven
+
+//Remove SoG Recipes
+pyro.findRecipe(96, [<minecraft:sugar> * 23, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [<liquid:nitrogen> * 400]).remove();
+pyro.findRecipe(64, [<minecraft:sugar> * 23, <gregtech:meta_item_1:32766>.withTag({Configuration: 1})], [null]).remove();
+
+//Remove GTCE Recipes
+pyro.findRecipe(96, [<ore:gemCoal>.firstItem * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 0})], [null]).remove();
+pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 0})], [null]).remove();
+pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 1})], [<liquid:nitrogen> * 400]).remove();
+pyro.findRecipe(192, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [null]).remove();
+pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 3})], [null]).remove();
+pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 4})], [<liquid:nitrogen> * 400]).remove();
+pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 5})], [null]).remove();
+pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 6})], [<liquid:nitrogen> * 400]).remove();
+pyro.findRecipe(64, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 7})], [null]).remove();
+pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 8})], [<liquid:nitrogen> * 400]).remove();
 pyro.findRecipe(96, [<minecraft:log> * 16, <gregtech:meta_item_1:32766>.withTag({Configuration: 9})], [<liquid:nitrogen> * 400]).remove();
-pyro.findRecipe(96, [<minecraft:sugar> * 23, <gregtech:meta_item_1:32766>.withTag({Configuration: 2})], [<liquid:nitrogen> * 400]).remove();	
-pyro.findRecipe(64, [<minecraft:sugar> * 23, <gregtech:meta_item_1:32766>.withTag({Configuration: 1})], [null]).remove();		
-pyro.recipeBuilder().inputs([<ore:logWood> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 0})).fluidInputs([<liquid:steam> * 4000]).outputs([<minecraft:coal:1> * 20]).fluidOutputs([<liquid:creosote> * 4000]).duration(600).EUt(30).buildAndRegister();
-pyro.recipeBuilder().inputs([<ore:logWood> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1})).fluidInputs([<liquid:steam> * 4000]).outputs([<minecraft:coal:1> * 20]).fluidOutputs([<liquid:wood_vinegar> * 3000]).duration(600).EUt(30).buildAndRegister();
-pyro.recipeBuilder().inputs([<ore:logWood> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2})).fluidInputs([<liquid:steam> * 4000]).outputs([<minecraft:coal:1> * 20]).fluidOutputs([<liquid:wood_gas> * 1500]).duration(600).EUt(30).buildAndRegister();
-pyro.recipeBuilder().inputs([<ore:logWood> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3})).fluidInputs([<liquid:steam> * 4000]).outputs([<minecraft:coal:1> * 20]).fluidOutputs([<liquid:wood_tar> * 1500]).duration(600).EUt(30).buildAndRegister();
-pyro.recipeBuilder().inputs([<ore:logWood> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 4})).fluidInputs([<liquid:steam> * 4000]).outputs([<minecraft:coal:1> * 20]).fluidOutputs([<liquid:charcoal_byproducts> * 4000]).duration(600).EUt(30).buildAndRegister();
-pyro.recipeBuilder().inputs([<minecraft:coal> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1})).fluidInputs([<liquid:steam> * 4000]).outputs([<gregtech:meta_item_1:8357> * 20]).fluidOutputs([<liquid:phenol> * 1000]).duration(600).EUt(30).buildAndRegister();
-pyro.recipeBuilder().inputs([<gregtech:meta_item_1:2106> * 16]).notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1})).fluidInputs([<liquid:steam> * 4000]).outputs([<gregtech:meta_item_1:2357> * 20]).fluidOutputs([<liquid:phenol> * 1000]).duration(600).EUt(30).buildAndRegister();
+
+//Creosote and Charcoal
+pyro.recipeBuilder()
+	.inputs([<ore:logWood> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 0}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<minecraft:coal:1> * 20])
+	.fluidOutputs([<liquid:creosote> * 4000])
+	.duration(600).EUt(30).buildAndRegister();
+
+//Wood Vinegar and Charcoal
+pyro.recipeBuilder()
+	.inputs([<ore:logWood> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<minecraft:coal:1> * 20])
+	.fluidOutputs([<liquid:wood_vinegar> * 3000])
+	.duration(600).EUt(30).buildAndRegister();
+
+//Wood Gas and Charcoal
+pyro.recipeBuilder()
+	.inputs([<ore:logWood> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 2}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<minecraft:coal:1> * 20])
+	.fluidOutputs([<liquid:wood_gas> * 1500])
+	.duration(600).EUt(30).buildAndRegister();
+
+//Wood Tar and Charcoal
+pyro.recipeBuilder()
+	.inputs([<ore:logWood> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 3}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<minecraft:coal:1> * 20])
+	.fluidOutputs([<liquid:wood_tar> * 1500])
+	.duration(600).EUt(30).buildAndRegister();
+
+//Charcoal Byproducts and Charcoal
+pyro.recipeBuilder()
+	.inputs([<ore:logWood> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 4}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<minecraft:coal:1> * 20])
+	.fluidOutputs([<liquid:charcoal_byproducts> * 4000])
+	.duration(600).EUt(30).buildAndRegister();
+
+//Phenol and Coke
+pyro.recipeBuilder()
+	.inputs([<minecraft:coal> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<gregtech:meta_item_1:8357> * 20])
+	.fluidOutputs([<liquid:phenol> * 1000])
+	.duration(600).EUt(30).buildAndRegister();
+
+//Phenol and Coke dust
+pyro.recipeBuilder()
+	.inputs([<gregtech:meta_item_1:2106> * 16])
+	.notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+	.fluidInputs([<liquid:steam> * 4000])
+	.outputs([<gregtech:meta_item_1:2357> * 20])
+	.fluidOutputs([<liquid:phenol> * 1000])
+	.duration(600).EUt(30).buildAndRegister();
 
 reactor.recipeBuilder().inputs(<metaitem:board.coated>).fluidInputs([<liquid:phenol> * 100]).outputs([<metaitem:board.phenolic>]).duration(100).EUt(8).buildAndRegister();
 
-assembler.findRecipe(8, [<ore:dustWood>.firstItem, <gregtech:meta_item_1:32301>], [<liquid:glue> * 100]).remove();	
-assembler.findRecipe(8, [<ore:dustWood>.firstItem, <gregtech:meta_item_1:32301>], [<liquid:bisphenol_a> * 100]).remove();	
+assembler.findRecipe(8, [<ore:dustWood>.firstItem, <gregtech:meta_item_1:32301>], [<liquid:glue> * 100]).remove();
+assembler.findRecipe(8, [<ore:dustWood>.firstItem, <gregtech:meta_item_1:32301>], [<liquid:bisphenol_a> * 100]).remove();
 
 recipes.removeByRecipeName("gregtech:small_coil_annealed_copper_steel");
 recipes.removeByRecipeName("gregtech:small_coil_copper_ferrite");
 recipes.removeByRecipeName("gregtech:small_coil_annealed_copper_ferrite");
-
-
-
-
-

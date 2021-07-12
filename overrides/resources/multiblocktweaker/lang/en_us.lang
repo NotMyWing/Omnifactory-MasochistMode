@@ -32,3 +32,5 @@ recipemap.naquadahreactormk2.name=Naquadah Decay (Mk2)
 recipemap.lunarminingstation.name=Lunar Mining
 recipemap.reinforced_coke_oven.name=Coke Oven
 recipemap.actualization_matrix.name=Actualization
+
+gregtech.recipe.chance=Chance: %s%%; doubled each tier

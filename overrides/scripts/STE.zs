@@ -30,7 +30,7 @@ mixer.recipeBuilder()
     .fluidOutputs(<liquid:xpjuice> * 6720) // 24L
     .fluidInputs(<liquid:mana> * 250)
     .duration(100).EUt(480).buildAndRegister();
-	
+
 mixer.recipeBuilder()
 	.inputs(<ore:itemPrecientPowder>)
     .fluidOutputs(<liquid:xpjuice> * 8960) // 32L
@@ -76,14 +76,6 @@ makeShaped("ae2stuff_nvt", <ae2stuff:visualiser>, [
         P: <ore:itemIlluminatedPanel>,
         F: <ore:crystalPureFluix>
 	});
-
-// Dense Conduit
-assembler.recipeBuilder()
-    .inputs([<enderio:item_me_conduit> * 4, <ore:itemConduitBinder> * 5])
-    .outputs([<enderio:item_me_conduit:1> * 2])
-    .duration(80)
-    .EUt(16)
-    .buildAndRegister();
 
 // Conduit Binder Composite
 mixer.recipeBuilder()
@@ -145,6 +137,6 @@ hammer.recipeBuilder()
 <ore:spaceSuit>.add(<advancedrocketry:spaceboots>);
 
 recipes.addShapeless(
-    <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}), 
+    <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 12 as short}]}),
     [<minecraft:writable_book>, <ore:spaceSuit>]
 );
