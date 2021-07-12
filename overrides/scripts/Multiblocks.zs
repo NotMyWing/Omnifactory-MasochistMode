@@ -1621,7 +1621,8 @@ actualization_matrix.recipeMap
     .recipeBuilder()
     .duration(780)
     .EUt(30720)
-    .inputs(<contenttweaker:tieroneship_stabilized_matter>, <gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
+    .inputs(<contenttweaker:tieroneship_stabilized_matter>)
+    .notConsumable(<gregtech:meta_item_1:32766>.withTag({Configuration: 1}))
     .outputs(<densemetals:dense_iron_ore> * 64,
              <gregtech:ore_cassiterite_0:3> * 64,
              <gregtech:ore_redstone_0> * 64,
