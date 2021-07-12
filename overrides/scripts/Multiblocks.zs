@@ -2058,7 +2058,8 @@ medium_microverse.recipeMap
              <minecraft:skull:1>* 32,
              <armorplus:material:2> * 64,
              <armorplus:material:2> * 64,
-             <minecraft:magma_cream> * 64)
+             <minecraft:magma_cream> * 64,
+             <extrautils2:ingredients:10> * 4)
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -2073,7 +2074,8 @@ actualization_matrix.recipeMap
              <minecraft:skull:1>* 32,
              <armorplus:material:2> * 64,
              <armorplus:material:2> * 64,
-             <minecraft:magma_cream> * 64)
+             <minecraft:magma_cream> * 64,
+             <extrautils2:ingredients:10> * 4)
     .buildAndRegister();
 
 // Tier 4.5: Lumium Microminer - Mission 3: End Mobs
@@ -2089,8 +2091,7 @@ medium_microverse.recipeMap
              <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
-             <darkutils:shulker_pearl> * 64,
-             <extrautils2:ingredients:10> * 4)
+             <darkutils:shulker_pearl> * 64)
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -2103,8 +2104,7 @@ actualization_matrix.recipeMap
              <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
-             <darkutils:shulker_pearl> * 64,
-             <extrautils2:ingredients:10> * 4)
+             <darkutils:shulker_pearl> * 64)
     .buildAndRegister();
 
 // Tier 4.5: Lumium Microminer - Mission 4: Dragon Fight
