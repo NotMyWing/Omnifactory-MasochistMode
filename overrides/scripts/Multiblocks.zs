@@ -2088,7 +2088,8 @@ medium_microverse.recipeMap
              <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
-             <darkutils:shulker_pearl> * 64)
+             <darkutils:shulker_pearl> * 64,
+             <extrautils2:ingredients:10> * 4)
     .buildAndRegister();
 
 actualization_matrix.recipeMap
@@ -2101,7 +2102,8 @@ actualization_matrix.recipeMap
              <gregtech:meta_block_compressed_13:10> * 16,
              <minecraft:shulker_shell> * 64,
              <minecraft:shulker_shell> * 64,
-             <darkutils:shulker_pearl> * 64)
+             <darkutils:shulker_pearl> * 64,
+             <extrautils2:ingredients:10> * 4)
     .buildAndRegister();
 
 // Tier 4.5: Lumium Microminer - Mission 4: Dragon Fight
