@@ -885,6 +885,12 @@ reactor.recipeBuilder()
 reactor.recipeBuilder()
     .inputs(<ore:dustEndstone>)
     .fluidInputs([<liquid:elementalreduction> * 100])
+    .outputs(<thermalfoundation:material:2051> * 4)
+    .duration(160).EUt(90).buildAndRegister();
+
+reactor.recipeBuilder()
+    .inputs(<ore:dustSiliconDioxide>)
+    .fluidInputs([<liquid:elementalreduction> * 100])
     .outputs(<thermalfoundation:material:2051>)
     .duration(160).EUt(90).buildAndRegister();
 
