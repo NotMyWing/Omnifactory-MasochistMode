@@ -27454,7 +27454,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Glowing!\n\nThis one takes a significant amount of time to cook, so make sure to have it going constantly.\n\nWires made from §6Lumium§r transmit IV power losslessly, and it forms the basis for §6LuV Machine Hulls§r.",
+          "desc:8": "Glowing!\n\nThis one takes a significant amount of time to cook, so make sure to have it going constantly.\n\nCables made from §6Lumium§r transmit IV power losslessly, and it forms the basis for §6LuV Machine Hulls§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -31525,7 +31525,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Coating §6Draconium Wire§r with §9Molten Nether Star§r and freezing it solid results in a superconductive material capable of transmitting enormous amounts of energy.\n\nThese wires losslessly transmit \"MAX\" tier, which is effectively infinite transfer rate. This means they will work for any tier of power. 1x wires handle 4 amps, meaning 4x wires can handle 16 amps.\n\nThese can also be made into RF conduits that can transmit a whopping 134 Million RF/t.",
+          "desc:8": "Coating §6Draconium Wire§r with §9Molten Nether Star§r and freezing it solid results in a superconductive material capable of transmitting enormous amounts of energy.\n\nThese cables losslessly transmit \"MAX\" tier, which is effectively infinite transfer rate. This means they will work for any tier of power. 1x wires handle 4 amps, meaning 4x wires can handle 16 amps.\n\nThese can also be made into RF conduits that can transmit a whopping 134 Million RF/t.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
