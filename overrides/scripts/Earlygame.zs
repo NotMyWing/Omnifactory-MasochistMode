@@ -67,7 +67,7 @@ recipes.addShapeless(<gregtech:meta_item_1:2101>,[<minecraft:coal:1>,<gregtech:m
 recipes.addShapeless(<gregtech:meta_item_1:2071>, [<gregtech:meta_item_1:10071>,<gregtech:meta_tool:12>]);
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <gregtech:meta_tool:12>]);
 recipes.addShapeless(<minecraft:sand>, [<minecraft:gravel>, <gregtech:meta_tool:12>]);
-furnace.addRecipe(<forestry:crafting_material>, <gregtech:meta_item_1:2193>, 0.0);
+furnace.addRecipe(<contenttweaker:pulsatingdust>, <gregtech:meta_item_1:2193>, 0.0);
 recipes.addShapeless(<minecraft:gravel>, [<minecraft:cobblestone>, <gregtech:meta_tool:12>]);
 
 
@@ -453,7 +453,7 @@ wiremill.recipeBuilder().inputs([<extendedcrafting:material:32>]).outputs([<greg
 centrifuge.findRecipe(30, [<gregtech:meta_item_1:2231> * 5], [null]).remove();
 electrolyzer.findRecipe(90, [<gregtech:meta_item_1:2114> * 8], [null]).remove();
 electrolyzer.recipeBuilder().inputs([<gregtech:meta_item_1:2114> * 8]).outputs([<gregtech:meta_item_1:2035> * 3,<gregtech:meta_item_1:2062> * 3, <gregtech:meta_item_1:2065> * 2]).duration(500).EUt(32).buildAndRegister();
-electrolyzer.recipeBuilder().inputs([<ore:dustEnderPearl>]).outputs([<forestry:crafting_material>]).duration(200).EUt(1000).buildAndRegister();
+electrolyzer.recipeBuilder().inputs([<ore:dustEnderPearl>]).outputs([<contenttweaker:pulsatingdust>]).duration(200).EUt(1000).buildAndRegister();
 electrolyzer.findRecipe(60, [<gregtech:meta_item_1:2218> * 10], [null]).remove();
 
 
@@ -867,8 +867,8 @@ recipes.removeByRecipeName("thermalexpansion:augment_26");
 
 // Pulsating Mesh
 alloy.recipeBuilder()
-	.inputs([<forestry:crafting_material>, <gregtech:meta_item_2:32505>])
-	.outputs([<forestry:crafting_material:1>])
+	.inputs([<ore:dustPulsating>, <gregtech:meta_item_2:32505>])
+	.outputs([<contenttweaker:pulsatingmesh>])
 	.duration(180).EUt(16).buildAndRegister();
 
 // Yeet Charcoal from Furnace recipes
@@ -1093,17 +1093,15 @@ compressor.recipeBuilder()
 	.outputs(<minecraft:bone>)
 	.duration(20).EUt(8).buildAndRegister();
 
-//Adjust the recipe of the GTCE Crafting Station
+// Adjust the recipe of the GTCE Crafting Station to the old Forestry Recipe
 recipes.removeByRecipeName("gregtech:workbench_bronze");
 makeShaped("gtce_crafting_station", <gregtech:machine:825>,
-	["CWC",
-	 "IAI",
-	 "IHI"],
+	[" B ",
+	 " T ",
+	 " C "],
 	{ C : <minecraft:chest>,
-	  W : <minecraft:crafting_table>,
-	  I : <gregtech:meta_item_1:12033>, //Iron Plate
-	  A : <forestry:worktable>, //Worktable
-	  H : <ore:gtceHardHammers> //Hammer
+	  T : <minecraft:crafting_table>,
+	  B : <minecraft:book>
 	  });
 
 //Add Decomposition Recipe for Polyphenylene Sulfide

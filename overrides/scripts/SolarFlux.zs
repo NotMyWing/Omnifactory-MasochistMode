@@ -150,7 +150,7 @@ recipes.addShaped(<solarflux:photovoltaic_cell_5> * 6, [
 recipes.addShaped(<solarflux:photovoltaic_cell_4> * 6, [
 [<gregtech:meta_item_1:15092>,<gregtech:meta_item_1:15092>,<gregtech:meta_item_1:15092>],
 [<solarflux:photovoltaic_cell_3>,<solarflux:photovoltaic_cell_3>,<solarflux:photovoltaic_cell_3>],
-[<forestry:crafting_material:1>,<forestry:crafting_material:1>,<forestry:crafting_material:1>]]);
+[<ore:meshPulsating>,<ore:meshPulsating>,<ore:meshPulsating>]]);
 
 recipes.addShaped(<solarflux:photovoltaic_cell_3> * 6, [
 [<gregtech:meta_item_1:15218>,<gregtech:meta_item_1:15218>,<gregtech:meta_item_1:15218>],
